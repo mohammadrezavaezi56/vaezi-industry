@@ -1,314 +1,465 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>گردش‌نیوز | اخبار گردشگری ایران</title>
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b3b36">
+  <meta name="description" content="VAEZI INDUSTRY؛ رسانه تخصصی صنعت گردشگری ایران، اخبار، تحلیل، پلتفرم‌های اقامت، مقصدها و جاهای دیدنی.">
+  <meta name="keywords" content="گردشگری ایران، صنعت گردشگری، اقامتگاه، جاباما، میهمان شو، شب، جاجیگا، مقصدهای ایران، جاهای دیدنی">
+  <title>VAEZI INDUSTRY | رسانه صنعت گردشگری ایران</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    :root{
+      --ink:#102b27; --muted:#66736f; --paper:#f6f5ef; --card:#fffdf7;
+      --brand:#0b554d; --brand-2:#0f766e; --accent:#dfaa55; --line:#e3e7e2;
+      --shadow:0 16px 45px rgba(21,50,44,.09); --radius:22px;
     }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Vazirmatn',sans-serif;background:var(--paper);color:var(--ink);line-height:1.8}
+    a{text-decoration:none;color:inherit}
+    button,input{font:inherit}
+    img{max-width:100%;display:block}
+    .wrap{max-width:1200px;margin:auto;padding:0 20px}
 
-    body {
-      font-family: 'Vazirmatn', sans-serif;
-      background-color: #f8fafc;
-      color: #1e293b;
-      line-height: 1.7;
+    .topbar{background:#0b2824;color:#dfece8;font-size:13px}
+    .topbar .wrap{min-height:36px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .topbar strong{color:#fff}
+    .ticker{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+    header{position:sticky;top:0;z-index:50;background:rgba(246,245,239,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(16,43,39,.08)}
+    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;min-width:205px}
+    .brand-mark{width:42px;height:42px;border-radius:13px;background:linear-gradient(145deg,var(--brand),#113a35);color:#fff;display:grid;place-items:center;font-size:20px;font-weight:800;box-shadow:0 10px 20px rgba(11,85,77,.2)}
+    .brand-name{font-weight:800;letter-spacing:.5px;font-size:19px}
+    .brand-sub{display:block;color:var(--muted);font-size:11px;font-weight:500;letter-spacing:0}
+    nav{display:flex;align-items:center;gap:22px;flex-wrap:wrap;justify-content:center}
+    nav a{font-size:14px;font-weight:600;color:#31524b;transition:.2s}
+    nav a:hover{color:var(--brand-2)}
+    .nav-cta{background:var(--brand);color:#fff!important;padding:10px 16px;border-radius:12px}
+
+    .hero{padding:54px 0 38px}
+    .hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:24px;align-items:stretch}
+    .hero-main{min-height:430px;border-radius:32px;overflow:hidden;position:relative;background:linear-gradient(120deg,rgba(8,57,50,.9),rgba(8,57,50,.46)),url('assets/images/hero.svg') center/cover;color:#fff;padding:42px;display:flex;flex-direction:column;justify-content:flex-end;box-shadow:var(--shadow)}
+    .eyebrow{display:inline-flex;align-items:center;gap:7px;width:max-content;padding:7px 11px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.2);font-size:12px;font-weight:700}
+    .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:#7fe1b3}
+    .hero h1{font-size:clamp(34px,5vw,62px);line-height:1.18;max-width:820px;margin:18px 0 15px;letter-spacing:-1px}
+    .hero p{max-width:720px;color:#e6f0ed;font-size:16px}
+    .hero-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+    .pill{font-size:12px;padding:7px 11px;border-radius:10px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16)}
+
+    .hero-side{display:grid;gap:24px}
+    .mini-card{border-radius:28px;background:var(--card);border:1px solid var(--line);padding:28px;box-shadow:var(--shadow);display:flex;flex-direction:column;justify-content:space-between;min-height:203px}
+    .mini-card h3{font-size:22px;line-height:1.45;margin-top:9px}
+    .mini-card p{color:var(--muted);font-size:13px}
+    .mini-link{margin-top:18px;color:var(--brand-2);font-size:13px;font-weight:800}
+    .mini-stat{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+    .stat-box{background:#edf5f2;border-radius:16px;padding:15px}
+    .stat-box strong{display:block;font-size:18px}
+    .stat-box span{font-size:11px;color:var(--muted)}
+
+    .section{padding:44px 0}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:18px}
+    .section-head h2{font-size:28px;line-height:1.3}
+    .section-head p{font-size:13px;color:var(--muted);max-width:620px}
+    .rule{height:1px;background:var(--line);margin:0 0 22px}
+
+    .filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+    .chip{border:1px solid var(--line);background:#fff;padding:9px 13px;border-radius:999px;cursor:pointer;color:#4b625e;font-size:12px;font-weight:700}
+    .chip.active,.chip:hover{background:var(--brand);border-color:var(--brand);color:#fff}
+    .searchbox{position:relative;max-width:350px}
+    .searchbox input{width:100%;border:1px solid var(--line);background:#fff;border-radius:14px;padding:12px 42px 12px 14px;outline:none}
+    .searchbox span{position:absolute;right:14px;top:10px;color:#7e8b87}
+
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:.24s}
+    .card:hover{transform:translateY(-5px)}
+    .cover{height:185px;background-size:cover;background-position:center}
+    .body{padding:20px}
+    .tag{display:inline-flex;padding:6px 9px;border-radius:999px;background:#eef4f1;color:var(--brand);font-size:11px;font-weight:800}
+    .card h3{font-size:18px;line-height:1.55;margin:12px 0 9px}
+    .card p{font-size:13px;color:var(--muted)}
+    .card-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:16px;padding-top:13px;border-top:1px solid var(--line);font-size:11px;color:#7b8884}
+    .read{color:var(--brand-2);font-weight:800;cursor:pointer}
+
+    .platforms{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .platform{padding:22px;border:1px solid var(--line);border-radius:18px;background:#fff;display:flex;flex-direction:column;gap:9px;min-height:150px}
+    .platform .logo-letter{width:42px;height:42px;border-radius:13px;background:#eff5f2;display:grid;place-items:center;font-weight:800;color:var(--brand)}
+    .platform strong{font-size:16px}.platform p{font-size:12px;color:var(--muted)}
+
+    .dest-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+    .dest{min-height:170px;border-radius:18px;overflow:hidden;position:relative;background-size:cover;background-position:center;box-shadow:var(--shadow)}
+    .dest::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 20%,rgba(0,0,0,.75))}
+    .dest-content{position:absolute;z-index:1;bottom:14px;right:14px;left:14px;color:#fff}.dest-content strong{display:block;font-size:16px}.dest-content span{font-size:11px;color:#dbe8e4}
+
+    .feature{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .report{background:#0d3a35;color:#f5fbf8;border-radius:28px;padding:32px;min-height:265px;position:relative;overflow:hidden}
+    .report::after{content:"";position:absolute;width:220px;height:220px;border:1px solid rgba(255,255,255,.12);border-radius:50%;left:-70px;bottom:-100px}
+    .report h3{font-size:28px;max-width:470px;line-height:1.4}.report p{color:#c9ded8;font-size:13px;max-width:520px;margin-top:12px}.report a{display:inline-flex;margin-top:22px;background:#f4ca84;color:#16352f;padding:10px 15px;border-radius:12px;font-weight:800;font-size:12px}
+    .about-card{background:#fff;border:1px solid var(--line);border-radius:28px;padding:32px}.about-card h3{font-size:24px}.about-card p{font-size:13px;color:var(--muted);margin-top:10px}.about-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}.about-list div{padding:12px 14px;border-radius:14px;background:#f7f8f4;font-size:12px}
+
+    .newsletter{background:linear-gradient(135deg,#0b554d,#123c58);color:#fff;border-radius:30px;padding:34px;display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:center}
+    .newsletter p{color:#c9ded8;font-size:13px;margin-top:7px}.newsletter form{display:flex;gap:8px}.newsletter input{flex:1;border:none;border-radius:12px;padding:13px 14px;outline:none}.newsletter button{border:none;border-radius:12px;padding:0 17px;background:#f4ca84;color:#15352f;font-weight:800;cursor:pointer}
+
+    footer{margin-top:50px;background:#082a27;color:#bcd0ca;padding:42px 0 26px}.footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:24px}.footer-title{color:#fff;font-weight:800;margin-bottom:9px}.footer p,.footer a{font-size:12px;color:#9fb8b0;display:block;margin-top:5px}.copyright{border-top:1px solid rgba(255,255,255,.08);padding-top:16px;margin-top:26px;font-size:11px;color:#79958d}
+
+    .modal{position:fixed;inset:0;background:rgba(4,16,14,.64);display:none;align-items:center;justify-content:center;padding:20px;z-index:100}
+    .modal.show{display:flex}.modal-card{width:min(760px,100%);max-height:88vh;overflow:auto;background:#fff;border-radius:24px;padding:28px;position:relative}.close{position:absolute;left:18px;top:15px;border:0;background:#eef3f0;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:18px}.modal-card .tag{margin-bottom:10px}.modal-card h2{font-size:30px;line-height:1.45;margin-bottom:12px}.modal-card p{font-size:14px;color:#586a65;margin-top:10px}.note{margin-top:18px;padding:14px 16px;border-radius:14px;background:#fff8e8;border:1px solid #f1ddaf;color:#765b24;font-size:12px}
+
+    .empty{padding:28px;border:1px dashed #cdd8d4;border-radius:18px;text-align:center;color:var(--muted);display:none}
+    .empty.show{display:block}
+
+    @media(max-width:980px){
+      .hero-grid,.feature,.newsletter{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:repeat(2,1fr)}
+      .platforms{grid-template-columns:repeat(2,1fr)}
+      .dest-grid{grid-template-columns:repeat(3,1fr)}
+      .footer-grid{grid-template-columns:repeat(2,1fr)}
+      nav{gap:12px}
     }
-
-    /* هدر */
-    header {
-      background: linear-gradient(135deg, #0f766e, #0d9488);
-      color: white;
-      padding: 1.2rem 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 1.6rem;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-    }
-
-    .logo span {
-      font-weight: 300;
-      opacity: 0.9;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-right: 1.8rem;
-      font-size: 0.95rem;
-      font-weight: 500;
-      opacity: 0.9;
-      transition: opacity 0.2s;
-    }
-
-    nav a:hover {
-      opacity: 1;
-    }
-
-    /* هیرو */
-    .hero {
-      background: linear-gradient(to left, #0f766e, #134e4a);
-      color: white;
-      padding: 3.5rem 0;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 2.2rem;
-      font-weight: 700;
-      margin-bottom: 0.8rem;
-    }
-
-    .hero p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    /* بخش اخبار */
-    .section {
-      padding: 3rem 0;
-    }
-
-    .section-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 1.8rem;
-      color: #0f766e;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-
-    .section-title::before {
-      content: "";
-      width: 6px;
-      height: 24px;
-      background: #0d9488;
-      border-radius: 4px;
-    }
-
-    .news-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .news-card {
-      background: white;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-      transition: transform 0.25s, box-shadow 0.25s;
-      border: 1px solid #e2e8f0;
-    }
-
-    .news-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.08);
-    }
-
-    .news-card .category {
-      display: inline-block;
-      background: #ecfdf5;
-      color: #0f766e;
-      font-size: 0.75rem;
-      font-weight: 600;
-      padding: 4px 10px;
-      border-radius: 20px;
-      margin: 1.2rem 1.2rem 0;
-    }
-
-    .news-card h3 {
-      font-size: 1.1rem;
-      font-weight: 600;
-      padding: 0.8rem 1.2rem 0.5rem;
-      line-height: 1.5;
-    }
-
-    .news-card p {
-      font-size: 0.9rem;
-      color: #64748b;
-      padding: 0 1.2rem 1rem;
-    }
-
-    .news-card .meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.9rem 1.2rem;
-      border-top: 1px solid #f1f5f9;
-      font-size: 0.8rem;
-      color: #94a3b8;
-    }
-
-    /* فوتر */
-    footer {
-      background: #0f172a;
-      color: #94a3b8;
-      text-align: center;
-      padding: 2rem 0;
-      margin-top: 2rem;
-      font-size: 0.9rem;
-    }
-
-    footer strong {
-      color: #e2e8f0;
-    }
-
-    /* واکنش‌گرا */
-    @media (max-width: 768px) {
-      .header-content {
-        flex-direction: column;
-        gap: 1rem;
-      }
-
-      nav a {
-        margin: 0 0.8rem;
-      }
-
-      .hero h1 {
-        font-size: 1.7rem;
-      }
-
-      .news-grid {
-        grid-template-columns: 1fr;
-      }
+    @media(max-width:680px){
+      .topbar .wrap{justify-content:center}.ticker{font-size:11px}
+      .nav{align-items:flex-start;flex-direction:column;padding:12px 0}.brand{min-width:0}nav{width:100%;justify-content:flex-start;overflow:auto;flex-wrap:nowrap;padding-bottom:3px}nav a{white-space:nowrap}
+      .hero{padding-top:24px}.hero-main{min-height:450px;padding:25px}.hero h1{font-size:34px}
+      .section{padding:34px 0}.section-head{align-items:flex-start;flex-direction:column}.grid-3{grid-template-columns:1fr}.platforms{grid-template-columns:1fr 1fr}.dest-grid{grid-template-columns:1fr 1fr}
+      .newsletter form{flex-direction:column}.newsletter button{padding:12px}.footer-grid{grid-template-columns:1fr}.about-list{grid-template-columns:1fr}
+      .searchbox{max-width:none;width:100%}
     }
   </style>
 </head>
 <body>
+  <div class="topbar"><div class="wrap"><div class="ticker"><strong>VAEZI INDUSTRY</strong> — رسانه تخصصی صنعت گردشگری ایران؛ خبر، تحلیل، مقصد و تجربه سفر</div><div>نسخه تحریریه ۱۴۰۵</div></div></div>
 
-  <!-- هدر -->
   <header>
-    <div class="container">
-      <div class="header-content">
-        <div class="logo">گردش‌نیوز <span>| اخبار گردشگری</span></div>
-        <nav>
-          <a href="#">صفحه اصلی</a>
-          <a href="#industry">صنعت گردشگری</a>
-          <a href="#places">مکان‌های تفریحی</a>
-          <a href="#booking">رزرو اقامتگاه</a>
-        </nav>
-      </div>
+    <div class="wrap nav">
+      <a class="brand" href="#home" aria-label="VAEZI INDUSTRY">
+        <div class="brand-mark">V</div>
+        <div><div class="brand-name">VAEZI INDUSTRY</div><span class="brand-sub">رسانه صنعت گردشگری ایران</span></div>
+      </a>
+      <nav>
+        <a href="#news">اخبار و تحلیل</a>
+        <a href="#platforms">پلتفرم‌ها</a>
+        <a href="#destinations">مقصدها</a>
+        <a href="#places">جاهای دیدنی</a>
+        <a href="#reports">گزارش‌ها</a>
+        <a class="nav-cta" href="#about">درباره VAEZI</a>
+      </nav>
     </div>
   </header>
 
-  <!-- هیرو -->
-  <section class="hero">
-    <div class="container">
-      <h1>مرجع اخبار گردشگری ایران</h1>
-      <p>پوشش اخبار صنعت گردشگری، مکان‌های تفریحی و آخرین تحولات رزرو اقامتگاه‌ها</p>
-    </div>
-  </section>
-
-  <!-- اخبار اصلی -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">آخرین اخبار</h2>
-      
-      <div class="news-grid">
-
-        <!-- خبر ۱ -->
-        <article class="news-card">
-          <span class="category">رزرو اقامتگاه</span>
-          <h3>جاباما طرح جدید تخفیف اقامتگاه‌های بوم‌گردی را آغاز کرد</h3>
-          <p>پلتفرم جاباما با همکاری سازمان میراث فرهنگی، تخفیف‌های ویژه‌ای برای اقامتگاه‌های بوم‌گردی در مناطق کمترشناخته‌شده اعلام کرد.</p>
-          <div class="meta">
-            <span>۱ مهر ۱۴۰۵</span>
-            <span>منبع: جاباما</span>
-          </div>
+  <main id="home">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <article class="hero-main">
+          <span class="eyebrow"><span class="dot"></span> پرونده ویژه تحریریه</span>
+          <h1>نبضِ صنعت گردشگری ایران</h1>
+          <p>جایی برای دنبال‌کردن روندهای صنعت، پلتفرم‌های اقامت، مقصدهای مهم ایران و ایده‌های تازه برای سفر و میزبانی.</p>
+          <div class="hero-meta"><span class="pill">اخبار صنعت</span><span class="pill">تحلیل بازار</span><span class="pill">مقصدهای ایران</span><span class="pill">اقامتگاه و میزبانی</span></div>
         </article>
-
-        <!-- خبر ۲ -->
-        <article class="news-card">
-          <span class="category">صنعت گردشگری</span>
-          <h3>رشد ۲۵ درصدی رزرو آنلاین اقامتگاه در نیمه اول سال</h3>
-          <p>طبق گزارش‌های منتشر شده، پلتفرم‌هایی مانند میهمان‌شو، جاجیگا و اتاقک رشد قابل توجهی در تعداد رزرو داشته‌اند.</p>
-          <div class="meta">
-            <span>۲۸ شهریور ۱۴۰۵</span>
-            <span>منبع: ایسنا</span>
-          </div>
-        </article>
-
-        <!-- خبر ۳ -->
-        <article class="news-card">
-          <span class="category">مکان‌های تفریحی</span>
-          <h3>افتتاح مسیر جدید پیاده‌روی در جنگل‌های شمال</h3>
-          <p>مسیر جدید گردشگری در منطقه جنگلی مازندران با امکان اقامت در کلبه‌های چوبی افتتاح شد.</p>
-          <div class="meta">
-            <span>۲۵ شهریور ۱۴۰۵</span>
-            <span>منبع: میراث آریا</span>
-          </div>
-        </article>
-
-        <!-- خبر ۴ -->
-        <article class="news-card">
-          <span class="category">رزرو اقامتگاه</span>
-          <h3>میهمان‌شو امکان رزرو آنی اقامتگاه را فعال کرد</h3>
-          <p>کاربران از این پس می‌توانند بدون انتظار برای تأیید میزبان، برخی اقامتگاه‌ها را فوری رزرو کنند.</p>
-          <div class="meta">
-            <span>۲۰ شهریور ۱۴۰۵</span>
-            <span>منبع: میهمان‌شو</span>
-          </div>
-        </article>
-
-        <!-- خبر ۵ -->
-        <article class="news-card">
-          <span class="category">صنعت گردشگری</span>
-          <h3>جاجیگا و اتاقک همکاری مشترکی برای توسعه بازار آغاز کردند</h3>
-          <p>دو پلتفرم مطرح رزرو اقامتگاه از همکاری جدید خود برای گسترش خدمات در شهرهای کوچک خبر دادند.</p>
-          <div class="meta">
-            <span>۱۵ شهریور ۱۴۰۵</span>
-            <span>منبع: دنیای اقتصاد</span>
-          </div>
-        </article>
-
-        <!-- خبر ۶ -->
-        <article class="news-card">
-          <span class="category">مکان‌های تفریحی</span>
-          <h3>افزایش بازدید از کویرهای مرکزی در فصل پاییز</h3>
-          <p>با شروع فصل خنک، اقامتگاه‌های کویری با رشد چشمگیر رزرو مواجه شده‌اند.</p>
-          <div class="meta">
-            <span>۱۰ شهریور ۱۴۰۵</span>
-            <span>منبع: ایرنا</span>
-          </div>
-        </article>
-
+        <div class="hero-side">
+          <article class="mini-card">
+            <div><span class="tag">رصد صنعت</span><h3>از اقتصاد سفر تا فناوری رزرو؛ چه چیزهایی بازار گردشگری را تغییر می‌دهد؟</h3><p>یادداشت تحریریه برای دنبال‌کردن روندهایی که روی مسافر، میزبان و پلتفرم اثر می‌گذارند.</p></div>
+            <a class="mini-link" href="#reports">مشاهده گزارش‌ها ←</a>
+          </article>
+          <article class="mini-card">
+            <span class="tag">اکتشاف مقصد</span>
+            <h3>ایران را شهر به شهر کشف کن.</h3>
+            <p>راهنمای سریع برای شروع جست‌وجوی مقصد، جاذبه و تجربه سفر.</p>
+            <div class="mini-stat"><div class="stat-box"><strong>شهرها</strong><span>مقصدهای منتخب</span></div><div class="stat-box"><strong>جاذبه‌ها</strong><span>مکان‌های دیدنی</span></div></div>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- فوتر -->
-  <footer>
-    <div class="container">
-      <p><strong>گردش‌نیوز</strong> — مرجع ساده اخبار گردشگری ایران</p>
-      <p style="margin-top: 0.5rem; font-size: 0.85rem;">بدون فروش • بدون پشتیبانی • فقط اخبار</p>
+    <section class="section" id="news">
+      <div class="wrap">
+        <div class="section-head"><div><h2>اخبار و تحلیل</h2><p>محتوای تحریریه درباره صنعت، اقامت، میزبان‌ها، رفتار مسافر و فناوری سفر.</p></div><div class="searchbox"><span>⌕</span><input id="search" type="search" placeholder="جست‌وجو در مطالب..." aria-label="جست‌وجو در مطالب"></div></div>
+        <div class="filters" id="filters">
+          <button class="chip active" data-filter="all">همه</button>
+          <button class="chip" data-filter="industry">صنعت گردشگری</button>
+          <button class="chip" data-filter="platform">پلتفرم‌ها</button>
+          <button class="chip" data-filter="host">میزبانی و اقامت</button>
+          <button class="chip" data-filter="travel">سفر و مقصد</button>
+        </div>
+        <div class="grid-3" id="newsGrid"></div>
+        <div class="empty" id="empty">مطلبی با این عبارت پیدا نشد.</div>
+      </div>
+    </section>
+
+    <section class="section" id="platforms">
+      <div class="wrap">
+        <div class="section-head"><div><h2>رادار پلتفرم‌ها</h2><p>صفحه‌ای برای پوشش و معرفی بازیگران بازار رزرو و اقامت؛ از خبرهای رسمی تا تحلیل تجربه کاربر و میزبان.</p></div></div>
+        <div class="platforms">
+          <div class="platform"><div class="logo-letter">ج</div><strong>جاباما</strong><p>رصد اخبار، خدمات، کمپین‌ها و تغییرات تجربه رزرو در اکوسیستم اقامت.</p></div>
+          <div class="platform"><div class="logo-letter">ش</div><strong>شب</strong><p>پرونده تحریریه درباره اقامت کوتاه‌مدت، انتخاب مقصد و تجربه مهمان.</p></div>
+          <div class="platform"><div class="logo-letter">ج</div><strong>جاجیگا</strong><p>پوشش تحولات بازار ویلا و اقامتگاه و رفتار کاربران در مقصدها.</p></div>
+          <div class="platform"><div class="logo-letter">م</div><strong>میهمان‌شو</strong><p>رصد تجربه میزبانی، تقویم اقامت و فرصت‌های رشد برای میزبان‌ها.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="destinations">
+      <div class="wrap">
+        <div class="section-head"><div><h2>مقصدهای ایران</h2><p>کارت‌های مقصد برای توسعه محتوای شهری؛ هر شهر در نسخه‌های بعدی می‌تواند صفحه اختصاصی، جاذبه‌ها، اقامت و راهنمای سفر داشته باشد.</p></div></div>
+        <div class="dest-grid">
+          <a class="dest" href="#" style="background-image:url('assets/images/ramsar.svg')"><div class="dest-content"><strong>رامسر</strong><span>دریا، جنگل و اقامت</span></div></a>
+          <a class="dest" href="#" style="background-image:url('assets/images/rasht.svg')"><div class="dest-content"><strong>رشت</strong><span>غذا، بازار و طبیعت</span></div></a>
+          <a class="dest" href="#" style="background-image:url('assets/images/shiraz.svg')"><div class="dest-content"><strong>شیراز</strong><span>تاریخ و باغ‌های ایرانی</span></div></a>
+          <a class="dest" href="#" style="background-image:url('assets/images/isfahan.svg')"><div class="dest-content"><strong>اصفهان</strong><span>معماری و فرهنگ</span></div></a>
+          <a class="dest" href="#" style="background-image:url('assets/images/mashhad.svg')"><div class="dest-content"><strong>مشهد</strong><span>سفر شهری و زیارتی</span></div></a>
+          <a class="dest" href="#" style="background-image:url('assets/images/kish.svg')"><div class="dest-content"><strong>کیش</strong><span>ساحل، تفریح و خرید</span></div></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="places">
+      <div class="wrap">
+        <div class="section-head"><div><h2>جاهای دیدنی و تجربه‌های سفر</h2><p>این بخش برای معرفی جاذبه‌ها، تفریحات، مسیرها، کافه‌ها، طبیعت‌گردی و تجربه‌های قابل انجام در شهرهای مختلف طراحی شده است.</p></div></div>
+        <div class="grid-3">
+          <article class="card"><div class="cover" style="background-image:url('assets/images/nature.svg')"></div><div class="body"><span class="tag">طبیعت</span><h3>چطور یک آخرهفته طبیعت‌گردی را بهتر برنامه‌ریزی کنیم؟</h3><p>چک‌لیست انتخاب مقصد، زمان سفر، اقامت و وسایل ضروری برای یک سفر کوتاه.</p><div class="card-foot"><span>راهنمای سفر</span><span class="read" data-id="nature">ادامه مطلب ←</span></div></div></article>
+          <article class="card"><div class="cover" style="background-image:url('assets/images/hosting.svg')"></div><div class="body"><span class="tag">میزبانی</span><h3>اقامتگاه خوب فقط عکس زیبا نیست</h3><p>از نظافت و پاسخ‌گویی تا اطلاعات دقیق؛ چه چیزهایی تجربه مهمان را می‌سازند؟</p><div class="card-foot"><span>یادداشت تحریریه</span><span class="read" data-id="hosting">ادامه مطلب ←</span></div></div></article>
+          <article class="card"><div class="cover" style="background-image:url('assets/images/city.svg')"></div><div class="body"><span class="tag">شهرگردی</span><h3>یک مقصد را فقط با فهرست جاذبه‌ها نمی‌شود شناخت</h3><p>راهنمای ساخت محتوای شهری که به مسافر برای انتخاب تجربه کمک کند.</p><div class="card-foot"><span>محتوای مقصد</span><span class="read" data-id="city">ادامه مطلب ←</span></div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reports">
+      <div class="wrap feature">
+        <div class="report"><span class="eyebrow"><span class="dot"></span> پرونده و گزارش</span><h3>بازار سفر را با عدد و تجربه بخوانیم، نه فقط با تیتر.</h3><p>در این بخش گزارش‌های تحلیلی درباره رفتار مسافر، عرضه اقامتگاه، عملکرد پلتفرم‌ها و ظرفیت مقصدها منتشر می‌شود.</p><a href="#news">ورود به پرونده‌های تحریریه</a></div>
+        <div class="about-card" id="about"><h3>VAEZI INDUSTRY چیست؟</h3><p>یک رسانه تخصصی برای روایت حرفه‌ای صنعت گردشگری ایران؛ با تمرکز بر خبر، تحلیل، مقصد، اقامت، پلتفرم‌ها و تجربه سفر.</p><div class="about-list"><div>📰 خبر و رصد صنعت</div><div>📊 تحلیل و گزارش</div><div>🏠 اقامت و میزبانی</div><div>🧭 مقصد و جاذبه</div><div>💻 فناوری سفر</div><div>🧩 پرونده پلتفرم‌ها</div></div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="newsletter"><div><h3>عضو خبرنامه VAEZI INDUSTRY شو</h3><p>برای راه‌اندازی نهایی، این فرم بعداً به سرویس ایمیل یا سیستم خبرنامه متصل می‌شود.</p></div><form id="newsletter"><input type="email" placeholder="ایمیل شما" required><button type="submit">عضویت</button></form></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div><div class="footer-title">VAEZI INDUSTRY</div><p>رسانه تخصصی صنعت گردشگری ایران.</p><p>اخبار، تحلیل، مقصد، اقامت و تجربه سفر.</p><p>تصاویر سایت به‌صورت محلی و کم‌حجم بارگذاری می‌شوند.</p></div>
+        <div><div class="footer-title">بخش‌ها</div><a href="#news">اخبار و تحلیل</a><a href="#platforms">پلتفرم‌ها</a><a href="#destinations">مقصدها</a></div>
+        <div><div class="footer-title">محتوا</div><a href="#places">جاهای دیدنی</a><a href="#reports">گزارش‌ها</a><a href="#about">درباره ما</a></div>
+        <div><div class="footer-title">برای توسعه بعدی</div><p>جستجوی پیشرفته</p><p>صفحه اختصاصی شهرها</p><p>صفحه اختصاصی اخبار</p><p>اتصال CMS و SEO</p></div>
+      </div>
+      <div class="copyright">© ۱۴۰۵ VAEZI INDUSTRY — کلیه حقوق برای برند VAEZI محفوظ است.</div>
     </div>
   </footer>
 
+  <div class="modal" id="modal" aria-hidden="true"><div class="modal-card"><button class="close" id="close" aria-label="بستن">×</button><span class="tag" id="modalTag">تحریریه</span><h2 id="modalTitle"></h2><p id="modalText"></p><div class="note">این نسخه یک قالب انتشار ایستا است. برای انتشار خبرهای واقعی، نام منبع و لینک مطلب اصلی را قبل از درج نهایی کنید.</div></div></div>
+
+  <script>
+    const NEWS = [
+      {id:'n1',cat:'industry',tag:'صنعت گردشگری',title:'چطور یک رسانه تخصصی می‌تواند صنعت گردشگری را بهتر روایت کند؟',text:'از خبرهای بازار تا تجربه مهمان و میزبان؛ محتوای تخصصی باید هم برای فعال حرفه‌ای مفید باشد و هم برای خواننده عمومی قابل فهم.',meta:'یادداشت تحریریه'},
+      {id:'n2',cat:'platform',tag:'پلتفرم‌ها',title:'پلتفرم‌های اقامت؛ چرا تجربه کاربر فقط به رزرو ختم نمی‌شود؟',text:'جست‌وجو، مقایسه، اعتماد، ارتباط با میزبان و پشتیبانی بخش‌هایی از سفر دیجیتال هستند که ارزش بررسی جداگانه دارند.',meta:'پرونده پلتفرم‌ها'},
+      {id:'n3',cat:'host',tag:'میزبانی و اقامت',title:'تقویم باز و پاسخ‌گویی؛ دو اهرم مهم برای فروش بهتر اقامتگاه',text:'میزبانی حرفه‌ای از تصویر خوب شروع می‌شود، اما با اطلاعات دقیق، ظرفیت به‌روز و پاسخ‌گویی کامل می‌شود.',meta:'راهنمای میزبان'},
+      {id:'n4',cat:'travel',tag:'سفر و مقصد',title:'چرا محتوای شهری باید فراتر از معرفی چند جاذبه باشد؟',text:'مسافر برای تصمیم‌گیری به مجموعه‌ای از اطلاعات درباره مسیر، زمان مناسب، تجربه‌ها و سبک سفر نیاز دارد.',meta:'تحلیل مقصد'},
+      {id:'n5',cat:'industry',tag:'فناوری سفر',title:'داده و شخصی‌سازی چگونه تجربه برنامه‌ریزی سفر را تغییر می‌دهند؟',text:'سایت‌ها و پلتفرم‌های سفر به سمت تجربه‌هایی می‌روند که انتخاب مقصد و اقامت را سریع‌تر و دقیق‌تر کنند.',meta:'تحلیل فناوری'},
+      {id:'n6',cat:'host',tag:'اقامتگاه',title:'پیش از رزرو؛ چه اطلاعاتی برای اعتماد مهمان حیاتی است؟',text:'تصاویر واقعی، توضیحات شفاف، قوانین اقامت و پاسخ سریع، عناصر مهم تصمیم‌گیری مسافر هستند.',meta:'تجربه مهمان'}
+    ];
+    const MODAL_DATA = {
+      nature:{tag:'طبیعت',title:'چطور یک آخرهفته طبیعت‌گردی را بهتر برنامه‌ریزی کنیم؟',text:'برای یک سفر کوتاه، سه چیز بیش از همه اهمیت دارد: انتخاب مقصد متناسب با زمان، رزرو مطمئن اقامت و آماده‌بودن برای شرایط آب‌وهوایی. در نسخه توسعه‌یافته سایت، هر مقصد به راهنمای کامل با مسیر، فصل مناسب، اقامت و تجربه‌های پیشنهادی تبدیل می‌شود.'},
+      hosting:{tag:'میزبانی',title:'اقامتگاه خوب فقط عکس زیبا نیست',text:'کیفیت تجربه مهمان از لحظه مشاهده آگهی شروع می‌شود. اطلاعات دقیق، تمیزی، پاسخ‌گویی، قوانین روشن و هماهنگی قبل از ورود، بخش بزرگی از رضایت مهمان را می‌سازد.'},
+      city:{tag:'شهرگردی',title:'یک مقصد را فقط با فهرست جاذبه‌ها نمی‌شود شناخت',text:'صفحه شهر باید به مسافر بگوید چه زمانی برود، چه تجربه‌ای انتخاب کند، کجا بماند و چطور وقت خود را مدیریت کند. هدف VAEZI INDUSTRY ساخت چنین صفحات مقصدی است.'}
+    };
+
+    const NEWS_IMAGES = [
+      'assets/images/tehran.svg','assets/images/isfahan.svg','assets/images/hosting.svg',
+      'assets/images/shiraz.svg','assets/images/hero.svg','assets/images/yazd.svg'
+    ];
+    const newsGrid = document.getElementById('newsGrid');
+    const empty = document.getElementById('empty');
+    let filter = 'all';
+    let query = '';
+
+    function escapeHtml(str){return str.replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));}
+    function renderNews(){
+      const rows = NEWS.filter(n => (filter==='all' || n.cat===filter) && (query==='' || (n.title+n.text+n.tag).toLowerCase().includes(query.toLowerCase())));
+      newsGrid.innerHTML = rows.map((n,i)=>`<article class="card"><div class="cover" style="background-image:url('${NEWS_IMAGES[i%NEWS_IMAGES.length]}')"></div><div class="body"><span class="tag">${escapeHtml(n.tag)}</span><h3>${escapeHtml(n.title)}</h3><p>${escapeHtml(n.text)}</p><div class="card-foot"><span>${escapeHtml(n.meta)}</span><span class="read" data-id="${n.id}">ادامه مطلب ←</span></div></div></article>`).join('');
+      empty.classList.toggle('show', rows.length===0);
+    }
+    renderNews();
+
+    document.querySelectorAll('.chip').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));btn.classList.add('active');filter=btn.dataset.filter;renderNews();}));
+    document.getElementById('search').addEventListener('input',e=>{query=e.target.value.trim();renderNews();});
+
+    const modal = document.getElementById('modal');
+    const close = () => { modal.classList.remove('show'); modal.setAttribute('aria-hidden','true'); };
+    document.addEventListener('click',e=>{
+      const id=e.target.getAttribute('data-id'); if(!id) return;
+      const item=NEWS.find(n=>n.id===id) || MODAL_DATA[id]; if(!item) return;
+      document.getElementById('modalTag').textContent=item.tag || 'تحریریه';
+      document.getElementById('modalTitle').textContent=item.title;
+      document.getElementById('modalText').textContent=item.text;
+      modal.classList.add('show'); modal.setAttribute('aria-hidden','false');
+    });<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" role="img" aria-label="شهرگردی">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#587a78"/><stop offset="1" stop-color="#263e49"/></linearGradient>
+  <linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2c8c99" stop-opacity=".9"/><stop offset="1" stop-color="#0f5965"/></linearGradient>
+  <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff3bf"/><stop offset="1" stop-color="#e6b35f"/></linearGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="28"/></filter>
+</defs>
+<rect width="1200" height="760" fill="url(#bg)"/>
+<circle cx="930" cy="145" r="105" fill="url(#sun)" opacity=".92"/>
+<circle cx="930" cy="145" r="150" fill="#fff0ba" opacity=".10" filter="url(#blur)"/>
+<rect y="500" width="1200" height="260" fill="#c8d6d2"/>
+<path d="M0 560 Q180 490 360 540 T720 530 T1200 550 V760 H0Z" fill="#607a76" opacity=".8"/>
+<path d="M200 500 Q450 320 600 470 Q760 300 990 500" fill="none" stroke="#f1d5a2" stroke-width="48"/>
+<g fill="#f5efe0"><circle cx="455" cy="408" r="42"/><circle cx="778" cy="387" r="52"/></g><rect x="34" y="34" width="1132" height="692" rx="36" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="2"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" role="img" aria-label="نبض صنعت گردشگری ایران">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b554d"/><stop offset="1" stop-color="#0e4050"/></linearGradient>
+  <linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2c8c99" stop-opacity=".9"/><stop offset="1" stop-color="#0f5965"/></linearGradient>
+  <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff3bf"/><stop offset="1" stop-color="#e6b35f"/></linearGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="28"/></filter>
+</defs>
+<rect width="1200" height="760" fill="url(#bg)"/>
+<circle cx="930" cy="145" r="105" fill="url(#sun)" opacity=".92"/>
+<circle cx="930" cy="145" r="150" fill="#fff0ba" opacity=".10" filter="url(#blur)"/>
+<path d="M0 530 L180 380 L320 520 L500 270 L710 530 L870 350 L1200 560 L1200 760 L0 760Z" fill="#0b3d3a" opacity=".92"/>
+<path d="M0 600 L220 460 L365 570 L560 365 L760 590 L940 420 L1200 590 L1200 760 L0 760Z" fill="#165e56"/>
+<path d="M0 650 Q230 605 440 655 T900 635 T1200 665 V760 H0Z" fill="url(#water)"/>
+<g fill="#f5e9c2" opacity=".9"><circle cx="105" cy="635" r="4"/><circle cx="170" cy="652" r="3"/><circle cx="247" cy="625" r="4"/><circle cx="1015" cy="665" r="4"/><circle cx="1100" cy="640" r="3"/></g><rect x="34" y="34" width="1132" height="692" rx="36" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="2"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" role="img" aria-label="میزبانی">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9d7a55"/><stop offset="1" stop-color="#214f49"/></linearGradient>
+  <linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2c8c99" stop-opacity=".9"/><stop offset="1" stop-color="#0f5965"/></linearGradient>
+  <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff3bf"/><stop offset="1" stop-color="#e6b35f"/></linearGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="28"/></filter>
+</defs>
+<rect width="1200" height="760" fill="url(#bg)"/>
+<circle cx="930" cy="145" r="105" fill="url(#sun)" opacity=".92"/>
+<circle cx="930" cy="145" r="150" fill="#fff0ba" opacity=".10" filter="url(#blur)"/>
+<rect y="500" width="1200" height="260" fill="#d9c6a3"/>
+<path d="M280 500 V360 L600 170 L920 360 V500Z" fill="#f4ecda"/>
+<path d="M230 360 L600 130 L970 360 L930 410 L600 205 L270 410Z" fill="#1a5c53"/>
+<rect x="505" y="365" width="190" height="135" rx="14" fill="#9bc3b5"/><rect x="330" y="380" width="110" height="70" rx="10" fill="#d4ece5"/><rect x="760" y="380" width="110" height="70" rx="10" fill="#d4ece5"/><rect x="34" y="34" width="1132" height="692" rx="36" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="2"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" role="img" aria-label="مقصد اصفهان">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3f7291"/><stop offset="1" stop-color="#183d4d"/></linearGradient>
+  <linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2c8c99" stop-opacity=".9"/><stop offset="1" stop-color="#0f5965"/></linearGradient>
+  <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff3bf"/><stop offset="1" stop-color="#e6b35f"/></linearGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="28"/></filter>
+</defs>
+<rect width="1200" height="760" fill="url(#bg)"/>
+<circle cx="930" cy="145" r="105" fill="url(#sun)" opacity=".92"/>
+<circle cx="930" cy="145" r="150" fill="#fff0ba" opacity=".10" filter="url(#blur)"/>
+<rect y="500" width="1200" height="260" fill="url(#water)"/>
+<path d="M110 500 H1090 L1025 390 H175Z" fill="#e8d9aa"/>
+<path d="M175 390 Q600 260 1025 390" fill="#2b7185" opacity=".8"/>
+<g fill="#e4c06c"><rect x="220" y="405" width="65" height="95"/><rect x="345" y="385" width="80" height="115"/><rect x="490" y="360" width="90" height="140"/><rect x="650" y="380" width="80" height="120"/><rect x="820" y="405" width="65" height="95"/></g>
+<g fill="#d8edf0" opacity=".9"><circle cx="531" cy="326" r="58"/><circle cx="668" cy="334" r="45"/></g><rect x="34" y="34" width="1132" height="692" rx="36" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="2"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" role="img" aria-label="مقصد کیش">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#137184"/><stop offset="1" stop-color="#0f4e62"/></linearGradient>
+  <linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2c8c99" stop-opacity=".9"/><stop offset="1" stop-color="#0f5965"/></linearGradient>
+  <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff3bf"/><stop offset="1" stop-color="#e6b35f"/></linearGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="28"/></filter>
+</defs>
+<rect width="1200" height="760" fill="url(#bg)"/>
+<circle cx="930" cy="145" r="105" fill="url(#sun)" opacity=".92"/>
+<circle cx="930" cy="145" r="150" fill="#fff0ba" opacity=".10" filter="url(#blur)"/>
+<rect y="460" width="1200" height="300" fill="url(#water)"/>
+<path d="M0 600 Q150 530 300 610 T600 610 T900 605 T1200 620 V760 H0Z" fill="#d8f0d8"/>
+<path d="M900 560 Q930 410 890 320" stroke="#563e2d" stroke-width="28" fill="none"/>
+<path d="M900 365 Q820 250 750 330 Q860 360 900 420 Q940 360 1050 330 Q980 250 900 365Z" fill="#2e8c5a"/>
+<circle cx="330" cy="450" r="74" fill="#fff1b0" opacity=".8"/><rect x="34" y="34" width="1132" height="692" rx="36" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="2"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-label="مقصد مشهد"><defs><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7b6a50"/><stop offset="1" stop-color="#183e47"/></linearGradient></defs><rect width="1200" height="760" fill="url(#b)"/><circle cx="935" cy="145" r="102" fill="#f6d58f" opacity=".9"/><rect y="510" width="1200" height="250" fill="#d5b47a"/><path d="M180 510 V330 H1020 V510Z" fill="#eadfbf"/><path d="M420 330 Q600 170 780 330" fill="#2a8b87"/><path d="M475 330 Q600 220 725 330" fill="#5bb7ae"/><circle cx="600" cy="235" r="78" fill="#e7d8ad"/><path d="M550 510 V380 Q600 330 650 380 V510Z" fill="#8b6145"/><g fill="#3c7972"><path d="M300 510 V375 H390 V510Z"/><path d="M810 510 V375 H900 V510Z"/></g><g fill="#75a86c"><circle cx="160" cy="500" r="48"/><circle cx="260" cy="485" r="42"/><circle cx="950" cy="490" r="48"/><circle cx="1040" cy="500" r="42"/></g><rect x="34" y="34" width="1132" height="692" rx="36" fill="none" stroke="#fff" stroke-opacity=".22" stroke-width="2"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" role="img" aria-label="طبیعت گردی">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2b6e5d"/><stop offset="1" stop-color="#183e55"/></linearGradient>
+  <linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2c8c99" stop-opacity=".9"/><stop offset="1" stop-color="#0f5965"/></linearGradient>
+  <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff3bf"/><stop offset="1" stop-color="#e6b35f"/></linearGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="28"/></filter>
+</defs>
+<rect width="1200" height="760" fill="url(#bg)"/>
+<circle cx="930" cy="145" r="105" fill="url(#sun)" opacity=".92"/>
+<circle cx="930" cy="145" r="150" fill="#fff0ba" opacity=".10" filter="url(#blur)"/>
+<path d="M0 530 L180 380 L320 520 L500 270 L710 530 L870 350 L1200 560 L1200 760 L0 760Z" fill="#0b3d3a" opacity=".92"/>
+<path d="M0 600 L220 460 L365 570 L560 365 L760 590 L940 420 L1200 590 L1200 760 L0 760Z" fill="#165e56"/>
+<path d="M0 650 Q230 605 440 655 T900 635 T1200 665 V760 H0Z" fill="url(#water)"/>
+<g fill="#f5e9c2" opacity=".9"><circle cx="105" cy="635" r="4"/><circle cx="170" cy="652" r="3"/><circle cx="247" cy="625" r="4"/><circle cx="1015" cy="665" r="4"/><circle cx="1100" cy="640" r="3"/></g><rect x="34" y="34" width="1132" height="692" rx="36" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="2"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" role="img" aria-label="مقصد رامسر">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1c6a5f"/><stop offset="1" stop-color="#0d4450"/></linearGradient>
+  <linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2c8c99" stop-opacity=".9"/><stop offset="1" stop-color="#0f5965"/></linearGradient>
+  <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff3bf"/><stop offset="1" stop-color="#e6b35f"/></linearGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="28"/></filter>
+</defs>
+<rect width="1200" height="760" fill="url(#bg)"/>
+<circle cx="930" cy="145" r="105" fill="url(#sun)" opacity=".92"/>
+<circle cx="930" cy="145" r="150" fill="#fff0ba" opacity=".10" filter="url(#blur)"/>
+<path d="M0 530 L210 260 L410 500 L620 315 L850 530 L1020 350 L1200 520 V760 H0Z" fill="#0b534d"/>
+<path d="M0 590 Q160 540 320 580 T640 575 T960 585 T1200 570 V760 H0Z" fill="url(#water)"/>
+<g fill="#224b3a"><rect x="110" y="430" width="12" height="130"/><rect x="180" y="395" width="12" height="165"/><rect x="250" y="420" width="12" height="140"/><rect x="950" y="400" width="12" height="160"/><rect x="1030" y="430" width="12" height="130"/></g>
+<g fill="#83b36b"><circle cx="115" cy="405" r="45"/><circle cx="185" cy="372" r="50"/><circle cx="255" cy="400" r="44"/><circle cx="955" cy="372" r="48"/><circle cx="1035" cy="408" r="45"/></g><rect x="34" y="34" width="1132" height="692" rx="36" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="2"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-label="مقصد رشت"><defs><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#477c73"/><stop offset="1" stop-color="#183e4c"/></linearGradient></defs><rect width="1200" height="760" fill="url(#b)"/><circle cx="935" cy="145" r="98" fill="#f4d18f" opacity=".9"/><path d="M0 520 Q150 450 300 500 T600 490 T900 510 T1200 500 V760 H0Z" fill="#83a86e"/><path d="M0 615 Q180 555 360 610 T720 600 T1200 615 V760 H0Z" fill="#2d7279"/><g fill="#f1ead8"><rect x="160" y="300" width="210" height="180" rx="14"/><path d="M135 310 L265 215 L395 310Z"/><rect x="520" y="280" width="230" height="200" rx="14"/><path d="M490 290 L635 185 L780 290Z"/></g><g fill="#4c765f"><rect x="205" y="360" width="45" height="70"/><rect x="285" y="360" width="45" height="70"/><rect x="580" y="340" width="48" height="75"/><rect x="665" y="340" width="48" height="75"/></g><g fill="#8fc47b"><circle cx="95" cy="480" r="44"/><circle cx="425" cy="470" r="40"/><circle cx="845" cy="480" r="50"/><circle cx="1080" cy="470" r="45"/></g><rect x="34" y="34" width="1132" height="692" rx="36" fill="none" stroke="#fff" stroke-opacity=".22" stroke-width="2"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" role="img" aria-label="مقصد شیراز">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8d6143"/><stop offset="1" stop-color="#2a5a55"/></linearGradient>
+  <linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2c8c99" stop-opacity=".9"/><stop offset="1" stop-color="#0f5965"/></linearGradient>
+  <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff3bf"/><stop offset="1" stop-color="#e6b35f"/></linearGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="28"/></filter>
+</defs>
+<rect width="1200" height="760" fill="url(#bg)"/>
+<circle cx="930" cy="145" r="105" fill="url(#sun)" opacity=".92"/>
+<circle cx="930" cy="145" r="150" fill="#fff0ba" opacity=".10" filter="url(#blur)"/>
+<rect y="520" width="1200" height="240" fill="#f4d59b"/>
+<path d="M0 560 Q150 490 300 555 T600 555 T900 545 T1200 550 V760 H0Z" fill="#426d53"/>
+<g fill="#d7eef0"><path d="M470 420 h260 l-30 -85 h-200z"/><rect x="470" y="420" width="260" height="110" rx="8"/><path d="M545 420 q55 -170 110 0z"/><circle cx="600" cy="338" r="55"/></g>
+<g fill="#6e4b3c"><rect x="505" y="450" width="28" height="80"/><rect x="555" y="450" width="28" height="80"/><rect x="605" y="450" width="28" height="80"/><rect x="655" y="450" width="28" height="80"/></g><rect x="34" y="34" width="1132" height="692" rx="36" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="2"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" role="img" aria-label="مقصد تهران">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1d4e5c"/><stop offset="1" stop-color="#102d37"/></linearGradient>
+  <linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2c8c99" stop-opacity=".9"/><stop offset="1" stop-color="#0f5965"/></linearGradient>
+  <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff3bf"/><stop offset="1" stop-color="#e6b35f"/></linearGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="28"/></filter>
+</defs>
+<rect width="1200" height="760" fill="url(#bg)"/>
+<circle cx="930" cy="145" r="105" fill="url(#sun)" opacity=".92"/>
+<circle cx="930" cy="145" r="150" fill="#fff0ba" opacity=".10" filter="url(#blur)"/>
+<rect y="520" width="1200" height="240" fill="#183b3b"/>
+<g fill="#244f4c"><rect x="90" y="385" width="150" height="135"/><rect x="260" y="320" width="110" height="200"/><rect x="390" y="410" width="180" height="110"/><rect x="600" y="350" width="130" height="170"/><rect x="760" y="290" width="180" height="230"/><rect x="960" y="380" width="130" height="140"/></g>
+<g fill="#f8dc9d" opacity=".75"><rect x="125" y="420" width="18" height="20"/><rect x="165" y="420" width="18" height="20"/><rect x="300" y="360" width="16" height="22"/><rect x="335" y="360" width="16" height="22"/><rect x="635" y="390" width="18" height="22"/><rect x="680" y="390" width="18" height="22"/><rect x="805" y="330" width="19" height="22"/><rect x="850" y="330" width="19" height="22"/></g>
+<path d="M110 520 Q140 450 170 520" stroke="#d6f0ea" stroke-width="9" fill="none"/><path d="M1010 520 Q1025 430 1040 520" stroke="#d6f0ea" stroke-width="8" fill="none"/><path d="M485 515 L520 320 L555 515Z" fill="#edf1e8"/><path d="M505 505 L520 350 L535 505Z" fill="#a1b2ad" opacity=".7"/><rect x="34" y="34" width="1132" height="692" rx="36" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="2"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" role="img" aria-label="مقصد یزد">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b77646"/><stop offset="1" stop-color="#7b4c35"/></linearGradient>
+  <linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2c8c99" stop-opacity=".9"/><stop offset="1" stop-color="#0f5965"/></linearGradient>
+  <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff3bf"/><stop offset="1" stop-color="#e6b35f"/></linearGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="28"/></filter>
+</defs>
+<rect width="1200" height="760" fill="url(#bg)"/>
+<circle cx="930" cy="145" r="105" fill="url(#sun)" opacity=".92"/>
+<circle cx="930" cy="145" r="150" fill="#fff0ba" opacity=".10" filter="url(#blur)"/>
+<rect y="470" width="1200" height="290" fill="#c98e55"/>
+<g fill="#a9683d"><rect x="130" y="290" width="230" height="180" rx="12"/><rect x="420" y="240" width="260" height="230" rx="12"/><rect x="740" y="300" width="270" height="170" rx="12"/></g>
+<g fill="#ead4ae"><path d="M205 470 V340 Q245 300 285 340 V470Z"/><path d="M490 470 V290 Q550 230 610 290 V470Z"/><path d="M810 470 V345 Q855 295 900 345 V470Z"/></g>
+<rect x="535" y="140" width="85" height="105" rx="20" fill="#d7a06a"/>
+<g stroke="#f1d8ae" stroke-width="10" opacity=".7"><path d="M550 155v75"/><path d="M575 155v75"/><path d="M600 155v75"/></g><rect x="34" y="34" width="1132" height="692" rx="36" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="2"/>
+</svg>
+    document.getElementById('close').addEventListener('click',close);
+    modal.addEventListener('click',e=>{if(e.target===modal)close();});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')close();});
+
+    document.getElementById('newsletter').addEventListener('submit',e=>{e.preventDefault();alert('فرم خبرنامه در نسخه فعلی نمایشی است و هنوز به سرویس ایمیل متصل نشده است.');});
+
+    // Prevent placeholder destination links from jumping to the top.
+    document.querySelectorAll('.dest').forEach(a=>a.addEventListener('click',e=>e.preventDefault()));
+  </script>
 </body>
 </html>
