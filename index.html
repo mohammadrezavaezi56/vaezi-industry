@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>گردش‌نیوز | اخبار گردشگری ایران</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
+      line-height: 1.7;
+    }
+
+    /* هدر */
+    header {
+      background: linear-gradient(135deg, #0f766e, #0d9488);
+      color: white;
+      padding: 1.2rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      font-weight: 300;
+      opacity: 0.9;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 1.8rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      opacity: 0.9;
+      transition: opacity 0.2s;
+    }
+
+    nav a:hover {
+      opacity: 1;
+    }
+
+    /* هیرو */
+    .hero {
+      background: linear-gradient(to left, #0f766e, #134e4a);
+      color: white;
+      padding: 3.5rem 0;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* بخش اخبار */
+    .section {
+      padding: 3rem 0;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.8rem;
+      color: #0f766e;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .section-title::before {
+      content: "";
+      width: 6px;
+      height: 24px;
+      background: #0d9488;
+      border-radius: 4px;
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .news-card {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      transition: transform 0.25s, box-shadow 0.25s;
+      border: 1px solid #e2e8f0;
+    }
+
+    .news-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+    }
+
+    .news-card .category {
+      display: inline-block;
+      background: #ecfdf5;
+      color: #0f766e;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin: 1.2rem 1.2rem 0;
+    }
+
+    .news-card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      padding: 0.8rem 1.2rem 0.5rem;
+      line-height: 1.5;
+    }
+
+    .news-card p {
+      font-size: 0.9rem;
+      color: #64748b;
+      padding: 0 1.2rem 1rem;
+    }
+
+    .news-card .meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.9rem 1.2rem;
+      border-top: 1px solid #f1f5f9;
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+
+    /* فوتر */
+    footer {
+      background: #0f172a;
+      color: #94a3b8;
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+
+    footer strong {
+      color: #e2e8f0;
+    }
+
+    /* واکنش‌گرا */
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      nav a {
+        margin: 0 0.8rem;
+      }
+
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+
+      .news-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- هدر -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">گردش‌نیوز <span>| اخبار گردشگری</span></div>
+        <nav>
+          <a href="#">صفحه اصلی</a>
+          <a href="#industry">صنعت گردشگری</a>
+          <a href="#places">مکان‌های تفریحی</a>
+          <a href="#booking">رزرو اقامتگاه</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- هیرو -->
+  <section class="hero">
+    <div class="container">
+      <h1>مرجع اخبار گردشگری ایران</h1>
+      <p>پوشش اخبار صنعت گردشگری، مکان‌های تفریحی و آخرین تحولات رزرو اقامتگاه‌ها</p>
+    </div>
+  </section>
+
+  <!-- اخبار اصلی -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">آخرین اخبار</h2>
+      
+      <div class="news-grid">
+
+        <!-- خبر ۱ -->
+        <article class="news-card">
+          <span class="category">رزرو اقامتگاه</span>
+          <h3>جاباما طرح جدید تخفیف اقامتگاه‌های بوم‌گردی را آغاز کرد</h3>
+          <p>پلتفرم جاباما با همکاری سازمان میراث فرهنگی، تخفیف‌های ویژه‌ای برای اقامتگاه‌های بوم‌گردی در مناطق کمترشناخته‌شده اعلام کرد.</p>
+          <div class="meta">
+            <span>۱ مهر ۱۴۰۵</span>
+            <span>منبع: جاباما</span>
+          </div>
+        </article>
+
+        <!-- خبر ۲ -->
+        <article class="news-card">
+          <span class="category">صنعت گردشگری</span>
+          <h3>رشد ۲۵ درصدی رزرو آنلاین اقامتگاه در نیمه اول سال</h3>
+          <p>طبق گزارش‌های منتشر شده، پلتفرم‌هایی مانند میهمان‌شو، جاجیگا و اتاقک رشد قابل توجهی در تعداد رزرو داشته‌اند.</p>
+          <div class="meta">
+            <span>۲۸ شهریور ۱۴۰۵</span>
+            <span>منبع: ایسنا</span>
+          </div>
+        </article>
+
+        <!-- خبر ۳ -->
+        <article class="news-card">
+          <span class="category">مکان‌های تفریحی</span>
+          <h3>افتتاح مسیر جدید پیاده‌روی در جنگل‌های شمال</h3>
+          <p>مسیر جدید گردشگری در منطقه جنگلی مازندران با امکان اقامت در کلبه‌های چوبی افتتاح شد.</p>
+          <div class="meta">
+            <span>۲۵ شهریور ۱۴۰۵</span>
+            <span>منبع: میراث آریا</span>
+          </div>
+        </article>
+
+        <!-- خبر ۴ -->
+        <article class="news-card">
+          <span class="category">رزرو اقامتگاه</span>
+          <h3>میهمان‌شو امکان رزرو آنی اقامتگاه را فعال کرد</h3>
+          <p>کاربران از این پس می‌توانند بدون انتظار برای تأیید میزبان، برخی اقامتگاه‌ها را فوری رزرو کنند.</p>
+          <div class="meta">
+            <span>۲۰ شهریور ۱۴۰۵</span>
+            <span>منبع: میهمان‌شو</span>
+          </div>
+        </article>
+
+        <!-- خبر ۵ -->
+        <article class="news-card">
+          <span class="category">صنعت گردشگری</span>
+          <h3>جاجیگا و اتاقک همکاری مشترکی برای توسعه بازار آغاز کردند</h3>
+          <p>دو پلتفرم مطرح رزرو اقامتگاه از همکاری جدید خود برای گسترش خدمات در شهرهای کوچک خبر دادند.</p>
+          <div class="meta">
+            <span>۱۵ شهریور ۱۴۰۵</span>
+            <span>منبع: دنیای اقتصاد</span>
+          </div>
+        </article>
+
+        <!-- خبر ۶ -->
+        <article class="news-card">
+          <span class="category">مکان‌های تفریحی</span>
+          <h3>افزایش بازدید از کویرهای مرکزی در فصل پاییز</h3>
+          <p>با شروع فصل خنک، اقامتگاه‌های کویری با رشد چشمگیر رزرو مواجه شده‌اند.</p>
+          <div class="meta">
+            <span>۱۰ شهریور ۱۴۰۵</span>
+            <span>منبع: ایرنا</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- فوتر -->
+  <footer>
+    <div class="container">
+      <p><strong>گردش‌نیوز</strong> — مرجع ساده اخبار گردشگری ایران</p>
+      <p style="margin-top: 0.5rem; font-size: 0.85rem;">بدون فروش • بدون پشتیبانی • فقط اخبار</p>
+    </div>
+  </footer>
+
+</body>
+</html>
