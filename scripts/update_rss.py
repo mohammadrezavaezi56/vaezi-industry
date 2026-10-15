@@ -130,11 +130,14 @@ def quality(item):
     title=clean(item.get("title",""))
     summary=clean(item.get("summary",""))
     if len(summary)<35:return False
+    joined=(title+" "+summary).casefold()
     source=str(item.get("source","")).casefold().strip()
     url=str(item.get("sourceUrl","")).casefold()
+    if any(x in joined for x in ["مطالبه شبانه‌روزی شدن مرکز سلامت","مرکز سلامت جوکار","بیمارستان ازندریان","سلامت اداری با رویکرد پلیسی","روایت شهدای میناب","مظلومیت شهدای میناب","حافظه دفاع از ایران","لوح ثبت آیین بازگشایی مدارس"]):return False
     if source in {"facebook","facebook.com","instagram","x","twitter","tiktok","pinterest"}:return False
     if any(domain in url for domain in ["facebook.com/","instagram.com/","tiktok.com/","pinterest.com/","x.com/","twitter.com/"]):return False
-    if any(x in (summary+" "+source+" "+url).casefold() for x in ["safariindia.com","sports news","football match"]):return False
+    combined=(summary+" "+source+" "+url).casefold()
+    if any(x in combined for x in ["safariindia.com","sports news","football match"]):return False
     if summary.casefold().strip(" .-")==title.casefold().strip(" .-"):return False
     if re.search(r"https?://|www\\.",summary,re.I) and len(summary)<len(title)+40:return False
     return True
@@ -234,7 +237,7 @@ def parse_feed(payload,source,region,category,google=False):
         joined=(title+" "+summary).casefold()
         bad=["پرستاری با تکیه بر قرآن","رزمایش بازسازی","عملیات میمک","سازندگان و طراحان","صنعت ساختمان","قفل هوشمند","فوتبال","والیبال","بسکتبال","پاراوزنه","تیم ملی","بورس","قیمت دلار","آبرسانی","مرکز سلامت","بیمارستان","پرستاری","خدمات درمانی","نوبت‌دهی پزشک"]
         if any(term in joined for term in bad):continue
-        article_region=classify_region(title,summary,region) if ("عصر گردشگری · راهنمای سفر" in source or content_type=="guide") else region
+        article_region=region
         strict=relevant(title,article_region,summary)
         if not strict:
             terms=context_world if article_region=="world" else context_ir
