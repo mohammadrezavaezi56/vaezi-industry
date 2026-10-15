@@ -129,7 +129,7 @@ def classify_region(title, summary, default_region):
 def quality(item):
     title=clean(item.get("title",""))
     summary=clean(item.get("summary",""))
-    if len(summary)<35:return False
+    if len(summary)<80:return False
     joined=(title+" "+summary).casefold()
     source=str(item.get("source","")).casefold().strip()
     url=str(item.get("sourceUrl","")).casefold()
@@ -139,7 +139,12 @@ def quality(item):
     combined=(summary+" "+source+" "+url).casefold()
     if any(x in combined for x in ["safariindia.com","sports news","football match"]):return False
     if summary.casefold().strip(" .-")==title.casefold().strip(" .-"):return False
-    if re.search(r"https?://|www\\.",summary,re.I) and len(summary)<len(title)+40:return False
+    title_words=re.findall(r"[a-z0-9\u0600-\u06FF]+",title.casefold())
+    summary_words=re.findall(r"[a-z0-9\u0600-\u06FF]+",summary.casefold())
+    if title_words and summary_words:
+        overlap=sum(1 for word in summary_words if word in set(title_words))/len(summary_words)
+        if len(summary)<len(title)+45 and overlap>0.78:return False
+    if re.search(r"https?://|www\.",summary,re.I) and len(summary)<len(title)+40:return False
     return True
 def category_for(title, region, default=""):
     t = title.casefold()

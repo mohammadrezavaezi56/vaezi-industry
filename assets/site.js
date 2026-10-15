@@ -33,7 +33,8 @@ const fallbackItems=[{"id":"iran-recovery-policy","title":"سند بازآفری
 let items=fallbackItems;
 
 async function load(){
-  const status=document.querySelector('[data-news-status]');
+  const statuses=$$('[data-news-status]');
+  const setStatus=message=>statuses.forEach(el=>{el.textContent=message});
   try{
     const response=await fetch('news.json?refresh=1',{cache:'no-store',headers:{'Accept':'application/json'}});
     if(!response.ok)throw new Error('خبرخوان پاسخ '+response.status+' برگرداند');
@@ -42,10 +43,15 @@ async function load(){
     const valid=rows.filter(n=>n&&n.id&&n.title&&String(n.sourceUrl||n.link||'').startsWith('http'));
     if(!valid.length)throw new Error('فهرست خبرها خالی یا نامعتبر است');
     items=valid;
-    if(status)status.textContent='آخرین بازبینی: '+(payload.updatedAt?dateText({publishedAt:payload.updatedAt}):'فید خبر');
+    let updated='زمان بازبینی مشخص نیست';
+    if(payload.updatedAt){
+      const stamp=new Date(payload.updatedAt);
+      if(!Number.isNaN(stamp.getTime()))updated=new Intl.DateTimeFormat('fa-IR',{dateStyle:'medium',timeStyle:'short'}).format(stamp);
+    }
+    setStatus('آخرین به‌روزرسانی آرشیو: '+updated+' · '+new Intl.NumberFormat('fa-IR').format(valid.length)+' مطلب');
   }catch(error){
     items=fallbackItems;
-    if(status)status.textContent='نسخهٔ پشتیبان نمایش داده شد؛ برای دریافت آرشیو تازه اتصال خبرخوان را بررسی کن.';
+    setStatus('نسخهٔ پشتیبان نمایش داده شد؛ اتصال آرشیو تازه در دسترس نیست.');
     console.warn('VAEZI INDUSTRY: news.json could not be loaded; fallback items are shown.',error);
   }
 }
