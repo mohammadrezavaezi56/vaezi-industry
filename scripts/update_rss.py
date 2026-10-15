@@ -240,7 +240,7 @@ def parse_feed(payload,source,region,category,google=False):
 def fetch(url):
     with urlopen(Request(url,headers=HEAD),timeout=18) as response:return response.read(2_000_000)
 def google(query,region):
-    params="hl=en-US&gl=US&ceid=US:en" if region=="world" else "hl=fa-IR&gl=IR&ceid=IR:fa"
+    params="hl=en-US&gl=US&ceid=US:en" if region=="world" else "hl=fa&gl=IR&ceid=IR:fa"
     return fetch("https://news.google.com/rss/search?q="+quote(query)+"&"+params)
 def dedupe(rows):
     seen=set();result=[]
