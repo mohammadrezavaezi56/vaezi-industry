@@ -24,7 +24,7 @@ IR_QUERIES=[
 WORLD_QUERIES=[('روند جهانی','tourism hospitality hotel travel industry when:14d','روند جهانی')]
 IR_TERMS=['گردشگری','گردشگر','توریسم','هتل','اقامتگاه','بوم گردی','بوم‌گردی','سفر','مسافرت','میراث فرهنگی','میراث‌فرهنگی','موزه','جاذبه','صنایع دستی','صنایع‌دستی','هتلداری','هتل‌داری','اکوتوریسم','طبیعت گردی','طبیعت‌گردی','روستا','گردشگری دریایی','گردشگری ساحلی','گردشگری شهری','نمایشگاه گردشگری','هتلدار','گردشگرپذیر','توریستی']
 EN_TERMS=['tourism','tourist','travel','hotel','hospitality','resort','airline','cruise','destination','visitor economy','accommodation']
-BAD_TERMS=['پاراوزنه','ملی پوش','ملی‌پوش','واحد مسکونی','هوش مصنوعی عکس','عکس دهه شصتی','فوتبال','والیبال','بسکتبال','بورس','قیمت دلار','تیم ملی']
+BAD_TERMS=['پاراوزنه','ملی پوش','ملی‌پوش','واحد مسکونی','هوش مصنوعی عکس','عکس دهه شصتی','فوتبال','والیبال','بسکتبال','بورس','قیمت دلار','تیم ملی','آبرسانی']
 HEAD={'User-Agent':'VAEZI-INDUSTRY-RSS/1.1'}
 def clean(value):
  return ' '.join(unescape(re.sub(r'<[^>]+>',' ',value or '')).split())
@@ -88,7 +88,7 @@ def main():
  seeds=json.loads(SEEDS.read_text(encoding='utf-8')).get('items',[])
  old=json.loads(NEWS.read_text(encoding='utf-8')) if NEWS.exists() else {'items':[]}
  old_items=old if isinstance(old,list) else old.get('items',[])
- previous=[x for x in old_items if x.get('kind')=='rss']
+ previous=[x for x in old_items if x.get('kind')=='rss' and relevant(x.get('title',''),x.get('region','iran'))]
  fresh_ir=[];fresh_world=[];warnings=[];success=0
  for name,url in DIRECT:
   try:
