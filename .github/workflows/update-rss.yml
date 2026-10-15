@@ -1,0 +1,42 @@
+name: Update tourism RSS news
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+  push:
+    paths:
+      - "scripts/update_rss.py"
+      - ".github/workflows/update-rss.yml"
+permissions:
+  contents: write
+concurrency:
+  group: tourism-rss
+  cancel-in-progress: false
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Update the news and RSS feed
+        run: |
+          python -m py_compile scripts/update_rss.py
+          python scripts/update_rss.py
+          python -m json.tool news.json >/dev/null
+      - name: Commit published news
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add news.json feed.xml
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh tourism RSS headlines"
+            git push origin main
+          else
+            echo "Nothing new to publish."
+          fi

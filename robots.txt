@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mohammadrezavaezi56.github.io/vaezi-industry/sitemap.xml
