@@ -118,7 +118,7 @@ def relevant(title, region, summary=""):
     if "سفر" in t and any(x in t for x in ["مقصد گردشگری","اقامتگاه","جاذبه گردشگری","طبیعت‌گردی","طبیعت گردی","روستای گردشگری","ساحل","جزیره","میراث فرهنگی","بازدید از جاذبه","رزرو اقامت"]): return True
     return False
 def classify_region(title, summary, default_region):
-    text_for_region=(str(title or "")+" "+str(summary or "")).casefold().replace("‌"," ")
+    text_for_region=str(title or "").casefold().replace("‌"," ")
     iran_places=["ایران","تهران","اصفهان","شیراز","یزد","کیش","قشم","تبریز","مشهد","گیلان","رشت","ماسوله","مازندران","کرمان","کرمانشاه","همدان","لرستان","هرمزگان","بوشهر","سیراف","تخت جمشید","مرودشت","اردبیل","خوزستان","بندرعباس","کاشان","البرز","کرج","قم","سمنان","گلستان","کردستان"]
     foreign_places=["ترکیه","استانبول","آنکارا","آنتالیا","دبی","امارات","قطر","دوحه","عمان","مسقط","عراق","نجف","کربلا","ارمنستان","ایروان","آذربایجان","باکو","هند","ژاپن","چین","تایلند","فرانسه","پاریس","ایتالیا","رم","اسپانیا","لندن","انگلستان","آلمان","برلین","یونان","آتن","مصر","قاهره","سوریه","دمشق","لاذقیه","عربستان","مکه","مدینه","مراکش","گرجستان","تفلیس","مالدیو","بالی","اندونزی","سنگاپور","مالزی","پکن","سئول","نیویورک","آمریکا","کانادا","مکزیک","کرواسی","صربستان","اتریش","وین","سوئیس","اروپا","پراگ","بوداپست","کپنهاگ"]
     has_iran=any(place in text_for_region for place in iran_places)
@@ -234,7 +234,7 @@ def parse_feed(payload,source,region,category,google=False):
         joined=(title+" "+summary).casefold()
         bad=["پرستاری با تکیه بر قرآن","رزمایش بازسازی","عملیات میمک","سازندگان و طراحان","صنعت ساختمان","قفل هوشمند","فوتبال","والیبال","بسکتبال","پاراوزنه","تیم ملی","بورس","قیمت دلار","آبرسانی","مرکز سلامت","بیمارستان","پرستاری","خدمات درمانی","نوبت‌دهی پزشک"]
         if any(term in joined for term in bad):continue
-        article_region=classify_region(title,summary,region)
+        article_region=classify_region(title,summary,region) if ("عصر گردشگری · راهنمای سفر" in source or content_type=="guide") else region
         strict=relevant(title,article_region,summary)
         if not strict:
             terms=context_world if article_region=="world" else context_ir
@@ -357,8 +357,9 @@ def main():
             try:
                 result,rows=future.result()
                 success+=1
-                if result[3]=="world":fresh_world.extend(rows)
-                else:fresh_ir.extend(rows)
+                for article in rows:
+                    if article.get("region")=="world":fresh_world.append(article)
+                    else:fresh_ir.append(article)
                 print("OK",result[1],"accepted",len(rows))
             except Exception as error:
                 warnings.append(task[1]+": "+str(error))
@@ -366,8 +367,8 @@ def main():
     seeds=[enrich(x) for x in seeds]
     curated_ir=[x for x in seeds if x.get("region")!="world"]
     curated_world=[x for x in seeds if x.get("region")=="world"]
-    iran=dedupe(curated_ir+[x for x in previous if x.get("region")!="world"]+fresh_ir)
-    rss_world=dedupe([x for x in previous if x.get("region")=="world"]+fresh_world)
+    iran=dedupe(curated_ir+[x for x in previous if x.get("region")!="world"]+[x for x in fresh_ir if x.get("region")!="world"])
+    rss_world=dedupe([x for x in previous if x.get("region")=="world"]+[x for x in fresh_ir if x.get("region")=="world"]+fresh_world)
     curated_ids={x.get("id") for x in curated_world}
     world=curated_world+[x for x in rss_world if x.get("id") not in curated_ids]
     world_limit=min(10,max(1,round(len(iran)/9))) if world else 0
