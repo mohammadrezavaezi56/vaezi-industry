@@ -1,0 +1,115 @@
+{
+  "licenseNote": "Image credits and license links are shown on the destination page. Photographs were resized for web delivery.",
+  "photos": {
+    "isfahan": {
+      "title": "Naqsh-e Jahan Square, Isfahan",
+      "author": "Armin Dadvand",
+      "source": "https://commons.wikimedia.org/wiki/File:Naqshe_jahan_SQ.jpg",
+      "license": "CC BY-SA 4.0",
+      "localFile": "assets/images/photos/isfahan.jpg"
+    },
+    "yazd": {
+      "title": "Windcatchers in Yazd",
+      "author": "Ms96",
+      "source": "https://commons.wikimedia.org/wiki/File:Windcatchers_in_Yazd.jpg",
+      "license": "CC BY-SA (see source page)",
+      "localFile": "assets/images/photos/yazd.jpg"
+    },
+    "rasht": {
+      "title": "Masuleh Village, Gilan",
+      "author": "Mojtaba Matboyi",
+      "source": "https://commons.wikimedia.org/wiki/File:Masuleh_Village.jpg",
+      "license": "CC BY-SA 4.0",
+      "localFile": "assets/images/photos/rasht.jpg"
+    },
+    "shiraz": {
+      "title": "Nasir al-Mulk Mosque, Shiraz",
+      "author": "Faraz Ahanin",
+      "source": "https://commons.wikimedia.org/wiki/File:Nasir_al-Mulk_Mosque_-_Shiraz.jpg",
+      "license": "CC0 1.0",
+      "localFile": "assets/images/photos/shiraz.jpg"
+    },
+    "kish": {
+      "title": "Beach, Kish Island",
+      "author": "Ivan Mlinaric",
+      "source": "https://commons.wikimedia.org/wiki/File:Beach_Kish_Island_Iran.jpg",
+      "license": "CC BY 2.0",
+      "localFile": "assets/images/photos/kish.jpg"
+    },
+    "qeshm": {
+      "title": "Star Valley, Qeshm Island",
+      "author": "Qeshmnil",
+      "source": "https://commons.wikimedia.org/wiki/File:Qeshm_Island_Star_Valley,_Iran.jpg",
+      "license": "CC BY-SA 4.0",
+      "localFile": "assets/images/photos/qeshm.jpg"
+    },
+    "tehran": {
+      "title": "Azadi Tower, Tehran",
+      "author": "Mostafa Meraji",
+      "source": "https://commons.wikimedia.org/wiki/File:Azadi_Tower_In_Tehran.jpg",
+      "license": "CC0 1.0",
+      "localFile": "assets/images/photos/tehran.jpg"
+    },
+    "persepolis": {
+      "title": "Persepolis Columns",
+      "author": "Abbas Sarhadi",
+      "source": "https://commons.wikimedia.org/wiki/File:Persepolis_Columns.jpg",
+      "license": "CC BY-SA 4.0",
+      "localFile": "assets/images/photos/persepolis.jpg"
+    },
+    "desert": {
+      "title": "Kaluts of Shahdad, Lut Desert",
+      "author": "Salehi1990mohsen",
+      "source": "https://commons.wikimedia.org/wiki/File:Kaluts_of_Shahdad.jpg",
+      "license": "CC BY-SA 4.0",
+      "localFile": "assets/images/photos/desert.jpg"
+    },
+    "guesthouse": {
+      "title": "Traditional Hotel, Yazd",
+      "author": "s1ingshot",
+      "source": "https://commons.wikimedia.org/wiki/File:Traditional_hotel_Yazd.jpg",
+      "license": "CC BY 2.0",
+      "localFile": "assets/images/photos/guesthouse.jpg"
+    },
+    "platform-jabama": {
+      "title": "Illustrative accommodation/travel photograph: Traditional Hotel, Yazd",
+      "author": "s1ingshot",
+      "source": "https://commons.wikimedia.org/wiki/File:Traditional_hotel_Yazd.jpg",
+      "license": "CC BY 2.0",
+      "localFile": "assets/images/platforms/jabama-cover.jpg",
+      "note": "Illustrative editorial image, not an official listing or endorsement from the platform."
+    },
+    "platform-mihmansho": {
+      "title": "Illustrative accommodation/travel photograph: Masuleh Village, Gilan",
+      "author": "Mojtaba Matboyi",
+      "source": "https://commons.wikimedia.org/wiki/File:Masuleh_Village.jpg",
+      "license": "CC BY-SA 4.0",
+      "localFile": "assets/images/platforms/mihmansho-cover.jpg",
+      "note": "Illustrative editorial image, not an official listing or endorsement from the platform."
+    },
+    "platform-shab": {
+      "title": "Illustrative accommodation/travel photograph: Beach, Kish Island",
+      "author": "Ivan Mlinaric",
+      "source": "https://commons.wikimedia.org/wiki/File:Beach_Kish_Island_Iran.jpg",
+      "license": "CC BY 2.0",
+      "localFile": "assets/images/platforms/shab-cover.jpg",
+      "note": "Illustrative editorial image, not an official listing or endorsement from the platform."
+    },
+    "platform-jajiga": {
+      "title": "Illustrative accommodation/travel photograph: Star Valley, Qeshm Island",
+      "author": "Qeshmnil",
+      "source": "https://commons.wikimedia.org/wiki/File:Qeshm_Island_Star_Valley,_Iran.jpg",
+      "license": "CC BY-SA 4.0",
+      "localFile": "assets/images/platforms/jajiga-cover.jpg",
+      "note": "Illustrative editorial image, not an official listing or endorsement from the platform."
+    },
+    "platform-otaghak": {
+      "title": "Illustrative accommodation/travel photograph: Windcatchers in Yazd",
+      "author": "Ms96",
+      "source": "https://commons.wikimedia.org/wiki/File:Windcatchers_in_Yazd.jpg",
+      "license": "CC BY-SA (see source page)",
+      "localFile": "assets/images/platforms/otaghak-cover.jpg",
+      "note": "Illustrative editorial image, not an official listing or endorsement from the platform."
+    }
+  }
+}
