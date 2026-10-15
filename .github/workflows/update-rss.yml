@@ -6,6 +6,7 @@ on:
   push:
     paths:
       - "scripts/update_rss.py"
+      - "news-seed.json"
       - ".github/workflows/update-rss.yml"
 permissions:
   contents: write
