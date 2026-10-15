@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T09:17:58+00:00",
+  "updatedAt": "2026-10-15T09:24:46+00:00",
   "mix": {
     "iranTargetPercent": 90,
     "worldTargetPercent": 10
@@ -53,6 +53,22 @@
       "image": "iran-panorama",
       "kind": "rss",
       "context": "این متن تاریخ و میزبانی اعلام‌شده در خبر را بازتاب می‌دهد؛ برای تعداد حاضران یا دستاوردهای قطعی، به گزارش پس از برگزاری نیاز است.",
+      "archived": false
+    },
+    {
+      "id": "rss-a04f9ba55d77f8",
+      "title": "Antigua and Barbuda to Host SOTIC 2027: A Major Win for Caribbean Tourism - eTurboNews",
+      "summary": "Antigua and Barbuda to Host SOTIC 2027: A Major Win for Caribbean Tourism eTurboNews",
+      "source": "eTurboNews",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9yelJ1RzZ5Z0R4UXhBanlRVENhSFBCYW83dWtPVHRkUFp0dERMeGlBM0djZklZVUxuczNlSWI4SXo2Z18zajhPVEZJX1ZCY2UxRDM1UjFWYjFZVzlqUUtkUGlWY3NFSFlZWncxYW9FYk04a2JyRDd4Vg?oc=5",
+      "publishedAt": "2026-10-14T20:35:49+00:00",
+      "region": "world",
+      "category": "روند جهانی",
+      "image": "world",
+      "kind": "rss",
+      "contentType": "news",
+      "body": "Antigua and Barbuda to Host SOTIC 2027: A Major Win for Caribbean Tourism eTurboNews\n\nاین نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
+      "context": "این نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
       "archived": false
     },
     {
@@ -188,6 +204,38 @@
       "manual": true,
       "archived": true,
       "context": "این مطلب آرشیوی است و برنامهٔ اعلام‌شده در زمان انتشار را منعکس می‌کند؛ برای وضعیت امروز پروژه باید اطلاعیه یا گزارش تازه‌تر پیدا شود."
+    },
+    {
+      "id": "rss-a2847f2aab04fd",
+      "title": "Afghanistan International افغانستان اینترنشنال. . مدار: دستور ترامپ برای محاصره ونزوئلا - Facebook",
+      "summary": "Afghanistan International افغانستان اینترنشنال. . مدار: دستور ترامپ برای محاصره ونزوئلا Facebook",
+      "source": "Facebook",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMi6AJBVV95cUxPVVdkT2lGcUlPSmZ3YjQ2OFVvWE91SW80M2o5dVlUd1NlNjJFTGprdHdFMkdCMkx0ZUZmVXRiT1E1elJDV29GUFFjSElSY29sX1hfNTdpcmdaU0g1aW1zR241ajZuOUYxQ1JFX3Vwc3VfNnc4UTh2TEVsRGs3WlNMamJtbU96SzhQN3hOY1RYWEVaY2hoRXZxdmpVMlBtRHVFb3M4WTZqM0ZsX29zR3ktMDRYOXAzT3BCZnR0QnlrdlNWbTlvNnlqLXVXM2VXdkRIM3NnMEVnNHpGZlc4ZGsydExRRlpFMlNiaTI4S1FSVEZUeVlrSE1tTzc3NGJQZ3Eyc0VJNGliNVpoSS1lQ2NuNE9HZXVUMF9xd2UydGNZdGlQd2lYUlJLSHBhYXpZaHZTYWFhYXhVRHU5ODhoS3FndE5CUnlkeGU4dGpuZWhzQlo2SERFYzAzQXJoRUVwX1BfclRvOFZtM1M?oc=5",
+      "publishedAt": "2025-12-17T08:00:00+00:00",
+      "region": "iran",
+      "category": "بازار گردشگری",
+      "image": "isfahan",
+      "kind": "rss",
+      "contentType": "news",
+      "body": "Afghanistan International افغانستان اینترنشنال. . مدار: دستور ترامپ برای محاصره ونزوئلا Facebook\n\nاین خلاصه بر پایهٔ توضیحات همراه گزارش تهیه شده است؛ برای جزئیات کامل، زمینه و اصلاحیه‌های احتمالی، منبع اصلی را باز کنید.",
+      "context": "این خلاصه بر پایهٔ توضیحات همراه گزارش تهیه شده است؛ برای جزئیات کامل، زمینه و اصلاحیه‌های احتمالی، منبع اصلی را باز کنید.",
+      "archived": true
+    },
+    {
+      "id": "rss-900f86f3e67dc3",
+      "title": "Afghanistan International افغانستان اینترنشنال. . آزیتا ابراهیمی، پژوهشگر و استاد دانشگاه، در ویدیویی که به افغانستان اینترنشنال فرستاد، جزئیات روند ثبت جهانی هنر مینیاتور به سبک کمال‌الدین بهزاد را تشریح کرده است. این هنر در بیستمین نشست آژانس فرهن - Facebook",
+      "summary": "Afghanistan International افغانستان اینترنشنال. . آزیتا ابراهیمی، پژوهشگر و استاد دانشگاه، در ویدیویی که به افغانستان اینترنشنال فرستاد، جزئیات روند ثبت جهانی هنر مینیاتور به سبک کمال‌الدین بهزاد را تشریح کرده است. این هنر در بیستمین نشست آژانس فرهن Facebook",
+      "source": "Facebook",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMimwVBVV95cUxNLVlDaXRMa1RQVlFHbEZwQndfNVJIOEFleGZPUXc4c3NqN2tYUlNpS3pQbE5oX0Q3MjFRcmtkNmw2RmVhOHBxTHA0WkVHU0NHSFVNbFM2UU1QMnJwZkRqNG80S0wtWGpya2pCaEtYeUpvV0RVOWE5YmxFYm15QXlSalZQOWRjMmlzcl8tWTZaLXl2aUZzVEM0a3ZUYWlqc1hLX3dQYy1KRVB0SkhQSnMzM2M0OFNKNGZ2bExYNVpOb3hERERzbW5udUp1SERoajFjWHFwdFhXTXNTMDZnYXBDYTFDbnZvZ2RraWR1dWJVRmRHZS1lOGRxeGFReWw5Umc4c3FjcVo3RkhfVmZ4UDk5V1JLRmpBQ0FJNHg2RE1MU19Yazh0NFFXZm1KWWd2QV9UczJJeVlNMERmTjh0eXhyQXhUV2JjY2pGNGZNNDZYMXNpeXluM2hHS2cwZkRYZ0N3dGxpV3k0bmJjS0Yzcks3VXpnZmJfa21pSWVtQUU0V1R0TlR4bUd4SnRtbzNNZjFXYnFOa1ZmR2JINHY5QS00ZF9CVjNjVDVYM0tDWVY0amo1NzN0Z3BXamdiWW5pRXo4U3gtWURydFJWSk9uYzBieGVqc3pmS25DUDVVQnV2dUgxcEY4aXM5VWxMaGV5NUQwbkI4WHNraEozT0xXYUpYQk1tZVpCR0k0X3dFQzUtMGpnMV9zSWdCd0VKdU9hc20wOEZSU1JyenVPRld1RnNiaFVYOVd5aHBlTXdENzhNX01WbDd5dS1uX0ZLZ1Z3VlVOdTdORmI2V3d4enhnQjZHNnZrc2ZsbGgyZmNCbWp5cnBQV1hJNjVIalBDZ3NZbFlXaTN4N2ZBWElOaGEzNHctekhXV3RreDYyLVM4?oc=5",
+      "publishedAt": "2025-12-14T08:00:00+00:00",
+      "region": "iran",
+      "category": "میراث فرهنگی",
+      "image": "isfahan",
+      "kind": "rss",
+      "contentType": "news",
+      "body": "Afghanistan International افغانستان اینترنشنال. . آزیتا ابراهیمی، پژوهشگر و استاد دانشگاه، در ویدیویی که به افغانستان اینترنشنال فرستاد، جزئیات روند ثبت جهانی هنر مینیاتور به سبک کمال‌الدین بهزاد را تشریح کرده است. این هنر در بیستمین نشست آژانس فرهن Facebook\n\nاین خلاصه بر پایهٔ توضیحات همراه گزارش تهیه شده است؛ برای جزئیات کامل، زمینه و اصلاحیه‌های احتمالی، منبع اصلی را باز کنید.",
+      "context": "این خلاصه بر پایهٔ توضیحات همراه گزارش تهیه شده است؛ برای جزئیات کامل، زمینه و اصلاحیه‌های احتمالی، منبع اصلی را باز کنید.",
+      "archived": true
     },
     {
       "id": "tehran-urban-tourism-archive",
