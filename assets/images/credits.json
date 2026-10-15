@@ -110,6 +110,18 @@
       "license": "CC BY-SA (see source page)",
       "localFile": "assets/images/platforms/otaghak-cover.jpg",
       "note": "Illustrative editorial image, not an official listing or endorsement from the platform."
+    },
+    "iran-panorama": {
+      "title": "Editorial collage of Iranian travel destinations",
+      "author": "Composite of the contributors credited in this manifest",
+      "source": "https://commons.wikimedia.org/",
+      "license": "See individual licenses of the component photos in this manifest",
+      "localFile": "assets/images/photos/iran-panorama.jpg",
+      "components": [
+        "isfahan",
+        "rasht",
+        "kish"
+      ]
     }
   }
 }
