@@ -59,3 +59,52 @@
 .platform-preview img{width:100%;height:100%;object-fit:cover}
 @media(max-width:760px){.news-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){.news-grid{grid-template-columns:1fr}.news-card .cover{height:190px}.pagination{gap:7px}.page-button{padding:9px 13px}}
+
+/* Editorial platform art, travel motifs, and homepage scroll treatment */
+.platform-grid{grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;gap:18px}
+.platform-card{display:flex;flex-direction:column;padding:0;overflow:hidden;gap:0;position:relative;transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease}
+.platform-card:hover{transform:translateY(-4px);box-shadow:0 18px 36px rgba(14,61,48,.13);border-color:#c7dacf}
+.platform-jabama{--mark-color:#138b99;--mark-wash:#e5f5f5}
+.platform-mihmansho{--mark-color:#b67d27;--mark-wash:#fbf0dc}
+.platform-shab{--mark-color:#6d67ab;--mark-wash:#efedfb}
+.platform-jajiga{--mark-color:#317451;--mark-wash:#e6f2e7}
+.platform-otaghak{--mark-color:#a55c3a;--mark-wash:#f7eae2}
+.platform-preview{height:185px;border-radius:0;isolation:isolate;background:#e4eee5}
+.platform-preview:after{content:"";position:absolute;inset:34% 0 0;background:linear-gradient(0deg,rgba(4,31,25,.72),transparent);pointer-events:none}
+.platform-preview img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .65s cubic-bezier(.2,.65,.25,1),filter .3s}
+.platform-card:hover .platform-preview img{transform:scale(1.055);filter:saturate(1.06)}
+.platform-preview:before{content:"";position:absolute;inset:12px;border:1px solid #ffffff63;border-radius:12px;z-index:1;pointer-events:none}
+.preview-label{z-index:2;right:22px;bottom:19px;background:rgba(7,43,35,.8);padding:5px 10px;font-size:10px;border:1px solid #ffffff3b;backdrop-filter:blur(6px)}
+.preview-symbol{position:absolute;left:22px;top:20px;width:46px;height:46px;border-radius:15px;border:1px solid #ffffff80;background:rgba(255,255,255,.88);box-shadow:0 8px 25px rgba(5,36,28,.15);display:grid;place-items:center;font-size:24px;z-index:2;color:var(--mark-color);backdrop-filter:blur(8px)}
+.preview-symbol svg{width:27px;height:35px;display:block}
+.platform-meta-row{display:flex;gap:13px;align-items:center;padding:17px 16px 14px;flex:1}
+.platform-mark{position:relative;flex:0 0 54px;width:54px;height:54px;padding:0;background:transparent;overflow:visible}
+.platform-mark .platform-logo{position:absolute;right:0;top:0;width:42px;height:42px;object-fit:contain;padding:4px;border-radius:13px;background:#fff;border:1px solid #e7ece5;box-shadow:0 3px 11px #153c3010}
+.platform-mark .brand-symbol{position:absolute;left:-2px;bottom:-1px;width:27px;height:27px;border:2px solid #fff;border-radius:50%;display:grid;place-items:center;background:var(--mark-color);color:#fff;font-size:14px;box-shadow:0 3px 9px #133b3020;line-height:1}
+.brand-symbol svg{width:15px;height:22px;display:block;color:#fff}
+.platform-copy{min-width:0;flex:1}
+.platform-copy h2{font-size:16px;line-height:1.7;margin:0 0 3px;color:#133f35}
+.platform-copy p{font-size:12px;line-height:1.9;margin:0;color:var(--muted)}
+.platform-actions{margin:0 16px;padding:12px 0 0;gap:12px;margin-bottom:17px}
+.platform-card .btn{padding:8px 12px}
+.photo-note{margin:15px 2px 0;color:var(--muted);font-size:11px;line-height:2}
+.travel-scroll-indicator{position:fixed;top:0;right:0;left:0;height:4px;z-index:1000;pointer-events:none;background:#0b3d3214}
+.travel-route-fill{position:absolute;inset-block:0;right:0;width:var(--travel-progress,0%);background:linear-gradient(90deg,#d8b36d,#0a7866);box-shadow:0 0 10px #1b806144}
+.travel-route-plane{position:absolute;top:-8px;right:calc(var(--travel-progress,0%) - 9px);width:22px;height:22px;display:grid;place-items:center;border-radius:50%;background:#fffdf7;border:1px solid #dfc18b;color:#0b594b;font-size:12px;box-shadow:0 3px 10px #0f403024;transition:right .08s linear}
+.travel-reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
+.travel-reveal.is-visible{opacity:1;transform:translateY(0)}
+.hero-image:before{content:"";position:absolute;inset:15px;border:1px dashed #ffffff7b;border-radius:20px;pointer-events:none;z-index:-1;opacity:.72}
+.hero-image{background-position:center;background-size:cover}
+@media(max-width:980px){.platform-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:680px){
+ .platform-grid{grid-template-columns:1fr}
+ .platform-preview{height:180px}
+ .platform-meta-row{padding:15px 15px 12px}
+ .platform-actions{margin-inline:15px}
+ .travel-route-plane{width:19px;height:19px;top:-7px}
+}
+@media(prefers-reduced-motion:reduce){
+ .travel-reveal{opacity:1;transform:none;transition:none}
+ .platform-card,.platform-preview img,.travel-route-plane{transition:none}
+ .platform-card:hover,.news-card:hover{transform:none}
+}

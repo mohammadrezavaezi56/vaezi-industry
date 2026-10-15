@@ -58,9 +58,24 @@ async function load(){
 function safeUrl(s){try{let u=new URL(s,location.href);return ['http:','https:'].includes(u.protocol)?u.href:'#'}catch{return '#'}}
 function dateText(n){if(n.displayDate)return n.displayDate;if(!n.publishedAt)return 'تاریخ در منبع مشخص نشده';let d=new Date(n.publishedAt);return isNaN(d)?n.publishedAt:new Intl.DateTimeFormat('fa-IR',{dateStyle:'medium'}).format(d)}
 function scene(n){return Object.hasOwn(photos,n)?n:'iran-panorama'}
+function storyHash(value){let h=2166136261;for(const ch of String(value||'')){h^=ch.charCodeAt(0);h=Math.imul(h,16777619)}return h>>>0}
+function storyPhoto(n){
+ const text=[n.title,n.summary,n.body,n.context,n.category,n.source].join(' ').toLocaleLowerCase('fa');
+ const rules=[
+  [/دریا|ساحل|جزیره|کیش|قشم|بندر|خلیج|ساحلی|کشتی|کروز|دریایی/,['kish','qeshm']],
+  [/جنگل|طبیعت|روستا|گیلان|مازندران|ماسوله|آبشار|کوهستان|محیط.?زیست|پارک ملی/,['rasht','guesthouse','desert']],
+  [/تهران|میلاد|نمایشگاه|همایش|فرودگاه|سیاست.?گذاری|آزمون|وزارت|دولت|سرمایه.?گذاری|تسهیلات|اقتصاد|بازار|پلتفرم|رزرو|اقامت|هتل|میزبان|جاباما|میهمان.?شو|جاجیگا|اتاقک/,['tehran','guesthouse','iran-panorama']],
+  [/یزد|بادگیر|کویر|کلوت|بیابان|نجوم|آسمان شب/,['yazd','desert']],
+  [/اصفهان|نقش.?جهان|تخت.?جمشید|پارسه|میراث|فرهنگ|تاریخی|مسجد|موزه|باستانی|صنایع.?دستی/,['isfahan','shiraz','persepolis','yazd']]
+ ];
+ const hash=storyHash(String(n.id||'')+'|'+String(n.title||''));
+ for(const [pattern,choices] of rules){if(pattern.test(text))return choices[hash%choices.length]}
+ const fallback=n.region==='world'?['tehran','kish','rasht','yazd','shiraz','desert','guesthouse','qeshm']:['isfahan','rasht','tehran','kish','yazd','shiraz','guesthouse','desert','qeshm','persepolis'];
+ return fallback[hash%fallback.length]
+}
 function shortExcerpt(value,max=235){let text=String(value||'').trim();return text.length>max?text.slice(0,max-1).trimEnd()+'…':text}
 function card(n){
- let pic=scene(n.image),arch=n.archived||/آرشیو/.test(n.title),region=n.region==='world'?'جهان':'ایران';
+ let pic=storyPhoto(n),arch=n.archived||/آرشیو/.test(n.title),region=n.region==='world'?'جهان':'ایران';
  let alt=photoAlt[pic]||'عکس آرشیوی مرتبط با موضوع خبر';
  let summary=shortExcerpt(n.summary||n.body||'برای جزئیات بیشتر گزارش اصلی را بخوانید.');
  return '<article class="news-card"><div class="cover" style="background-image:url(\'assets/images/'+pic+'.svg\')"><img loading="lazy" decoding="async" src="'+esc(photos[pic]||'')+'" alt="'+esc(alt)+'" title="'+esc(alt)+'" onerror="this.style.display=\'none\'"></div><div class="card-body"><span class="tag '+(n.region==='world'?'world':'')+'">'+region+' · '+esc(n.category||'گردشگری')+'</span><h3><a href="article.html?id='+encodeURIComponent(n.id)+'">'+esc(n.title)+'</a></h3><span class="summary-label">خلاصهٔ مطلب</span><p class="card-summary">'+esc(summary)+'</p><div class="card-meta"><span>'+esc(dateText(n))+'</span><b>'+esc(n.source||'منبع')+(arch?' · آرشیو':'')+'</b></div><div class="card-actions"><a class="mini-btn" href="article.html?id='+encodeURIComponent(n.id)+'">متن کامل ←</a><a class="text-link" href="'+esc(safeUrl(n.sourceUrl||n.link||'#'))+'" target="_blank" rel="noopener noreferrer">منبع اصلی ↗</a></div></div></article>'
@@ -168,6 +183,18 @@ function photoBacks(){
   detail.prepend(img);
  }
 }
+function travelEffects(){
+ const home=$('.hero');if(!home)return;
+ const reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const indicator=document.createElement('div');indicator.className='travel-scroll-indicator';indicator.setAttribute('aria-hidden','true');
+ indicator.innerHTML='<span class="travel-route-fill"></span><span class="travel-route-plane">✈</span>';document.body.appendChild(indicator);
+ const update=()=>{const root=document.documentElement,max=Math.max(1,root.scrollHeight-window.innerHeight),progress=Math.max(0,Math.min(1,window.scrollY/max));indicator.style.setProperty('--travel-progress',(progress*100).toFixed(2)+'%')};
+ document.addEventListener('scroll',update,{passive:true});window.addEventListener('resize',update,{passive:true});update();
+ const targets=$('.hero-copy,.hero-image,.quick>a,.section-heading,.destination-card,.feature,.band,.news-card');
+ if(reduced||!('IntersectionObserver' in window)){targets.forEach(el=>el.classList.add('travel-reveal','is-visible'));return}
+ const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}})},{threshold:.12,rootMargin:'0px 0px -26px 0px'});
+ targets.forEach((el,i)=>{el.classList.add('travel-reveal');el.style.transitionDelay=(Math.min(i%4,3)*55)+'ms';observer.observe(el)});
+}
 function menu(){let b=$('.menu-button'),n=$('#main-nav');if(!b||!n)return;b.addEventListener('click',()=>{let open=n.classList.toggle('open');b.setAttribute('aria-expanded',String(open));let s=$('span',b);if(s)s.textContent=open?'بستن':'منو'})}
-async function init(){await load();latest();newsPage();destination();article();citySearch();photoBacks();menu()}init();
+async function init(){await load();latest();newsPage();destination();article();citySearch();photoBacks();menu();travelEffects()}init();
 })();
