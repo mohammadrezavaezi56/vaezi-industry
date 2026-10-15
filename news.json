@@ -1,15 +1,63 @@
 {
-  "updatedAt": "2026-10-15T09:26:05+00:00",
+  "updatedAt": "2026-10-15T09:31:00+00:00",
   "mix": {
     "iranTargetPercent": 90,
     "worldTargetPercent": 10
   },
   "feedStatus": {
-    "configuredFeeds": 47,
+    "configuredFeeds": 78,
     "successfulFeeds": 47,
-    "warnings": []
+    "warnings": [
+      "عصر گردشگری · راهنمای سفر · آرشیو 3: duplicate attribute: line 2, column 61",
+      "خبرگزاری تسنیم · سفر: HTTP Error 502: Bad Gateway",
+      "عصر گردشگری · راهنمای سفر · آرشیو 4: duplicate attribute: line 2, column 61",
+      "عصر گردشگری · راهنمای سفر · آرشیو 2: duplicate attribute: line 2, column 61",
+      "عصر گردشگری · راهنمای سفر · آرشیو 5: duplicate attribute: line 2, column 61",
+      "عصر گردشگری · راهنمای سفر · آرشیو 6: duplicate attribute: line 2, column 61",
+      "عصر گردشگری · راهنمای سفر · آرشیو 11: duplicate attribute: line 2, column 61",
+      "عصر گردشگری · راهنمای سفر · آرشیو 8: duplicate attribute: line 2, column 61",
+      "عصر گردشگری · راهنمای سفر · آرشیو 9: duplicate attribute: line 2, column 61",
+      "عصر گردشگری · راهنمای سفر · آرشیو 10: duplicate attribute: line 2, column 61",
+      "عصر گردشگری · راهنمای سفر · آرشیو 12: duplicate attribute: line 2, column 61",
+      "عصر گردشگری · راهنمای سفر · آرشیو 7: duplicate attribute: line 2, column 61",
+      "عصر گردشگری · راهنمای سفر · آرشیو 14: duplicate attribute: line 2, column 61",
+      "عصر گردشگری · راهنمای سفر · آرشیو 13: duplicate attribute: line 2, column 61",
+      "عصر گردشگری · راهنمای سفر · آرشیو 15: duplicate attribute: line 2, column 61",
+      "عصر گردشگری · راهنمای سفر · آرشیو 16: duplicate attribute: line 2, column 61",
+      "عصر گردشگری · میراث فرهنگی · آرشیو 3: duplicate attribute: line 2, column 61",
+      "عصر گردشگری · میراث فرهنگی · آرشیو 4: duplicate attribute: line 2, column 61",
+      "عصر گردشگری · میراث فرهنگی · آرشیو 2: duplicate attribute: line 2, column 61",
+      "عصر گردشگری · میراث فرهنگی · آرشیو 5: duplicate attribute: line 2, column 61",
+      "عصر گردشگری · میراث فرهنگی · آرشیو 6: duplicate attribute: line 2, column 61",
+      "عصر گردشگری · میراث فرهنگی · آرشیو 7: duplicate attribute: line 2, column 61",
+      "عصر گردشگری · میراث فرهنگی · آرشیو 8: duplicate attribute: line 2, column 61",
+      "عصر گردشگری · میراث فرهنگی · آرشیو 11: duplicate attribute: line 2, column 61",
+      "عصر گردشگری · میراث فرهنگی · آرشیو 9: duplicate attribute: line 2, column 61",
+      "عصر گردشگری · میراث فرهنگی · آرشیو 10: duplicate attribute: line 2, column 61",
+      "عصر گردشگری · میراث فرهنگی · آرشیو 12: duplicate attribute: line 2, column 61",
+      "عصر گردشگری · میراث فرهنگی · آرشیو 13: duplicate attribute: line 2, column 61",
+      "عصر گردشگری · میراث فرهنگی · آرشیو 14: duplicate attribute: line 2, column 61",
+      "عصر گردشگری · میراث فرهنگی · آرشیو 15: duplicate attribute: line 2, column 61",
+      "عصر گردشگری · میراث فرهنگی · آرشیو 16: duplicate attribute: line 2, column 61"
+    ]
   },
   "items": [
+    {
+      "id": "rss-f2339f25d30b9f",
+      "title": "مطالبه شبانه‌روزی شدن مرکز سلامت جوکار و تکمیل بیمارستان ازندریان",
+      "summary": "مسئولان ارشد ملی و استانی حوزه سلامت و درمان، پنجشنبه ۲۳ مهرماه، در جریان سفر به شهرستان ملایر از مرکز خدمات جامع سلامت شهر جوکار، مرکز خدمات جامع سلامت شبانه‌روزی ازندریان و پایگاه امداد و نجات جاده‌ای گردنه زاغه بازدید کردند.",
+      "source": "خبرگزاری ایسنا",
+      "sourceUrl": "https://www.isna.ir/news/1405072315505/%D9%85%D8%B7%D8%A7%D9%84%D8%A8%D9%87-%D8%B4%D8%A8%D8%A7%D9%86%D9%87-%D8%B1%D9%88%D8%B2%DB%8C-%D8%B4%D8%AF%D9%86-%D9%85%D8%B1%DA%A9%D8%B2-%D8%B3%D9%84%D8%A7%D9%85%D8%AA-%D8%AC%D9%88%DA%A9%D8%A7%D8%B1-%D9%88-%D8%AA%DA%A9%D9%85%DB%8C%D9%84-%D8%A8%DB%8C%D9%85%D8%A7%D8%B1%D8%B3%D8%AA%D8%A7%D9%86-%D8%A7%D8%B2%D9%86%D8%AF%D8%B1%DB%8C%D8%A7%D9%86",
+      "publishedAt": "2026-10-15T09:14:11+00:00",
+      "region": "world",
+      "category": "روند جهانی",
+      "image": "world",
+      "kind": "rss",
+      "contentType": "news",
+      "body": "مسئولان ارشد ملی و استانی حوزه سلامت و درمان، پنجشنبه ۲۳ مهرماه، در جریان سفر به شهرستان ملایر از مرکز خدمات جامع سلامت شهر جوکار، مرکز خدمات جامع سلامت شبانه‌روزی ازندریان و پایگاه امداد و نجات جاده‌ای گردنه زاغه بازدید کردند.\n\nاین نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
+      "context": "این نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
+      "archived": false
+    },
     {
       "id": "rss-62cb1cd2f973da",
       "title": "مدیرکل میراث فرهنگی استان: احیای هویت تاریخی تبریز به مطالبه عمومی تبدیل شده است",
@@ -53,22 +101,6 @@
       "image": "iran-panorama",
       "kind": "rss",
       "context": "این متن تاریخ و میزبانی اعلام‌شده در خبر را بازتاب می‌دهد؛ برای تعداد حاضران یا دستاوردهای قطعی، به گزارش پس از برگزاری نیاز است.",
-      "archived": false
-    },
-    {
-      "id": "rss-a04f9ba55d77f8",
-      "title": "Antigua and Barbuda to Host SOTIC 2027: A Major Win for Caribbean Tourism - eTurboNews",
-      "summary": "Antigua and Barbuda to Host SOTIC 2027: A Major Win for Caribbean Tourism eTurboNews",
-      "source": "eTurboNews",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9yelJ1RzZ5Z0R4UXhBanlRVENhSFBCYW83dWtPVHRkUFp0dERMeGlBM0djZklZVUxuczNlSWI4SXo2Z18zajhPVEZJX1ZCY2UxRDM1UjFWYjFZVzlqUUtkUGlWY3NFSFlZWncxYW9FYk04a2JyRDd4Vg?oc=5",
-      "publishedAt": "2026-10-14T20:35:49+00:00",
-      "region": "world",
-      "category": "روند جهانی",
-      "image": "world",
-      "kind": "rss",
-      "contentType": "news",
-      "body": "Antigua and Barbuda to Host SOTIC 2027: A Major Win for Caribbean Tourism eTurboNews\n\nاین نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
-      "context": "این نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
       "archived": false
     },
     {
@@ -204,38 +236,6 @@
       "manual": true,
       "archived": true,
       "context": "این مطلب آرشیوی است و برنامهٔ اعلام‌شده در زمان انتشار را منعکس می‌کند؛ برای وضعیت امروز پروژه باید اطلاعیه یا گزارش تازه‌تر پیدا شود."
-    },
-    {
-      "id": "rss-a2847f2aab04fd",
-      "title": "Afghanistan International افغانستان اینترنشنال. . مدار: دستور ترامپ برای محاصره ونزوئلا - Facebook",
-      "summary": "Afghanistan International افغانستان اینترنشنال. . مدار: دستور ترامپ برای محاصره ونزوئلا Facebook",
-      "source": "Facebook",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMi6AJBVV95cUxPVVdkT2lGcUlPSmZ3YjQ2OFVvWE91SW80M2o5dVlUd1NlNjJFTGprdHdFMkdCMkx0ZUZmVXRiT1E1elJDV29GUFFjSElSY29sX1hfNTdpcmdaU0g1aW1zR241ajZuOUYxQ1JFX3Vwc3VfNnc4UTh2TEVsRGs3WlNMamJtbU96SzhQN3hOY1RYWEVaY2hoRXZxdmpVMlBtRHVFb3M4WTZqM0ZsX29zR3ktMDRYOXAzT3BCZnR0QnlrdlNWbTlvNnlqLXVXM2VXdkRIM3NnMEVnNHpGZlc4ZGsydExRRlpFMlNiaTI4S1FSVEZUeVlrSE1tTzc3NGJQZ3Eyc0VJNGliNVpoSS1lQ2NuNE9HZXVUMF9xd2UydGNZdGlQd2lYUlJLSHBhYXpZaHZTYWFhYXhVRHU5ODhoS3FndE5CUnlkeGU4dGpuZWhzQlo2SERFYzAzQXJoRUVwX1BfclRvOFZtM1M?oc=5",
-      "publishedAt": "2025-12-17T08:00:00+00:00",
-      "region": "iran",
-      "category": "بازار گردشگری",
-      "image": "isfahan",
-      "kind": "rss",
-      "contentType": "news",
-      "body": "Afghanistan International افغانستان اینترنشنال. . مدار: دستور ترامپ برای محاصره ونزوئلا Facebook\n\nاین خلاصه بر پایهٔ توضیحات همراه گزارش تهیه شده است؛ برای جزئیات کامل، زمینه و اصلاحیه‌های احتمالی، منبع اصلی را باز کنید.",
-      "context": "این خلاصه بر پایهٔ توضیحات همراه گزارش تهیه شده است؛ برای جزئیات کامل، زمینه و اصلاحیه‌های احتمالی، منبع اصلی را باز کنید.",
-      "archived": true
-    },
-    {
-      "id": "rss-900f86f3e67dc3",
-      "title": "Afghanistan International افغانستان اینترنشنال. . آزیتا ابراهیمی، پژوهشگر و استاد دانشگاه، در ویدیویی که به افغانستان اینترنشنال فرستاد، جزئیات روند ثبت جهانی هنر مینیاتور به سبک کمال‌الدین بهزاد را تشریح کرده است. این هنر در بیستمین نشست آژانس فرهن - Facebook",
-      "summary": "Afghanistan International افغانستان اینترنشنال. . آزیتا ابراهیمی، پژوهشگر و استاد دانشگاه، در ویدیویی که به افغانستان اینترنشنال فرستاد، جزئیات روند ثبت جهانی هنر مینیاتور به سبک کمال‌الدین بهزاد را تشریح کرده است. این هنر در بیستمین نشست آژانس فرهن Facebook",
-      "source": "Facebook",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMimwVBVV95cUxNLVlDaXRMa1RQVlFHbEZwQndfNVJIOEFleGZPUXc4c3NqN2tYUlNpS3pQbE5oX0Q3MjFRcmtkNmw2RmVhOHBxTHA0WkVHU0NHSFVNbFM2UU1QMnJwZkRqNG80S0wtWGpya2pCaEtYeUpvV0RVOWE5YmxFYm15QXlSalZQOWRjMmlzcl8tWTZaLXl2aUZzVEM0a3ZUYWlqc1hLX3dQYy1KRVB0SkhQSnMzM2M0OFNKNGZ2bExYNVpOb3hERERzbW5udUp1SERoajFjWHFwdFhXTXNTMDZnYXBDYTFDbnZvZ2RraWR1dWJVRmRHZS1lOGRxeGFReWw5Umc4c3FjcVo3RkhfVmZ4UDk5V1JLRmpBQ0FJNHg2RE1MU19Yazh0NFFXZm1KWWd2QV9UczJJeVlNMERmTjh0eXhyQXhUV2JjY2pGNGZNNDZYMXNpeXluM2hHS2cwZkRYZ0N3dGxpV3k0bmJjS0Yzcks3VXpnZmJfa21pSWVtQUU0V1R0TlR4bUd4SnRtbzNNZjFXYnFOa1ZmR2JINHY5QS00ZF9CVjNjVDVYM0tDWVY0amo1NzN0Z3BXamdiWW5pRXo4U3gtWURydFJWSk9uYzBieGVqc3pmS25DUDVVQnV2dUgxcEY4aXM5VWxMaGV5NUQwbkI4WHNraEozT0xXYUpYQk1tZVpCR0k0X3dFQzUtMGpnMV9zSWdCd0VKdU9hc20wOEZSU1JyenVPRld1RnNiaFVYOVd5aHBlTXdENzhNX01WbDd5dS1uX0ZLZ1Z3VlVOdTdORmI2V3d4enhnQjZHNnZrc2ZsbGgyZmNCbWp5cnBQV1hJNjVIalBDZ3NZbFlXaTN4N2ZBWElOaGEzNHctekhXV3RreDYyLVM4?oc=5",
-      "publishedAt": "2025-12-14T08:00:00+00:00",
-      "region": "iran",
-      "category": "میراث فرهنگی",
-      "image": "isfahan",
-      "kind": "rss",
-      "contentType": "news",
-      "body": "Afghanistan International افغانستان اینترنشنال. . آزیتا ابراهیمی، پژوهشگر و استاد دانشگاه، در ویدیویی که به افغانستان اینترنشنال فرستاد، جزئیات روند ثبت جهانی هنر مینیاتور به سبک کمال‌الدین بهزاد را تشریح کرده است. این هنر در بیستمین نشست آژانس فرهن Facebook\n\nاین خلاصه بر پایهٔ توضیحات همراه گزارش تهیه شده است؛ برای جزئیات کامل، زمینه و اصلاحیه‌های احتمالی، منبع اصلی را باز کنید.",
-      "context": "این خلاصه بر پایهٔ توضیحات همراه گزارش تهیه شده است؛ برای جزئیات کامل، زمینه و اصلاحیه‌های احتمالی، منبع اصلی را باز کنید.",
-      "archived": true
     },
     {
       "id": "tehran-urban-tourism-archive",
