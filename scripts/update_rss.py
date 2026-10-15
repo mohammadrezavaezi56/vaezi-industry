@@ -18,16 +18,12 @@ DIRECT = [
     ("خبرگزاری ایسنا", "https://www.isna.ir/rss"),
     ("خبرآنلاین", "https://www.khabaronline.ir/rss"),
     ("باشگاه خبرنگاران جوان", "https://www.yjc.ir/fa/rss/allnews"),
-    ("خبرگزاری تسنیم · سفر", "https://www.tasnimnews.ir/fa/rss/section/1416"),
 ]
-# Historical pages from Persian tourism-editorial categories, with source attribution preserved.
-ARCHIVE_FEEDS = [
-    ("عصر گردشگری · راهنمای سفر", "https://asregardeshgari.com/category/travel-guide/feed/"),
-    ("عصر گردشگری · میراث فرهنگی", "https://asregardeshgari.com/category/cultural-heritage-news/feed/"),
+WP_ARCHIVES = [
+    ("عصر گردشگری · میراث فرهنگی", "cultural-heritage-news", "میراث فرهنگی", "news"),
+    ("عصر گردشگری · راهنمای سفر", "travel-guide", "راهنمای سفر", "guide"),
 ]
-for archive_name, archive_url in ARCHIVE_FEEDS:
-    for archive_page in range(2, 17):
-        DIRECT.append((archive_name + " · آرشیو " + str(archive_page), archive_url + "?paged=" + str(archive_page)))
+
 IR_QUERIES = [
     ("بازار گردشگری ایران", "گردشگری ایران when:365d", "بازار گردشگری"),
     ("سیاست‌گذاری گردشگری", "وزارت میراث فرهنگی گردشگری ایران when:365d", "سیاست‌گذاری"),
@@ -90,7 +86,7 @@ EN_TERMS = [
 ]
 BAD_TERMS = [
     "پاراوزنه","ملی پوش","ملی‌پوش","واحد مسکونی","هوش مصنوعی عکس","عکس دهه شصتی","فوتبال",
-    "والیبال","بسکتبال","بورس","قیمت دلار","تیم ملی","آبرسانی","رزمایش بازسازی","عملیات میمک",
+    "والیبال","بسکتبال","بورس","قیمت دلار","تیم ملی","آبرسانی","مرکز سلامت","بیمارستان","پرستاری","خدمات درمانی","رزمایش بازسازی","عملیات میمک",
     "سازندگان و طراحان","صنعت ساختمان","قفل هوشمند"
 ]
 HEAD = {"User-Agent": "VAEZI-INDUSTRY-RSS/2.0 (tourism editorial archive)"}
@@ -236,7 +232,7 @@ def parse_feed(payload,source,region,category,google=False):
         summary=clean(text_child(node,{"description","summary","content"}))
         if not title or not link.startswith(("http://","https://")):continue
         joined=(title+" "+summary).casefold()
-        bad=["پرستاری با تکیه بر قرآن","رزمایش بازسازی","عملیات میمک","سازندگان و طراحان","صنعت ساختمان","قفل هوشمند","فوتبال","والیبال","بسکتبال","پاراوزنه","تیم ملی","بورس","قیمت دلار","آبرسانی"]
+        bad=["پرستاری با تکیه بر قرآن","رزمایش بازسازی","عملیات میمک","سازندگان و طراحان","صنعت ساختمان","قفل هوشمند","فوتبال","والیبال","بسکتبال","پاراوزنه","تیم ملی","بورس","قیمت دلار","آبرسانی","مرکز سلامت","بیمارستان","پرستاری","خدمات درمانی","نوبت‌دهی پزشک"]
         if any(term in joined for term in bad):continue
         article_region=classify_region(title,summary,region)
         strict=relevant(title,article_region,summary)
@@ -259,6 +255,56 @@ def parse_feed(payload,source,region,category,google=False):
         items.append(enrich(item))
     print("FEED",source,"raw",seen,"kept",len(items),"relevance_filtered",relevance_rejects,"quality_filtered",quality_rejects)
     return items
+def fetch_json(url):
+    with urlopen(Request(url,headers=HEAD),timeout=22) as response:
+        payload=response.read(5_000_000)
+    return json.loads(payload.decode("utf-8",errors="replace"))
+def parse_wp_archive(source,slug,region,category,content_type):
+    base_url="https://asregardeshgari.com/wp-json/wp/v2"
+    categories=fetch_json(base_url+"/categories?slug="+quote(slug)+"&_fields=id,slug,name")
+    if not isinstance(categories,list) or not categories:
+        # Alternate WordPress REST route for installations that disable pretty REST URLs.
+        categories=fetch_json("https://asregardeshgari.com/?rest_route=%2Fwp%2Fv2%2Fcategories&slug="+quote(slug)+"&_fields=id,slug,name")
+    if not isinstance(categories,list) or not categories:
+        raise RuntimeError("WordPress category not found: "+slug)
+    category_id=categories[0].get("id")
+    if not category_id:raise RuntimeError("WordPress category has no ID: "+slug)
+    items=[];raw_count=0;rejected=0
+    for page in range(1,6):
+        url=base_url+"/posts?categories="+str(category_id)+"&per_page=100&page="+str(page)+"&_fields=date,date_gmt,link,title,excerpt"
+        posts=fetch_json(url)
+        if not isinstance(posts,list):raise RuntimeError("Unexpected WordPress response for "+slug)
+        if not posts:break
+        raw_count+=len(posts)
+        for post in posts:
+            title_obj=post.get("title") or {}
+            excerpt_obj=post.get("excerpt") or {}
+            title=clean(title_obj.get("rendered","") if isinstance(title_obj,dict) else title_obj)
+            summary=clean(excerpt_obj.get("rendered","") if isinstance(excerpt_obj,dict) else excerpt_obj)
+            link=str(post.get("link") or "").strip()
+            if not title or not link.startswith(("http://","https://")) or len(summary)<35:
+                rejected+=1;continue
+            joined=(title+" "+summary).casefold()
+            bad=["پرستاری با تکیه بر قرآن","رزمایش بازسازی","عملیات میمک","سازندگان و طراحان","صنعت ساختمان","قفل هوشمند","فوتبال","والیبال","بسکتبال","پاراوزنه","تیم ملی","بورس","قیمت دلار","آبرسانی","مرکز سلامت","بیمارستان","پرستاری","خدمات درمانی"]
+            if any(term in joined for term in bad):rejected+=1;continue
+            article_region=classify_region(title,summary,region)
+            strict=relevant(title,article_region,summary)
+            context_words=["اقامت","اقامتگاه","هتل","مسافر","گردش","مقصد","روستا","میراث","تاریخی","موزه","بازدید","باغ","پارک","طبیعت","جنگل","ساحل","جزیره","کویر","فرودگاه","پرواز","قطار","تور","دهکده","خوراک","محلی","جاذبه","رزرو","مهمان","گردشگر"]
+            if not strict and (len(summary)<75 or not any(term in joined for term in context_words)):
+                rejected+=1;continue
+            published=parse_date(post.get("date_gmt") or post.get("date",""))
+            if not published:rejected+=1;continue
+            digest=hashlib.sha1(link.encode()).hexdigest()[:14]
+            source_name="عصر گردشگری"
+            fallback_category="راهنمای سفر" if content_type=="guide" else category
+            item={"id":"rss-"+digest,"title":title,"summary":summary[:420],"source":source_name,"sourceUrl":link,"publishedAt":published,"region":article_region,"category":category_for(title,article_region,fallback_category),"image":image_for(title,article_region,category),"kind":"rss","contentType":content_type}
+            if not quality(item):rejected+=1;continue
+            item=enrich(item)
+            items.append(item)
+        if len(posts)<100:break
+    print("WP ARCHIVE",source,"slug",slug,"raw",raw_count,"kept",len(items),"filtered",rejected)
+    return items
+
 def fetch(url):
     with urlopen(Request(url,headers=HEAD),timeout=18) as response:return response.read(2_000_000)
 def google(query,region):
@@ -289,12 +335,21 @@ def main():
     fresh_ir=[];fresh_world=[];warnings=[];success=0
     tasks=[]
     for name,url in DIRECT:tasks.append(("direct",name,url,"iran","اخبار گردشگری"))
+    for name,slug,category,content_type in WP_ARCHIVES:tasks.append(("wp",name,slug,"iran",category+"|"+content_type))
     for name,query,category in IR_QUERIES:tasks.append(("google",name,query,"iran",category))
     for name,query,category in WORLD_QUERIES:tasks.append(("google",name,query,"world",category))
     def run_task(task):
         kind,name,value,region,category=task
-        payload=fetch(value) if kind=="direct" else google(value,region)
-        return task,parse_feed(payload,name,region,category,kind=="google")
+        if kind=="direct":
+            payload=fetch(value)
+            parsed=parse_feed(payload,name,region,category,False)
+        elif kind=="wp":
+            archive_category,content_type=category.split("|",1)
+            parsed=parse_wp_archive(name,value,region,archive_category,content_type)
+        else:
+            payload=google(value,region)
+            parsed=parse_feed(payload,name,region,category,True)
+        return task,parsed
     with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
         futuremap={pool.submit(run_task,task):task for task in tasks}
         for future in concurrent.futures.as_completed(futuremap):
@@ -316,7 +371,7 @@ def main():
     curated_ids={x.get("id") for x in curated_world}
     world=curated_world+[x for x in rss_world if x.get("id") not in curated_ids]
     world_limit=min(10,max(1,round(len(iran)/9))) if world else 0
-    items=iran[:180]+world[:world_limit]
+    items=iran[:90]+world[:10]
     if len(items)<100:
         # Never fabricate articles merely to meet a count. Preserve all quality source-backed items and expose the shortfall in logs.
         print("WARNING: only",len(items),"quality items available; expand sources rather than duplicating headlines.")
