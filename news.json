@@ -1,20 +1,13 @@
 {
-  "updatedAt": "2026-10-15T08:46:19+00:00",
+  "updatedAt": "2026-10-15T08:47:42+00:00",
   "mix": {
     "iranTargetPercent": 90,
     "worldTargetPercent": 10
   },
   "feedStatus": {
     "configuredFeeds": 8,
-    "successfulFeeds": 2,
-    "warnings": [
-      "خبرگزاری مهر: cannot access local variable 'summary' where it is not associated with a value",
-      "خبرگزاری ایسنا: cannot access local variable 'summary' where it is not associated with a value",
-      "خبرآنلاین: cannot access local variable 'summary' where it is not associated with a value",
-      "باشگاه خبرنگاران جوان: cannot access local variable 'summary' where it is not associated with a value",
-      "گردشگری ایران: cannot access local variable 'summary' where it is not associated with a value",
-      "روند جهانی: cannot access local variable 'summary' where it is not associated with a value"
-    ]
+    "successfulFeeds": 8,
+    "warnings": []
   },
   "items": [
     {
@@ -44,6 +37,20 @@
       "image": "iran-panorama",
       "kind": "rss",
       "context": "خلاصهٔ منبع، جزئیات عملی مانند وضعیت جاده، ساعات فعالیت یا امکانات بازدید را مشخص نمی‌کند؛ پیش از برنامه‌ریزی این موارد را از منبع محلی بررسی کنید."
+    },
+    {
+      "id": "rss-7b2ec4648765ae",
+      "title": "صیانت از گویش قمی باید پس از ثبت ملی وارد مرحله اجرا شود",
+      "summary": "معاون گردشگری وزارت میراث‌فرهنگی، گردشگری و صنایع‌دستی، با تأکید بر اینکه گویش قمی بخشی از میراث زنده و هویت تاریخی مردم قم است، تصریح کرد: ثبت ملی این گویش باید نقطه آغاز اقدامات عملی برای حفاظت از آن باشد، نه پایان فرایند.",
+      "source": "خبرآنلاین",
+      "sourceUrl": "https://www.khabaronline.ir/news/2288715/%D8%B5%DB%8C%D8%A7%D9%86%D8%AA-%D8%A7%D8%B2-%DA%AF%D9%88%DB%8C%D8%B4-%D9%82%D9%85%DB%8C-%D8%A8%D8%A7%DB%8C%D8%AF-%D9%BE%D8%B3-%D8%A7%D8%B2-%D8%AB%D8%A8%D8%AA-%D9%85%D9%84%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF-%D9%85%D8%B1%D8%AD%D9%84%D9%87-%D8%A7%D8%AC%D8%B1%D8%A7-%D8%B4%D9%88%D8%AF",
+      "publishedAt": "2026-10-15T07:45:00+00:00",
+      "region": "iran",
+      "category": "اخبار گردشگری",
+      "image": "iran-panorama",
+      "kind": "rss",
+      "body": "معاون گردشگری وزارت میراث‌فرهنگی، گردشگری و صنایع‌دستی، با تأکید بر اینکه گویش قمی بخشی از میراث زنده و هویت تاریخی مردم قم است، تصریح کرد: ثبت ملی این گویش باید نقطه آغاز اقدامات عملی برای حفاظت از آن باشد، نه پایان فرایند.\n\nاین خلاصه از توضیحات همراه خبر در فید ناشر گرفته شده است. برای جزئیات کامل، زمینهٔ آماری و اصلاحیه‌های احتمالی، گزارش اصلی را باز کنید.",
+      "context": "این خلاصه بر پایهٔ توضیحات منبع تهیه شده است؛ برای جزئیات کامل، زمینه و اصلاحیه‌های احتمالی، گزارش اصلی را بخوانید."
     },
     {
       "id": "rss-41282b1e1c825b",
