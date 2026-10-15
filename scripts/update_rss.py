@@ -339,7 +339,15 @@ def main():
     seeds=json.loads(SEEDS.read_text(encoding="utf-8")).get("items",[])
     old=json.loads(NEWS.read_text(encoding="utf-8")) if NEWS.exists() else {"items":[]}
     old_items=old if isinstance(old,list) else old.get("items",[])
-    previous=[enrich(x) for x in old_items if x.get("kind")=="rss" and relevant(x.get("title",""),x.get("region","iran"),x.get("summary","")) and quality(x)]
+    previous=[]
+    for item in old_items:
+        if item.get("kind")!="rss" or not relevant(item.get("title",""),item.get("region","iran"),item.get("summary","")) or not quality(item):
+            continue
+        # The Iranian editorial archive occasionally mentions foreign countries in the body.
+        # Reclassify those saved items from the headline rather than retaining a stale region.
+        if "asregardeshgari.com" in str(item.get("sourceUrl","")).casefold():
+            item["region"]=classify_region(item.get("title",""),"", "iran")
+        previous.append(enrich(item))
     fresh_ir=[];fresh_world=[];warnings=[];success=0
     tasks=[]
     for name,url in DIRECT:tasks.append(("direct",name,url,"iran","اخبار گردشگری"))
@@ -379,11 +387,30 @@ def main():
     rss_world=dedupe([x for x in previous if x.get("region")=="world"]+[x for x in fresh_ir if x.get("region")=="world"]+fresh_world)
     curated_ids={x.get("id") for x in curated_world}
     world=curated_world+[x for x in rss_world if x.get("id") not in curated_ids]
-    world_limit=min(10,max(1,round(len(iran)/9))) if world else 0
-    items=iran[:90]+world[:10]
+    # Pick globally unique stories across both regional pools, avoiding duplicates whose
+    # source was classified differently in an earlier run.
+    items=[];seen_titles=set();seen_urls=set();seen_ids=set()
+    def add_unique(pool,limit=None):
+        added=0
+        for item in pool:
+            title_key="".join(ch for ch in item.get("title","").casefold() if ch.isalnum())
+            url_key=str(item.get("sourceUrl","")).split("#",1)[0].split("?",1)[0].rstrip("/").casefold()
+            item_id=item.get("id","")
+            if not title_key or title_key in seen_titles or (url_key and url_key in seen_urls) or (item_id and item_id in seen_ids):
+                continue
+            items.append(item);seen_titles.add(title_key)
+            if url_key:seen_urls.add(url_key)
+            if item_id:seen_ids.add(item_id)
+            added+=1
+            if limit is not None and added>=limit:break
+        return added
+    add_unique(iran,90)
+    add_unique(world,10)
     if len(items)<100:
-        # Never fabricate articles merely to meet a count. Preserve all quality source-backed items and expose the shortfall in logs.
-        print("WARNING: only",len(items),"quality items available; expand sources rather than duplicating headlines.")
+        add_unique(iran[90:])
+        add_unique(world[10:])
+    if len(items)<100:
+        print("WARNING: only",len(items),"unique quality items available; expand sources rather than duplicating headlines.")
     items.sort(key=lambda x:x.get("publishedAt",""),reverse=True)
     payload={"updatedAt":datetime.now(timezone.utc).isoformat(timespec="seconds"),"mix":{"iranTargetPercent":90,"worldTargetPercent":10},"feedStatus":{"configuredFeeds":len(tasks),"successfulFeeds":success,"warnings":warnings},"items":items}
     NEWS.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")

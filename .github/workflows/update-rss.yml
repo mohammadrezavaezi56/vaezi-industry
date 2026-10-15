@@ -38,6 +38,7 @@ jobs:
           python scripts/update_rss.py
           python -m json.tool news.json >/dev/null
           python -m json.tool assets/images/credits.json >/dev/null
+          python scripts/validate_site.py
       - name: Commit articles and local media
         run: |
           git config user.name "github-actions[bot]"
