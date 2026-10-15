@@ -18,7 +18,16 @@ DIRECT = [
     ("خبرگزاری ایسنا", "https://www.isna.ir/rss"),
     ("خبرآنلاین", "https://www.khabaronline.ir/rss"),
     ("باشگاه خبرنگاران جوان", "https://www.yjc.ir/fa/rss/allnews"),
+    ("خبرگزاری تسنیم · سفر", "https://www.tasnimnews.ir/fa/rss/section/1416"),
 ]
+# Historical pages from Persian tourism-editorial categories, with source attribution preserved.
+ARCHIVE_FEEDS = [
+    ("عصر گردشگری · راهنمای سفر", "https://asregardeshgari.com/category/travel-guide/feed/"),
+    ("عصر گردشگری · میراث فرهنگی", "https://asregardeshgari.com/category/cultural-heritage-news/feed/"),
+]
+for archive_name, archive_url in ARCHIVE_FEEDS:
+    for archive_page in range(2, 17):
+        DIRECT.append((archive_name + " · آرشیو " + str(archive_page), archive_url + "?paged=" + str(archive_page)))
 IR_QUERIES = [
     ("بازار گردشگری ایران", "گردشگری ایران when:365d", "بازار گردشگری"),
     ("سیاست‌گذاری گردشگری", "وزارت میراث فرهنگی گردشگری ایران when:365d", "سیاست‌گذاری"),
@@ -107,20 +116,31 @@ def relevant(title, region, summary=""):
     bad=["پاراوزنه","ملی پوش","ملی‌پوش","واحد مسکونی","هوش مصنوعی عکس","عکس دهه شصتی","فوتبال","والیبال","بسکتبال","بورس","قیمت دلار","تیم ملی","آبرسانی","رزمایش بازسازی","عملیات میمک","سازندگان و طراحان","صنعت ساختمان","قفل هوشمند","پرستاری با تکیه بر قرآن","پرستاری","رزمایش","جنگی","عملیات نظامی","خبر ورزشی"]
     if any(x in t for x in bad): return False
     if region=="world":
-        return any(x in t for x in ["tourism","tourist","hotel","hospitality","travel demand","accommodation","resort","destination management","airline routes","international visitors","visitor economy"])
+        return any(x in t for x in ["tourism","tourist","hotel","hospitality","travel demand","accommodation","resort","destination management","airline routes","international visitors","visitor economy","گردشگری","گردشگر","هتل","اقامتگاه","سفر","مقصد","پرواز","جاذبه","ساحل","جزیره","راهنمای سفر"])
     strong=["گردشگری","گردشگر","توریسم","اقامتگاه","بوم‌گردی","بوم گردی","میراث فرهنگی","میراث‌فرهنگی","اکوتوریسم","طبیعت‌گردی","طبیعت گردی","صنایع دستی","صنایع‌دستی","هتلداری","هتل‌داری","هتل داری","هتلداران","هتل‌داران","رزرو اقامت","گردشگرپذیر","جاذبه گردشگری","گردشگری سلامت","گردشگری شهری","گردشگری دریایی","گردشگری ساحلی","توریستی","موزه","قطار گردشگری","فرودگاه گردشگری","گردشگری پایدار","گردشگری تاریخی","مسافرت داخلی","سفرهای داخلی","صنعت هتلداری","هتل","روستای گردشگری","بازار اقامت","ضریب اشغال"]
     if any(x in t for x in strong): return True
     if "سفر" in t and any(x in t for x in ["مقصد گردشگری","اقامتگاه","جاذبه گردشگری","طبیعت‌گردی","طبیعت گردی","روستای گردشگری","ساحل","جزیره","میراث فرهنگی","بازدید از جاذبه","رزرو اقامت"]): return True
     return False
+def classify_region(title, summary, default_region):
+    text_for_region=(str(title or "")+" "+str(summary or "")).casefold().replace("‌"," ")
+    iran_places=["ایران","تهران","اصفهان","شیراز","یزد","کیش","قشم","تبریز","مشهد","گیلان","رشت","ماسوله","مازندران","کرمان","کرمانشاه","همدان","لرستان","هرمزگان","بوشهر","سیراف","تخت جمشید","مرودشت","اردبیل","خوزستان","بندرعباس","کاشان","البرز","کرج","قم","سمنان","گلستان","کردستان"]
+    foreign_places=["ترکیه","استانبول","آنکارا","آنتالیا","دبی","امارات","قطر","دوحه","عمان","مسقط","عراق","نجف","کربلا","ارمنستان","ایروان","آذربایجان","باکو","هند","ژاپن","چین","تایلند","فرانسه","پاریس","ایتالیا","رم","اسپانیا","لندن","انگلستان","آلمان","برلین","یونان","آتن","مصر","قاهره","سوریه","دمشق","لاذقیه","عربستان","مکه","مدینه","مراکش","گرجستان","تفلیس","مالدیو","بالی","اندونزی","سنگاپور","مالزی","پکن","سئول","نیویورک","آمریکا","کانادا","مکزیک","کرواسی","صربستان","اتریش","وین","سوئیس","اروپا","پراگ","بوداپست","کپنهاگ"]
+    has_iran=any(place in text_for_region for place in iran_places)
+    has_foreign=any(place in text_for_region for place in foreign_places)
+    if has_foreign and not has_iran:
+        return "world"
+    return default_region
 def quality(item):
     title=clean(item.get("title",""))
     summary=clean(item.get("summary",""))
-    # Don't publish bare headlines; source excerpts may be concise but must carry information.
-    if len(summary)<35: return False
-    combined=(summary+" "+item.get("source","")+" "+item.get("sourceUrl","")).casefold()
-    if any(x in combined for x in ["safariindia.com","sports news","football match"]): return False
-    if summary.casefold().strip(" .-")==title.casefold().strip(" .-"): return False
-    if re.search(r"https?://|www\\.",summary,re.I) and len(summary)<len(title)+40: return False
+    if len(summary)<35:return False
+    source=str(item.get("source","")).casefold().strip()
+    url=str(item.get("sourceUrl","")).casefold()
+    if source in {"facebook","facebook.com","instagram","x","twitter","tiktok","pinterest"}:return False
+    if any(domain in url for domain in ["facebook.com/","instagram.com/","tiktok.com/","pinterest.com/","x.com/","twitter.com/"]):return False
+    if any(x in (summary+" "+source+" "+url).casefold() for x in ["safariindia.com","sports news","football match"]):return False
+    if summary.casefold().strip(" .-")==title.casefold().strip(" .-"):return False
+    if re.search(r"https?://|www\\.",summary,re.I) and len(summary)<len(title)+40:return False
     return True
 def category_for(title, region, default=""):
     t = title.casefold()
@@ -202,7 +222,8 @@ def parse_feed(payload,source,region,category,google=False):
     root=ET.fromstring(payload);items=[]
     seen=0;relevance_rejects=0;quality_rejects=0
     context_ir=["اقامت","اقامتگاه","هتل","مسافر","گردش","مقصد","روستا","استان","میراث","تاریخی","موزه","بازدید","باغ","پارک","طبیعت","جنگل","ساحل","جزیره","کویر","فرودگاه","پرواز","قطار","تور","دهکده","رستوران","خوراک","محلی","جاذبه","رزرو","مهمان","مسیر گردشگری","گردشگر"]
-    context_world=["tourism","tourist","hotel","hospitality","travel","visitor","resort","destination","airline","accommodation","cruise","tour operator","hotel group","hotel investment"]
+    context_world=["tourism","tourist","hotel","hospitality","travel","visitor","resort","destination","airline","accommodation","cruise","tour operator","hotel group","hotel investment","گردشگری","گردشگر","هتل","اقامتگاه","سفر","مقصد","پرواز","جاذبه","ساحل","جزیره","راهنمای سفر"]
+    archive_context=("عصر گردشگری · راهنمای سفر" in source) or ("عصر گردشگری · میراث فرهنگی" in source)
     for node in root.iter():
         if node.tag.split("}")[-1].lower() not in ("item","entry"):continue
         seen+=1
@@ -214,15 +235,16 @@ def parse_feed(payload,source,region,category,google=False):
         link=(link or "").strip()
         summary=clean(text_child(node,{"description","summary","content"}))
         if not title or not link.startswith(("http://","https://")):continue
-        text_for_check=(title+" "+summary).casefold()
-        bad=["پرستاری با تکیه بر قرآن","پرستاری","رزمایش بازسازی","عملیات میمک","سازندگان و طراحان","صنعت ساختمان","قفل هوشمند","فوتبال","والیبال","بسکتبال","پاراوزنه","تیم ملی","بورس","قیمت دلار","safariindia.com"]
-        if any(term in text_for_check for term in bad):continue
-        strict=relevant(title,region,summary)
+        joined=(title+" "+summary).casefold()
+        bad=["پرستاری با تکیه بر قرآن","رزمایش بازسازی","عملیات میمک","سازندگان و طراحان","صنعت ساختمان","قفل هوشمند","فوتبال","والیبال","بسکتبال","پاراوزنه","تیم ملی","بورس","قیمت دلار","آبرسانی"]
+        if any(term in joined for term in bad):continue
+        article_region=classify_region(title,summary,region)
+        strict=relevant(title,article_region,summary)
         if not strict:
-            # Google News RSS is a topic-specific search query. Allow a longer contextual excerpt
-            # where the headline doesn't repeat words such as "tourism" but clearly describes travel.
-            terms=context_world if region=="world" else context_ir
-            if not google or len(summary)<65 or not any(term in text_for_check for term in terms):
+            terms=context_world if article_region=="world" else context_ir
+            category_valid=archive_context and len(summary)>=75 and any(term in joined for term in terms)
+            google_valid=google and len(summary)>=65 and any(term in joined for term in terms)
+            if not (category_valid or google_valid):
                 relevance_rejects+=1;continue
         published=parse_date(text_child(node,{"pubdate","published","updated","date"}))
         if not published:continue
@@ -231,7 +253,7 @@ def parse_feed(payload,source,region,category,google=False):
             if child.tag.split("}")[-1].lower()=="source" and child.text:src=clean(child.text);break
         if not src or src.casefold() in ("بدون منبع","unknown"):src=source
         digest=hashlib.sha1(link.encode()).hexdigest()[:14]
-        item={"id":"rss-"+digest,"title":title,"summary":summary[:420],"source":src,"sourceUrl":link,"publishedAt":published,"region":region,"category":category_for(title,region,category),"image":image_for(title,region,category),"kind":"rss","contentType":"news"}
+        item={"id":"rss-"+digest,"title":title,"summary":summary[:420],"source":src,"sourceUrl":link,"publishedAt":published,"region":article_region,"category":category_for(title,article_region,category),"image":image_for(title,article_region,category),"kind":"rss","contentType":"news"}
         if not quality(item):
             quality_rejects+=1;continue
         items.append(enrich(item))
@@ -243,10 +265,14 @@ def google(query,region):
     params="hl=en-US&gl=US&ceid=US:en" if region=="world" else "hl=fa&gl=IR&ceid=IR:fa"
     return fetch("https://news.google.com/rss/search?q="+quote(query)+"&"+params)
 def dedupe(rows):
-    seen=set();result=[]
+    seen_titles=set();seen_urls=set();result=[]
     for item in sorted(rows,key=lambda x:x.get("publishedAt",""),reverse=True):
-        key="".join(ch for ch in item.get("title","").casefold() if ch.isalnum())
-        if key and key not in seen:seen.add(key);result.append(item)
+        title_key="".join(ch for ch in item.get("title","").casefold() if ch.isalnum())
+        url=str(item.get("sourceUrl","")).split("#",1)[0].split("?",1)[0].rstrip("/").casefold()
+        if not title_key or title_key in seen_titles or (url and url in seen_urls):continue
+        seen_titles.add(title_key)
+        if url:seen_urls.add(url)
+        result.append(item)
     return result
 def make_feed(items):
     now=datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S GMT");entries=[]
