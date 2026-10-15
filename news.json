@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T08:13:08+00:00",
+  "updatedAt": "2026-10-15T08:14:33+00:00",
   "mix": {
     "iranTargetPercent": 90,
     "worldTargetPercent": 10
@@ -24,32 +24,6 @@
       "kind": "rss"
     },
     {
-      "id": "rss-7fb4a1b288d0c2",
-      "title": "۱۱۲۴۸ واحد مسکونی در آذربایجان شرقی افتتاح شد",
-      "summary": "همزمان با بیست و دومین سفر استانی دولت، طی آیینی با حضور معاون اجرایی رییس‌جمهور در شهر جدید سهند، ۱۱ هزار و ۲۴۸ واحد مسکونی در قالب طرح‌های حمایتی شهری، خودمالک روستایی، خودمالک شهری و پروژه‌های خودمالک فرسوده و ناکارآمد شهری با اعتباری بیش از ۱۵ هزار و ۶۰۰ میلیارد تومان به بهره‌برداری رسید.",
-      "body": "این عنوان از خبرخوان RSS کشف شده است؛ خلاصه برای آشنایی اولیه است. برای جزئیات، زمینه و اصلاحیه‌ها گزارش ناشر را بررسی کنید.",
-      "source": "خبرگزاری ایسنا",
-      "sourceUrl": "https://www.isna.ir/news/1405072315435/%DB%B1%DB%B1%DB%B2%DB%B4%DB%B8-%D9%88%D8%A7%D8%AD%D8%AF-%D9%85%D8%B3%DA%A9%D9%88%D9%86%DB%8C-%D8%AF%D8%B1-%D8%A2%D8%B0%D8%B1%D8%A8%D8%A7%DB%8C%D8%AC%D8%A7%D9%86-%D8%B4%D8%B1%D9%82%DB%8C-%D8%A7%D9%81%D8%AA%D8%AA%D8%A7%D8%AD-%D8%B4%D8%AF",
-      "publishedAt": "2026-10-15T08:00:20+00:00",
-      "region": "iran",
-      "category": "اخبار گردشگری",
-      "image": "iran-panorama",
-      "kind": "rss"
-    },
-    {
-      "id": "rss-e4975000a943fb",
-      "title": "افتتاح طرح آبرسانی به ۱۵۰ روستای آذربایجان شرقی",
-      "summary": "با حضور معاون اجرایی رئیس‌جمهور طرح آبرسانی به ۱۵۰ روستای آذربایجان شرقی افتتاح شد.",
-      "body": "این عنوان از خبرخوان RSS کشف شده است؛ خلاصه برای آشنایی اولیه است. برای جزئیات، زمینه و اصلاحیه‌ها گزارش ناشر را بررسی کنید.",
-      "source": "باشگاه خبرنگاران جوان",
-      "sourceUrl": "https://www.yjc.ir/fa/news/9138902/افتتاح-طرح-آبرسانی-به-۱۵۰-روستای-آذربایجان-شرقی",
-      "publishedAt": "2026-10-15T07:54:03+00:00",
-      "region": "iran",
-      "category": "اخبار گردشگری",
-      "image": "iran-panorama",
-      "kind": "rss"
-    },
-    {
       "id": "rss-bd353325ad715d",
       "title": "روستای «کهنه‌ده» کرج؛ جایی که نان و حلوای پنیر روایتگر زندگی‌اند",
       "summary": "کرج- سفر به «کهنه‌ده» کرج تنها تماشای طبیعت کوهستانی نیست؛ آشنایی با خوراک‌های محلی، نان سنتی، محصولات باغی و مهارت‌های به‌جامانده از نسل‌های گذشته، بخش دیگری از جذابیت این روستاست.",
@@ -57,19 +31,6 @@
       "source": "خبرگزاری مهر",
       "sourceUrl": "https://www.mehrnews.com/news/6978422/%D8%B1%D9%88%D8%B3%D8%AA%D8%A7%DB%8C-%DA%A9%D9%87%D9%86%D9%87-%D8%AF%D9%87-%DA%A9%D8%B1%D8%AC-%D8%AC%D8%A7%DB%8C%DB%8C-%DA%A9%D9%87-%D9%86%D8%A7%D9%86-%D9%88-%D8%AD%D9%84%D9%88%D8%A7%DB%8C-%D9%BE%D9%86%DB%8C%D8%B1-%D8%B1%D9%88%D8%A7%DB%8C%D8%AA%DA%AF%D8%B1-%D8%B2%D9%86%D8%AF%DA%AF%DB%8C-%D8%A7%D9%86%D8%AF",
       "publishedAt": "2026-10-15T07:51:21+00:00",
-      "region": "iran",
-      "category": "اخبار گردشگری",
-      "image": "iran-panorama",
-      "kind": "rss"
-    },
-    {
-      "id": "rss-7b2ec4648765ae",
-      "title": "صیانت از گویش قمی باید پس از ثبت ملی وارد مرحله اجرا شود",
-      "summary": "معاون گردشگری وزارت میراث‌فرهنگی، گردشگری و صنایع‌دستی، با تأکید بر اینکه گویش قمی بخشی از میراث زنده و هویت تاریخی مردم قم است، تصریح کرد: ثبت ملی این گویش باید نقطه آغاز اقدامات عملی برای حفاظت از آن باشد، نه پایان فرایند.",
-      "body": "این عنوان از خبرخوان RSS کشف شده است؛ خلاصه برای آشنایی اولیه است. برای جزئیات، زمینه و اصلاحیه‌ها گزارش ناشر را بررسی کنید.",
-      "source": "بدون منبع",
-      "sourceUrl": "https://www.khabaronline.ir/news/2288715/%D8%B5%DB%8C%D8%A7%D9%86%D8%AA-%D8%A7%D8%B2-%DA%AF%D9%88%DB%8C%D8%B4-%D9%82%D9%85%DB%8C-%D8%A8%D8%A7%DB%8C%D8%AF-%D9%BE%D8%B3-%D8%A7%D8%B2-%D8%AB%D8%A8%D8%AA-%D9%85%D9%84%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF-%D9%85%D8%B1%D8%AD%D9%84%D9%87-%D8%A7%D8%AC%D8%B1%D8%A7-%D8%B4%D9%88%D8%AF",
-      "publishedAt": "2026-10-15T07:45:00+00:00",
       "region": "iran",
       "category": "اخبار گردشگری",
       "image": "iran-panorama",
@@ -89,19 +50,6 @@
       "kind": "rss"
     },
     {
-      "id": "rss-a445de482d8b85",
-      "title": "ملی‌پوش پاراوزنه‌برداری: تا ناگویا ۲ روز در راه بودیم",
-      "summary": "ملی‌پوش پارا وزنه‌برداری ایران، با اشاره به دشواری‌های مسیر سفر به ناگویا و برخی مشکلات اسکان و تغذیه ورزشکاران، گفت: با وجود تمام سختی ها اعضای تیم برای درخشش در پنجمین دوره بازی های پاراآسیایی تلاش خواهند کرد.",
-      "body": "این عنوان از خبرخوان RSS کشف شده است؛ خلاصه برای آشنایی اولیه است. برای جزئیات، زمینه و اصلاحیه‌ها گزارش ناشر را بررسی کنید.",
-      "source": "خبرگزاری ایسنا",
-      "sourceUrl": "https://www.isna.ir/news/1405072315400/%D9%85%D9%84%DB%8C-%D9%BE%D9%88%D8%B4-%D9%BE%D8%A7%D8%B1%D8%A7%D9%88%D8%B2%D9%86%D9%87-%D8%A8%D8%B1%D8%AF%D8%A7%D8%B1%DB%8C-%D8%AA%D8%A7-%D9%86%D8%A7%DA%AF%D9%88%DB%8C%D8%A7-%DB%B2-%D8%B1%D9%88%D8%B2-%D8%AF%D8%B1-%D8%B1%D8%A7%D9%87-%D8%A8%D9%88%D8%AF%DB%8C%D9%85",
-      "publishedAt": "2026-10-15T07:31:00+00:00",
-      "region": "iran",
-      "category": "اخبار گردشگری",
-      "image": "iran-panorama",
-      "kind": "rss"
-    },
-    {
       "id": "rss-f6b54953a8bdfa",
       "title": "Texas A&M celebrates 60 years of hospitality - AgriLife Today",
       "summary": "a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxOUGVWU0lpZFIyWW5ILV9EblJRMzNzMUlOZTlOMFlJYlFiZGtCeUlqSEVxOEMyUzRVSFBXUGdQRF96eHJvb2Q4UFkwdlJlZzN4bGYtTHRLam9JN0FpOXlvSzd6X3Y2VzFISzZRdHg2UWZTQklUdS1IZi1VMi1JVnpONmtZVXdWVUxvSUJiaFhfZw?oc=5\" target=\"_blank\" Texas A&M celebrates 60 years of hospitality /a font color=\"#6f6f6f\" AgriLife Today /font",
@@ -109,19 +57,6 @@
       "source": "AgriLife Today",
       "sourceUrl": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOUGVWU0lpZFIyWW5ILV9EblJRMzNzMUlOZTlOMFlJYlFiZGtCeUlqSEVxOEMyUzRVSFBXUGdQRF96eHJvb2Q4UFkwdlJlZzN4bGYtTHRLam9JN0FpOXlvSzd6X3Y2VzFISzZRdHg2UWZTQklUdS1IZi1VMi1JVnpONmtZVXdWVUxvSUJiaFhfZw?oc=5",
       "publishedAt": "2026-10-14T19:55:56+00:00",
-      "region": "world",
-      "category": "روند جهانی",
-      "image": "world",
-      "kind": "rss"
-    },
-    {
-      "id": "rss-ec8ac0c31ee11c",
-      "title": "Lords Hotels & Resorts Reports Q2 Growth - https://safariindia.com/",
-      "summary": "a href=\"https://news.google.com/rss/articles/CBMicEFVX3lxTE9aM3JiNTNRZ1RtTllsNWRyWXRwYUxocENhYzhXZ1dGc2kyV2ZCSG5QOGJSX21iYW82aS1ZaHpaM3R2Z0lRc19jWmVyWGpMQmJzVGRYTHBIMEVsaTNoY2s4OV9zN29ad0MyNTVLZGpZRlg?oc=5\" target=\"_blank\" Lords Hotels & Resorts Reports Q2 Growth /a font color=\"#6f6f6f\" https://safariindia.com/ /font",
-      "body": "این عنوان از خبرخوان RSS کشف شده است؛ خلاصه برای آشنایی اولیه است. برای جزئیات، زمینه و اصلاحیه‌ها گزارش ناشر را بررسی کنید.",
-      "source": "https://safariindia.com/",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9aM3JiNTNRZ1RtTllsNWRyWXRwYUxocENhYzhXZ1dGc2kyV2ZCSG5QOGJSX21iYW82aS1ZaHpaM3R2Z0lRc19jWmVyWGpMQmJzVGRYTHBIMEVsaTNoY2s4OV9zN29ad0MyNTVLZGpZRlg?oc=5",
-      "publishedAt": "2026-10-14T11:05:11+00:00",
       "region": "world",
       "category": "روند جهانی",
       "image": "world",
@@ -206,19 +141,6 @@
       "manual": true
     },
     {
-      "id": "rss-cbdf98d9b324c3",
-      "title": "Iranian test-takers head abroad as exam access shrinks - Iran International",
-      "summary": "a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE1TOWpxU0k3dTFPN2MwSEYyYThndWpCR0gxVUZ3T0NkTE16dlR4Wl9JMGVPV3BPX3lMYzNpME04anc4LVkxcFFsazZwNWh0T1lKVVE?oc=5\" target=\"_blank\" Iranian test-takers head abroad as exam access shrinks /a font color=\"#6f6f6f\" Iran International /font",
-      "body": "این عنوان از خبرخوان RSS کشف شده است؛ خلاصه برای آشنایی اولیه است. برای جزئیات، زمینه و اصلاحیه‌ها گزارش ناشر را بررسی کنید.",
-      "source": "Iran International",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1TOWpxU0k3dTFPN2MwSEYyYThndWpCR0gxVUZ3T0NkTE16dlR4Wl9JMGVPV3BPX3lMYzNpME04anc4LVkxcFFsazZwNWh0T1lKVVE?oc=5",
-      "publishedAt": "2026-09-22T07:00:00+00:00",
-      "region": "iran",
-      "category": "گردشگری ایران",
-      "image": "iran-panorama",
-      "kind": "rss"
-    },
-    {
       "id": "iran-south-events",
       "title": "طرح «مهر جنوب»؛ برنامه‌ریزی برای رویدادهای گردشگری",
       "summary": "گزارش بازنشرشده به نقل از مهر از برنامه‌ریزی رویدادهای گردشگری در جنوب ایران طی مهر خبر داده بود؛ برنامه‌ریزی با اجرای قطعی همه رویدادها برابر نیست.",
@@ -230,19 +152,6 @@
       "category": "رویدادها",
       "image": "kish",
       "manual": true
-    },
-    {
-      "id": "rss-d46ec6f8871da0",
-      "title": "سفر در زمان با هوش مصنوعی؛ چطور با chatgpt عکس دهه شصتی بسازیم؟ - روزنامه هفت صبح",
-      "summary": "a href=\"https://news.google.com/rss/articles/CBMimgRBVV95cUxPLTFYUkk5VklNeW9NR0loV3lUVDN6NlJnRHVtY0d6U1VCNEhTOWVIUkRvam1TSmY3RC00dElSeU9zU3oxbFl3LThEbmMwRWg3b0VMaHR6M0ZscnF5ZFd0VVR1TW9ZN3FfdjNZaGE2bzFyeEFUUDJFVFhGc09sZkthWXptOVkzdDZrYm84WWd6eEloWDQzS1AybUJkUTJnZklKRWw3S3BlYnhhd3FvY3FPcFBGMXhsY3FIQ0IyMXc5UHNoNUczVEM0aXh0eTZlY1Q1Z3NJQVJwdHV3VmI3Z2FqNlVqLXNUNUNSOVg1TWlVRDVYUjlKcThSZ0p6eEI2M2VNdGJzUkpYOGZyejFqb2dXZWxER3o",
-      "body": "این عنوان از خبرخوان RSS کشف شده است؛ خلاصه برای آشنایی اولیه است. برای جزئیات، زمینه و اصلاحیه‌ها گزارش ناشر را بررسی کنید.",
-      "source": "روزنامه هفت صبح",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMimgRBVV95cUxPLTFYUkk5VklNeW9NR0loV3lUVDN6NlJnRHVtY0d6U1VCNEhTOWVIUkRvam1TSmY3RC00dElSeU9zU3oxbFl3LThEbmMwRWg3b0VMaHR6M0ZscnF5ZFd0VVR1TW9ZN3FfdjNZaGE2bzFyeEFUUDJFVFhGc09sZkthWXptOVkzdDZrYm84WWd6eEloWDQzS1AybUJkUTJnZklKRWw3S3BlYnhhd3FvY3FPcFBGMXhsY3FIQ0IyMXc5UHNoNUczVEM0aXh0eTZlY1Q1Z3NJQVJwdHV3VmI3Z2FqNlVqLXNUNUNSOVg1TWlVRDVYUjlKcThSZ0p6eEI2M2VNdGJzUkpYOGZyejFqb2dXZWxER3o4ZnRvb2ozV2ZFejEzTUpyZnRXeUpBNFpvODdIdjZGanIzRE9jWXhyNWNra1owQnRhYXdWYlQ5dDVJUzh0WGdYcDlzRG1vd0JhN2dNc29aeGMydnF3RUV5Z3Q3Yi1FVTdRSGhJZVZQa09vUDB1bGE4anNwWU9PWHJfX3o0dlVIaktaeVdPa0YzbHktTkg2aDhPcVp3cFA5WHVpc2lsXzB2YlJ4VGRXLVpic3pfUERGMjMzLTNGWm43anNJRzVjbXRmbWFjekU4ck8zOE1VWC1fNnY5Wktqek8wQmFDRkhVSmFnWFlTeVZvd1pJaTZFUTJXUDhVbVBWZGpSTkQ0MzQ3SXk1MEVn?oc=5",
-      "publishedAt": "2026-09-18T07:00:00+00:00",
-      "region": "iran",
-      "category": "گردشگری ایران",
-      "image": "iran-panorama",
-      "kind": "rss"
     },
     {
       "id": "karon-waterfront-archive",
