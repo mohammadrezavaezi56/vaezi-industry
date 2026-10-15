@@ -55,9 +55,16 @@ def relevant(title,region,summary=''):
 def quality(item):
  title=clean(item.get('title',''));summary=clean(item.get('summary',''))
  if len(summary)<75:return False
- if 'safariindia.com' in (summary+' '+item.get('source','')+' '+item.get('sourceUrl','')).casefold():return False
+ combined=(summary+' '+item.get('source','')+' '+item.get('sourceUrl','')).casefold()
+ if 'safariindia.com' in combined:return False
  if summary.casefold().strip(' .-')==title.casefold().strip(' .-'):return False
- if re.search(r'https?://|www\.',summary,re.I) and len(summary)<len(title)+70:return False
+ if re.search(r'https?://|www\\.',summary,re.I) and len(summary)<len(title)+70:return False
+ # Exclude RSS entries where the "description" merely repeats its headline.
+ title_words=re.findall(r'[a-z0-9\u0600-\u06FF]+',title.casefold())
+ summary_words=re.findall(r'[a-z0-9\u0600-\u06FF]+',summary.casefold())
+ if len(title_words)>=5 and len(summary_words)<=len(title_words)*1.4:
+  joined=' '.join(summary_words); overlap=sum(1 for word in title_words if word in joined.split())
+  if overlap/len(title_words)>=0.82:return False
  return True
 def editorial_context(title,region,category):
  t=title.casefold()
