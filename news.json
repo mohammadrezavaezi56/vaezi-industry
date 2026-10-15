@@ -1,141 +1,55 @@
 {
-  "updatedAt": "2026-10-15T08:10:00Z",
+  "updatedAt": "2026-10-15T08:08:58+00:00",
   "mix": {
     "iranTargetPercent": 90,
     "worldTargetPercent": 10
   },
+  "feedStatus": {
+    "configuredFeeds": 9,
+    "successfulFeeds": 8,
+    "warnings": [
+      "تسنیم: mismatched tag: line 27, column 2"
+    ]
+  },
   "items": [
     {
-      "id": "iran-recovery-policy",
-      "title": "سند بازآفرینی گردشگری ایران در دورهٔ پساجنگ ابلاغ شد",
-      "summary": "گزارش ۲۲ مهر می‌گوید سند راهبردی جدید بر گردشگری طبیعت‌محور و جامعه‌محور، سلامت و میراث فرهنگی‌ـ‌تاریخی تأکید دارد.",
-      "body": "به گزارش عصر گردشگری به نقل از مهر، معاون گردشگری از ابلاغ سندی برای هماهنگی اقدامات ملی و استانی و بازتعریف مزیت‌های رقابتی گردشگری ایران خبر داده است. ابلاغ سند به‌تنهایی به معنای تحقق نتایج نیست؛ اجرای برنامه‌ها باید با گزارش‌های بعدی بررسی شود.",
-      "source": "عصر گردشگری · به نقل از مهر",
-      "sourceUrl": "https://asregardeshgari.com/cultural-heritage-news/371345/",
-      "publishedAt": "2026-10-14",
-      "region": "iran",
-      "category": "سیاست‌گذاری",
-      "image": "isfahan",
-      "manual": true
-    },
-    {
-      "id": "alborz-tourism-exam",
-      "title": "آغاز ثبت‌نام آزمون جامع گردشگری البرز از ۲۵ مهر اعلام شد",
-      "summary": "در فهرست مطالب ۲۲ مهر عصر گردشگری، زمان آغاز ثبت‌نام آزمون جامع گردشگری البرز ۲۵ مهر اعلام شده است؛ شرایط نهایی را از مرجع برگزارکننده بررسی کنید.",
-      "body": "این خبر زمان اعلام‌شده در منبع را بازتاب می‌دهد و جایگزین اطلاعیهٔ رسمی برگزارکننده نیست. شرایط ثبت‌نام، مدارک و زمان‌بندی نهایی را از مرجع مربوط تأیید کنید.",
-      "source": "عصر گردشگری",
-      "sourceUrl": "https://asregardeshgari.com/cultural-heritage-news/371342/",
-      "publishedAt": "2026-10-14",
-      "region": "iran",
-      "category": "آموزش گردشگری",
-      "image": "guesthouse",
-      "manual": true
-    },
-    {
-      "id": "tourism-credit-fund",
-      "title": "گزارش: ۴۰ همت تسهیلات برای گردشگری و صنایع‌دستی در نظر گرفته شده است",
-      "summary": "گزارش‌های منتشرشده در ۲۰ مهر از درنظرگرفتن بیش از ۴۰ همت تسهیلات خبر می‌دهند؛ رقم اعلامی با مبلغ پرداخت‌شده یکسان نیست.",
-      "body": "این رقم به‌عنوان ظرفیت یا تسهیلات درنظرگرفته‌شده گزارش شده است. برای ارزیابی اثر واقعی بر کسب‌وکارها باید جزئیات تخصیص، شرایط دسترسی و میزان پرداخت بررسی شود.",
-      "source": "بازنشر خبر ایرنا / باشگاه خبرنگاران",
-      "sourceUrl": "https://www.collector.com.tr/1020504527",
-      "publishedAt": "2026-10-12",
-      "region": "iran",
-      "category": "سرمایه‌گذاری",
-      "image": "guesthouse",
-      "manual": true
-    },
-    {
-      "id": "tourism-projects-construction",
-      "title": "گزارش: بیش از ۳ هزار پروژهٔ گردشگری در حال ساخت است",
-      "summary": "گزارش بازنشرشده به نقل از وزیر میراث‌فرهنگی از ۳٬۰۱۷ پروژه در ۳۱ استان و سرمایه‌گذاری اعلام‌شدهٔ ۱٬۳۰۰ همت خبر می‌دهد.",
-      "body": "این ارقام در گزارش بازنشرشده آمده‌اند؛ «در حال ساخت» با پروژهٔ تکمیل‌شده یا آمادهٔ بهره‌برداری تفاوت دارد. برای استفادهٔ پژوهشی، منبع و تاریخ را دوباره بررسی کنید.",
-      "source": "ویستا · بازنشر خبر",
-      "sourceUrl": "https://vista.ir/2610/218/ptptf/%D9%88%D8%B2%DB%8C%D8%B1-%D9%85%DB%8C%D8%B1%D8%A7%D8%AB-%D9%81%D8%B1%D9%87%D9%86%DA%AF%DB%8C-%D9%88-%DA%AF%D8%B1%D8%AF%D8%B4%DA%AF%D8%B1%DB%8C-%D8%A8%DB%8C%D8%B4-%D8%A7%D8%B2-%DB%B3-%D9%87%D8%B2%D8%A7%D8%B1-%D9%BE%D8%B1%D9%88%DA%98%D9%87-%DA%AF%D8%B1%D8%AF%D8%B4%DA%AF%D8%B1%DB%8C-%D8%AF%D8%B1-%DA%A9%D8%B4%D9%88%D8%B1-%D8%AF%D8%B1%D8%AD%D8%A7%D9%84-%D8%B3%D8%A7%D8%AE%D8%AA-%D8%A7%D8%B3%D8%AA",
-      "publishedAt": "2026-10-08",
-      "region": "iran",
-      "category": "زیرساخت",
-      "image": "yazd",
-      "manual": true
-    },
-    {
-      "id": "iran-hotel-occupancy-september",
-      "title": "گزارش شهریور: ضریب اشغال اقامتگاه‌های شمال در برخی استان‌ها بالا گزارش شد",
-      "summary": "گزارش ۷ مهر تسنیم از ضریب اشغال بالای اقامتگاه‌ها در گیلان، مازندران و اردبیل در شهریور خبر می‌دهد؛ این شاخص به همان دوره محدود است.",
-      "body": "این گزارش آرشیو نزدیک بازار اقامت است و نرخ فعلی اشغال محسوب نمی‌شود. برای تحلیل بازار باید ظرفیت عرضه، طول اقامت و دادهٔ ماه‌های دیگر نیز بررسی شود.",
-      "source": "خبرگزاری تسنیم",
-      "sourceUrl": "https://www.tasnimnews.ir/fa/service/1416/%D8%B3%D9%81%D8%B1",
-      "publishedAt": "2026-09-29",
-      "region": "iran",
-      "category": "بازار اقامت",
-      "image": "rasht",
-      "manual": true
-    },
-    {
-      "id": "iran-south-events",
-      "title": "طرح «مهر جنوب»؛ برنامه‌ریزی برای بیش از ۶۵۰ رویداد گردشگری",
-      "summary": "گزارش بازنشرشده به نقل از مهر از برنامه‌ریزی رویدادهای گردشگری در جنوب ایران طی مهر خبر داده بود؛ برنامه‌ریزی با اجرای قطعی همه رویدادها برابر نیست.",
-      "body": "برای سفر به یک رویداد مشخص، زمان، مکان و وضعیت برگزاری را از برگزارکننده بررسی کنید.",
-      "source": "بازنشر خبر مهر",
-      "sourceUrl": "https://wona.ir/news/29h842nxm0/",
-      "publishedAt": "2026-09-22",
-      "region": "iran",
-      "category": "رویدادها",
-      "image": "kish",
-      "manual": true
-    },
-    {
-      "id": "iran-coitm-2026",
-      "title": "حضور ایران در بازار گردشگری چین؛ فرصت معرفی مسیرهای فرهنگی",
-      "summary": "اطلاعیهٔ برگزارکنندهٔ COITM 2026 به حضور عرضه‌کنندگان و ظرفیت معرفی مقصدهای فرهنگی و تجاری در بازار چین اشاره می‌کند.",
-      "body": "این مطلب بازنویسی اطلاعیهٔ برگزارکننده است. از خود اطلاعیه نمی‌توان تعداد گردشگران جذب‌شده یا ارزش قراردادها را نتیجه گرفت؛ اثر رویداد باید با گزارش‌های بعدی بررسی شود.",
-      "source": "COITM · برگزارکننده",
-      "sourceUrl": "https://www.coitm.cn/en/COITM-News97",
-      "publishedAt": "2026-09-28",
-      "region": "iran",
-      "category": "بازارهای بین‌المللی",
-      "image": "shiraz",
-      "manual": true
-    },
-    {
-      "id": "karon-waterfront-archive",
-      "title": "آرشیو: برنامهٔ توسعهٔ گردشگری ساحلی در حاشیهٔ کارون",
-      "summary": "گزارشی در آذر ۱۴۰۴ دربارهٔ برنامهٔ ساماندهی بخشی از ساحل کارون با هدف ایجاد مقصد گردشگری آبی منتشر شد.",
-      "body": "این گزارش آرشیوی است؛ اعلام برنامه معادل تکمیل پروژه نیست و وضعیت پیشرفت آن باید با منبع تازه‌تر بررسی شود.",
-      "source": "خبرگزاری مهر · آرشیو",
-      "sourceUrl": "https://www.mehrnews.com/news/6697518/",
-      "publishedAt": "2025-12-21",
-      "region": "iran",
-      "category": "زیرساخت",
-      "image": "kish",
-      "manual": true,
-      "archived": true
-    },
-    {
-      "id": "tehran-urban-tourism-archive",
-      "title": "آرشیو: ظرفیت‌های کمترشناخته‌شده گردشگری شهری تهران",
-      "summary": "گزارش مهر در آبان ۱۴۰۴ دربارهٔ معرفی ظرفیت‌های تاریخی و فرهنگی تهران به‌عنوان مقصد گردشگری صحبت می‌کند.",
-      "body": "این مطلب زمینهٔ تاریخی است، نه خبر جاری یا تأیید تحقق همهٔ طرح‌های مطرح‌شده.",
-      "source": "خبرگزاری مهر · آرشیو",
-      "sourceUrl": "https://www.mehrnews.com/news/6648848/",
-      "publishedAt": "2025-11-08",
-      "region": "iran",
-      "category": "گردشگری شهری",
-      "image": "isfahan",
-      "manual": true,
-      "archived": true
-    },
-    {
-      "id": "world-dubai-hotel-market",
-      "title": "نگاه جهانی: گزارش رویترز از بازیابی تدریجی اشغال هتل‌های دبی",
-      "summary": "رویترز در ۲۱ سپتامبر گزارش داد ضریب اشغال هتل‌های Emaar در دبی به حدود ۶۰٪ رسیده بود؛ پایین‌تر از سطح پیش از بحران.",
-      "body": "این گزارش فقط وضعیت اعلام‌شده از سوی Emaar در سپتامبر ۲۰۲۶ را توصیف می‌کند؛ نه دادهٔ جاری همهٔ هتل‌های دبی. این نمونهٔ جهانی برای مقایسه است و مستقیماً قابل تعمیم به ایران نیست.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/world/middle-east/emaar-expects-return-pre-war-occupancy-levels-dubai-hotels-next-12-months-2026-09-21/",
-      "publishedAt": "2026-09-21",
+      "id": "rss-ec8ac0c31ee11c",
+      "title": "Lords Hotels & Resorts Reports Q2 Growth - https://safariindia.com/",
+      "summary": "Lords Hotels & Resorts Reports Q2 Growth    https://safariindia.com/",
+      "body": "این عنوان از خبرخوان RSS کشف شده است؛ خلاصهٔ کوتاه برای آشنایی اولیه است. برای جزئیات، زمینه و اصلاحیه‌ها گزارش ناشر را بررسی کنید.",
+      "source": "https://safariindia.com/",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9aM3JiNTNRZ1RtTllsNWRyWXRwYUxocENhYzhXZ1dGc2kyV2ZCSG5QOGJSX21iYW82aS1ZaHpaM3R2Z0lRc19jWmVyWGpMQmJzVGRYTHBIMEVsaTNoY2s4OV9zN29ad0MyNTVLZGpZRlg?oc=5",
+      "publishedAt": "2026-10-14T11:05:11+00:00",
       "region": "world",
       "category": "روند جهانی",
       "image": "world",
-      "manual": true
+      "kind": "rss"
+    },
+    {
+      "id": "rss-ea4b15a0ccf323",
+      "title": "PATWA International Travel Awards 2026 Held at ITB Berlin - https://safariindia.com/",
+      "summary": "PATWA International Travel Awards 2026 Held at ITB Berlin    https://safariindia.com/",
+      "body": "این عنوان از خبرخوان RSS کشف شده است؛ خلاصهٔ کوتاه برای آشنایی اولیه است. برای جزئیات، زمینه و اصلاحیه‌ها گزارش ناشر را بررسی کنید.",
+      "source": "https://safariindia.com/",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMifEFVX3lxTE10cWVlYndGLURTRDFrRm1IaFpXYmFlQklNQ0NUREZDWVZXMml6eURCazZLTkx5UkxfcGIyRjhmeGFZbWJ0SlFLNVNBWE50VkV3TTBabmR0d3UyaEpmUmpuWW04REdVY3RLaFJ6NnM1dkhad0pfQ0wyNlVXS08?oc=5",
+      "publishedAt": "2026-10-13T10:23:07+00:00",
+      "region": "world",
+      "category": "روند جهانی",
+      "image": "world",
+      "kind": "rss"
+    },
+    {
+      "id": "rss-27b39c18202b6c",
+      "title": "Jamaica Pegasus Wins Caribbean Business Hotel Award - South Florida Caribbean News",
+      "summary": "Jamaica Pegasus Wins Caribbean Business Hotel Award    South Florida Caribbean News",
+      "body": "این عنوان از خبرخوان RSS کشف شده است؛ خلاصهٔ کوتاه برای آشنایی اولیه است. برای جزئیات، زمینه و اصلاحیه‌ها گزارش ناشر را بررسی کنید.",
+      "source": "South Florida Caribbean News",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9lang3QVRTai1ycWE2N0pNamxsUEc3XzZiT1hXSFQxNG9iLUVzQmg4QWRmWHE1ellfaGxqdk9yMDMtNTZhMnplV1hGVEJDNlAwbk9DZjJ6cmxYX1B6RU1aaklmN0htZGkyajZ6czhIX1pqQllJVDFERk930gF_QVVfeXFMUGRqWmpSeElFMHRmTXFuQk9keGY2czdORkJIN1pjS2RTV0lNVTFHQ0ZsWmU0bThwcGxnRFA4anpJckN1WTFZdUd5eDNYaDdabFFKN19NMzlKQ3E2a0VyRVFMcmVSV0NxeVRjRFZpWU4yMFk3MDNvUldqX0pqTm9Scw?oc=5",
+      "publishedAt": "2026-10-12T21:13:20+00:00",
+      "region": "world",
+      "category": "روند جهانی",
+      "image": "world",
+      "kind": "rss"
     }
   ]
 }
