@@ -1,57 +1,22 @@
 {
-  "updatedAt": "2026-10-15T08:44:36+00:00",
+  "updatedAt": "2026-10-15T08:45:44+00:00",
   "mix": {
     "iranTargetPercent": 90,
     "worldTargetPercent": 10
   },
   "feedStatus": {
     "configuredFeeds": 8,
-    "successfulFeeds": 8,
-    "warnings": []
+    "successfulFeeds": 2,
+    "warnings": [
+      "خبرگزاری مهر: cannot access local variable 'summary' where it is not associated with a value",
+      "خبرگزاری ایسنا: cannot access local variable 'summary' where it is not associated with a value",
+      "خبرآنلاین: cannot access local variable 'summary' where it is not associated with a value",
+      "باشگاه خبرنگاران جوان: cannot access local variable 'summary' where it is not associated with a value",
+      "گردشگری ایران: cannot access local variable 'summary' where it is not associated with a value",
+      "روند جهانی: cannot access local variable 'summary' where it is not associated with a value"
+    ]
   },
   "items": [
-    {
-      "id": "rss-9e72432ac78a0f",
-      "title": "خسارت سیلاب به ۹ روستای مراوه‌تپه/ اعتبار مدیریت بحران در انتظار احداث پل و لایروبی مسیرها",
-      "summary": "فرماندار مراوه‌تپه با اشاره به خسارت سیلاب اخیر به ۹ روستای این شهرستان و آسیب‌دیدگی بخشی از پل روستای کلاته گفت: با وجود ثبت ۱۴۵ میلی‌متر بارندگی در یکی از مناطق شهرستان، اقدامات پیشگیرانه خسارات را محدود کرد؛ با این حال، احداث اصولی پل آسیب‌دیده و لایروبی اساسی مسیرهای سیلابی به تأمین اعتبار از محل منابع مدیریت بحران نیاز دارد.",
-      "source": "خبرگزاری ایسنا",
-      "sourceUrl": "https://www.isna.ir/news/1405072315468/%D8%AE%D8%B3%D8%A7%D8%B1%D8%AA-%D8%B3%DB%8C%D9%84%D8%A7%D8%A8-%D8%A8%D9%87-%DB%B9-%D8%B1%D9%88%D8%B3%D8%AA%D8%A7%DB%8C-%D9%85%D8%B1%D8%A7%D9%88%D9%87-%D8%AA%D9%BE%D9%87-%D8%A7%D8%B9%D8%AA%D8%A8%D8%A7%D8%B1-%D9%85%D8%AF%DB%8C%D8%B1%DB%8C%D8%AA-%D8%A8%D8%AD%D8%B1%D8%A7%D9%86-%D8%AF%D8%B1-%D8%A7%D9%86%D8%AA%D8%B8%D8%A7%D8%B1",
-      "publishedAt": "2026-10-15T08:43:41+00:00",
-      "region": "iran",
-      "category": "اخبار گردشگری",
-      "image": "iran-panorama",
-      "kind": "rss",
-      "body": "فرماندار مراوه‌تپه با اشاره به خسارت سیلاب اخیر به ۹ روستای این شهرستان و آسیب‌دیدگی بخشی از پل روستای کلاته گفت: با وجود ثبت ۱۴۵ میلی‌متر بارندگی در یکی از مناطق شهرستان، اقدامات پیشگیرانه خسارات را محدود کرد؛ با این حال، احداث اصولی پل آسیب‌دیده و لایروبی اساسی مسیرهای سیلابی به تأمین اعتبار از محل منابع مدیریت بحران نیاز دارد.\n\nاین خلاصه از توضیحات همراه خبر در فید ناشر گرفته شده است. برای جزئیات کامل، زمینهٔ آماری و اصلاحیه‌های احتمالی، گزارش اصلی را باز کنید.",
-      "context": "این خبر می‌تواند برای شناخت مقصد مفید باشد؛ اما اطلاعات متغیر مانند مسیر دسترسی، ساعات بازدید و امکانات را نزدیک سفر جداگانه کنترل کنید."
-    },
-    {
-      "id": "rss-2aaa11ea2fe917",
-      "title": "رزمایش بازسازی عملیات میمک در اسفراین برگزار شد",
-      "summary": "اسفراین- رزمایش بازسازی عملیات میمک با هدف ترویج فرهنگ ایثار و شهادت و بازنمایی رشادت‌های رزمندگان اسلام در هشت سال دفاع مقدس برگزار شد.",
-      "source": "خبرگزاری مهر",
-      "sourceUrl": "https://www.mehrnews.com/news/6978670/%D8%B1%D8%B2%D9%85%D8%A7%DB%8C%D8%B4-%D8%A8%D8%A7%D8%B2%D8%B3%D8%A7%D8%B2%DB%8C-%D8%B9%D9%85%D9%84%DB%8C%D8%A7%D8%AA-%D9%85%DB%8C%D9%85%DA%A9-%D8%AF%D8%B1-%D8%A7%D8%B3%D9%81%D8%B1%D8%A7%DB%8C%D9%86-%D8%A8%D8%B1%DA%AF%D8%B2%D8%A7%D8%B1-%D8%B4%D8%AF",
-      "publishedAt": "2026-10-15T08:43:36+00:00",
-      "region": "iran",
-      "category": "اخبار گردشگری",
-      "image": "iran-panorama",
-      "kind": "rss",
-      "body": "اسفراین- رزمایش بازسازی عملیات میمک با هدف ترویج فرهنگ ایثار و شهادت و بازنمایی رشادت‌های رزمندگان اسلام در هشت سال دفاع مقدس برگزار شد.\n\nاین خلاصه از توضیحات همراه خبر در فید ناشر گرفته شده است. برای جزئیات کامل، زمینهٔ آماری و اصلاحیه‌های احتمالی، گزارش اصلی را باز کنید.",
-      "context": "این خلاصه بر پایهٔ توضیحات منبع تهیه شده است؛ برای جزئیات کامل، زمینه و اصلاحیه‌های احتمالی، گزارش اصلی را بخوانید."
-    },
-    {
-      "id": "rss-67533d59de9e88",
-      "title": "بیست و چهارمین همایش سازندگان و طراحان کشور در هتل آراز نوشهر برگزار شد",
-      "summary": "بیست‌وچهارمین همایش سازندگان و طراحان کشور، اول و دوم مهرماه در هتل آراز نوشهر برگزار شد. در این رویداد، شرکت‌های فعال در صنعت ساختمان تازه‌ترین محصولات و راهکارهای خود را معرفی کردند. آداک تِک نیز با ارائه قفل‌ها و دستگیره‌های هوشمند، تجهیزات خانه و هتل هوشمند و محصولات برندهای Kaadas و Moorgen حضور داشت. نکته قابل توجه این دوره، برگزاری همایش در هتلی بود که آداک تِک پیش‌تر بخشی از تجهیزات هوشمند آن را تأمین و اجرا ",
-      "source": "خبرآنلاین",
-      "sourceUrl": "https://www.khabaronline.ir/news/2288754/%D8%A8%DB%8C%D8%B3%D8%AA-%D9%88-%DA%86%D9%87%D8%A7%D8%B1%D9%85%DB%8C%D9%86-%D9%87%D9%85%D8%A7%DB%8C%D8%B4-%D8%B3%D8%A7%D8%B2%D9%86%D8%AF%DA%AF%D8%A7%D9%86-%D9%88-%D8%B7%D8%B1%D8%A7%D8%AD%D8%A7%D9%86-%DA%A9%D8%B4%D9%88%D8%B1-%D8%AF%D8%B1-%D9%87%D8%AA%D9%84-%D8%A2%D8%B1%D8%A7%D8%B2-%D9%86%D9%88%D8%B4%D9%87%D8%B1",
-      "publishedAt": "2026-10-15T08:31:19+00:00",
-      "region": "iran",
-      "category": "اخبار گردشگری",
-      "image": "iran-panorama",
-      "kind": "rss",
-      "body": "بیست‌وچهارمین همایش سازندگان و طراحان کشور، اول و دوم مهرماه در هتل آراز نوشهر برگزار شد. در این رویداد، شرکت‌های فعال در صنعت ساختمان تازه‌ترین محصولات و راهکارهای خود را معرفی کردند. آداک تِک نیز با ارائه قفل‌ها و دستگیره‌های هوشمند، تجهیزات خانه و هتل هوشمند و محصولات برندهای Kaadas و Moorgen حضور داشت. نکته قابل توجه این دوره، برگزاری همایش در هتلی بود که آداک تِک پیش‌تر بخشی از تجهیزات هوشمند آن را تأمین و اجرا\n\nاین خلاصه از توضیحات همراه خبر در فید ناشر گرفته شده است. برای جزئیات کامل، زمینهٔ آماری و اصلاحیه‌های احتمالی، گزارش اصلی را باز کنید.",
-      "context": "اعلام برنامه با اثبات برگزاری همهٔ بخش‌ها یا دستاورد نهایی یکسان نیست؛ برای جزئیات اجرایی، برگزارکننده و گزارش پس از رویداد را بررسی کنید."
-    },
     {
       "id": "rss-62cb1cd2f973da",
       "title": "مدیرکل میراث فرهنگی استان: احیای هویت تاریخی تبریز به مطالبه عمومی تبدیل شده است",
@@ -121,20 +86,6 @@
       "image": "guesthouse",
       "manual": true,
       "context": "تاریخ‌ها در این نوشته بازتاب اطلاعیهٔ هنگام انتشار هستند؛ پیش از ثبت‌نام به اطلاعیهٔ رسمی و آخرین اصلاحیه‌های برگزارکننده مراجعه کنید."
-    },
-    {
-      "id": "rss-27b39c18202b6c",
-      "title": "Jamaica Pegasus Wins Caribbean Business Hotel Award - South Florida Caribbean News",
-      "summary": "Jamaica Pegasus Wins Caribbean Business Hotel Award South Florida Caribbean News",
-      "source": "South Florida Caribbean News",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9lang3QVRTai1ycWE2N0pNamxsUEc3XzZiT1hXSFQxNG9iLUVzQmg4QWRmWHE1ellfaGxqdk9yMDMtNTZhMnplV1hGVEJDNlAwbk9DZjJ6cmxYX1B6RU1aaklmN0htZGkyajZ6czhIX1pqQllJVDFERk930gF_QVVfeXFMUGRqWmpSeElFMHRmTXFuQk9keGY2czdORkJIN1pjS2RTV0lNVTFHQ0ZsWmU0bThwcGxnRFA4anpJckN1WTFZdUd5eDNYaDdabFFKN19NMzlKQ3E2a0VyRVFMcmVSV0NxeVRjRFZpWU4yMFk3MDNvUldqX0pqTm9Scw?oc=5",
-      "publishedAt": "2026-10-12T21:13:20+00:00",
-      "region": "world",
-      "category": "روند جهانی",
-      "image": "world",
-      "kind": "rss",
-      "body": "Jamaica Pegasus Wins Caribbean Business Hotel Award South Florida Caribbean News\n\nاین خلاصه از توضیحات همراه خبر در فید ناشر گرفته شده است. برای جزئیات کامل، زمینهٔ آماری و اصلاحیه‌های احتمالی، گزارش اصلی را باز کنید.",
-      "context": "این نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها تفاوت دارد و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد."
     },
     {
       "id": "tourism-credit-fund",
