@@ -1,15 +1,13 @@
 {
-  "updatedAt": "2026-10-15T09:36:49+00:00",
+  "updatedAt": "2026-10-15T10:20:18+00:00",
   "mix": {
     "iranTargetPercent": 90,
     "worldTargetPercent": 10
   },
   "feedStatus": {
     "configuredFeeds": 49,
-    "successfulFeeds": 48,
-    "warnings": [
-      "باشگاه خبرنگاران جوان: <urlopen error timed out>"
-    ]
+    "successfulFeeds": 49,
+    "warnings": []
   },
   "items": [
     {
@@ -74,22 +72,6 @@
       "archived": false
     },
     {
-      "id": "rss-a04f9ba55d77f8",
-      "title": "Antigua and Barbuda to Host SOTIC 2027: A Major Win for Caribbean Tourism - eTurboNews",
-      "summary": "Antigua and Barbuda to Host SOTIC 2027: A Major Win for Caribbean Tourism eTurboNews",
-      "source": "eTurboNews",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9yelJ1RzZ5Z0R4UXhBanlRVENhSFBCYW83dWtPVHRkUFp0dERMeGlBM0djZklZVUxuczNlSWI4SXo2Z18zajhPVEZJX1ZCY2UxRDM1UjFWYjFZVzlqUUtkUGlWY3NFSFlZWncxYW9FYk04a2JyRDd4Vg?oc=5",
-      "publishedAt": "2026-10-14T20:35:49+00:00",
-      "region": "world",
-      "category": "روند جهانی",
-      "image": "world",
-      "kind": "rss",
-      "contentType": "news",
-      "body": "Antigua and Barbuda to Host SOTIC 2027: A Major Win for Caribbean Tourism eTurboNews\n\nاین نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
-      "context": "این نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
-      "archived": false
-    },
-    {
       "id": "rss-60dbb549a62cb3",
       "title": "ابلاغ سند بازآفرینی گردشگری ایران در دوره پساجنگ",
       "summary": "معاون گردشگری کشور با تأکید بر ضرورت بازتعریف مسیر توسعه گردشگری ایران متناسب با تحولات و روندهای نوین جهانی، از ابلاغ سند راهبردی و عملیاتی بازآفرینی گردشگری ایران در دوره پساجنگ خبر داد.",
@@ -122,22 +104,6 @@
       "archived": false
     },
     {
-      "id": "rss-4566e5e11a2f73",
-      "title": "FACILITATE Community launches at TIS 2026 to support tourism data transition - Travel Daily News International",
-      "summary": "FACILITATE Community launches at TIS 2026 to support tourism data transition Travel Daily News International",
-      "source": "Travel Daily News International",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQcUR5UDJtV0ZjZVBLejh2RDlZWm1UZ3NUc1ZUNldhN0JWMVBNdUxzZXEtYVZudzlQZjhsc3FPYnhoeDBiNmR1dlRLaWxvM0JzOVBtTmlvZURqbmxRM0VEN1JTbnl4bGdoTmxEMmJJRy14c3NpeW5Qb2E0RWxwS0tib2ZXVm5FalNnMVFtOHpveFZhSG1QTHZlb09UWllhalU?oc=5",
-      "publishedAt": "2026-10-14T09:14:09+00:00",
-      "region": "world",
-      "category": "روند جهانی",
-      "image": "world",
-      "kind": "rss",
-      "contentType": "news",
-      "body": "FACILITATE Community launches at TIS 2026 to support tourism data transition Travel Daily News International\n\nاین نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
-      "context": "این نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
-      "archived": false
-    },
-    {
       "id": "rss-3451f50db99696",
       "title": "میراث ناملموس و صادرات خدمات ۲ مسیر تازه گردشگری",
       "summary": "اصفهان- فعالان گردشگری در نشست مانوین تاکس، از ظرفیت آیین‌ها، مهارت‌های بومی، تولید محتوای تخصصی و خدمات قابل عرضه به بازارهای خارجی برای توسعه کسب‌وکارهای گردشگری سخن گفتند.",
@@ -151,54 +117,6 @@
       "contentType": "news",
       "body": "اصفهان- فعالان گردشگری در نشست مانوین تاکس، از ظرفیت آیین‌ها، مهارت‌های بومی، تولید محتوای تخصصی و خدمات قابل عرضه به بازارهای خارجی برای توسعه کسب‌وکارهای گردشگری سخن گفتند.\n\nاین خبر می‌تواند برای شناخت مقصد مفید باشد؛ اما اطلاعات متغیر مانند مسیر دسترسی، ساعات بازدید و امکانات را نزدیک سفر جداگانه کنترل کنید.",
       "context": "این خبر می‌تواند برای شناخت مقصد مفید باشد؛ اما اطلاعات متغیر مانند مسیر دسترسی، ساعات بازدید و امکانات را نزدیک سفر جداگانه کنترل کنید.",
-      "archived": false
-    },
-    {
-      "id": "rss-9236f769b79a83",
-      "title": "East Coast tourism stakeholders undergo training on sustainability - Daily Express Malaysia",
-      "summary": "East Coast tourism stakeholders undergo training on sustainability Daily Express Malaysia",
-      "source": "Daily Express Malaysia",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNbWRZLWdVdjFRVkhQUlljMno5cTFrNWp0OG1RZ3FURDA0czE4Nnd5WmhUZXdBSkg5OEo4VlR1emJwSTkza3ViYUFYT1JKcmVMXy1JSHVRRDJZOHFxRjlSUmxwMDcwUkpHZ0xmVDZQemxDZkxxVGwxUVVVbUt2UTk4QVB5RVcwSnd5VFFXR1R4c0N6dGRjRzR2bUZHSi04TVM3ajZHVWxWTURQVDFwNmFQbw?oc=5",
-      "publishedAt": "2026-10-14T06:24:32+00:00",
-      "region": "world",
-      "category": "روند جهانی",
-      "image": "world",
-      "kind": "rss",
-      "contentType": "news",
-      "body": "East Coast tourism stakeholders undergo training on sustainability Daily Express Malaysia\n\nاین نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
-      "context": "این نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
-      "archived": false
-    },
-    {
-      "id": "rss-d0c40cceeb1fca",
-      "title": "Quang Ninh looks to sustainable growth through high-end tourism - Cổng thông tin Quảng Ninh",
-      "summary": "Quang Ninh looks to sustainable growth through high-end tourism Cổng thông tin Quảng Ninh",
-      "source": "Cổng thông tin Quảng Ninh",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9QVEVqdjNuanF0U2JSaEZ3eEtNZ3BQVEU2a0E4YktqZXk5dXVzVXFKU3lTUXo2VU94REdYWlliZU5BbUY1cXQwd2k2bFd2X2FEbWkwNk05SFVJaUZpVXpSSlpiSmxTaFU0YVRhbUJIZlNXSE1qLWh1cnNiWmhEbm8?oc=5",
-      "publishedAt": "2026-10-14T04:05:00+00:00",
-      "region": "world",
-      "category": "روند جهانی",
-      "image": "world",
-      "kind": "rss",
-      "contentType": "news",
-      "body": "Quang Ninh looks to sustainable growth through high-end tourism Cổng thông tin Quảng Ninh\n\nاین نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
-      "context": "این نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
-      "archived": false
-    },
-    {
-      "id": "rss-0dc63e7507015a",
-      "title": "flydubai expands network to 125+ destinations with new routes - Gulf Business",
-      "summary": "flydubai expands network to 125+ destinations with new routes Gulf Business",
-      "source": "Gulf Business",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQNjI0Rnl1bXdFTGVsazR5WEl2UDN4c2dMUTdKYWNEQmdia1hDTnJWanp0VWk4b2xabDVINUNuVDhvNTkyWm1tWDNER2VCSng3bk1LRFVydlNqdXZhak9JOHI0SnpmZW1fNGdaVlpKazd0Rzc2MEYyZDFKU19pSlhfYTdQMWV0NEFUSTduSXpHM0liNkQ0UExwbVo2U0RNeTA5RHc?oc=5",
-      "publishedAt": "2026-10-13T23:56:46+00:00",
-      "region": "world",
-      "category": "روند جهانی",
-      "image": "world",
-      "kind": "rss",
-      "contentType": "news",
-      "body": "flydubai expands network to 125+ destinations with new routes Gulf Business\n\nاین نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
-      "context": "این نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
       "archived": false
     },
     {
@@ -246,54 +164,6 @@
       "kind": "rss",
       "contentType": "news",
       "body": "رئیس شورای حکام مرکز مطالعات منطقه‌ای پاسداری ازمیراث فرهنگی ناملموس بااشاره به آسیب دیدگی ۱۴۹بنای تاریخی درجنگ تجاوزکارانه گفت: تهاجم آمریکا به اماکن دارای «سپر آبی» نقض کنوانسیون لاهه است.\n\nاین نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
-      "context": "این نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
-      "archived": false
-    },
-    {
-      "id": "rss-867ce20ddcf100",
-      "title": "Sabah’s East Coast ecotourism push puts sustainability in focus - Newswav",
-      "summary": "Sabah’s East Coast ecotourism push puts sustainability in focus Newswav",
-      "source": "Newswav",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNelhDZ2dhNG9IQWpNdW5nVU1rbmhzcnFKYzJUNERERms3eUU0ZUo5STVPVEZnXzFnTGVpVkhkUHYyU2Q4Z2dSTVJfZENaVWIxcFpJRFY4Uy1yV3dIaGpyNFAwWnZrY0U2UGY0X2ZoN1c3LVQ3NFBoZy1LeXJ5T2ZJSE56dW5BdHVOY18zaG8wLWlYYzcwdUNRV3ItemQ0bUExTzJKbUpENA?oc=5",
-      "publishedAt": "2026-10-13T07:13:42+00:00",
-      "region": "world",
-      "category": "روند جهانی",
-      "image": "world",
-      "kind": "rss",
-      "contentType": "news",
-      "body": "Sabah’s East Coast ecotourism push puts sustainability in focus Newswav\n\nاین نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
-      "context": "این نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
-      "archived": false
-    },
-    {
-      "id": "rss-a53415d907e562",
-      "title": "With Fewer Canadian Arrivals, Georgia Sees $70M Drop in Foreign Tourist Spending - Global Atlanta",
-      "summary": "With Fewer Canadian Arrivals, Georgia Sees $70M Drop in Foreign Tourist Spending Global Atlanta",
-      "source": "Global Atlanta",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPQlhreDJzRmlBSE43UHZlSXVmLXNna19mb21Zem9CUl9XOGhPUHhwa3NkMk5mV2NMTU9jekNWT19scGtGN3VKZnJMa0RFWDVkRFFGamt2OTA5QUlyX3pWR0c4UGlNVWo3UF90V0lxWFVfOXRpT2lmVGExazNLeGxqSUk4LXhLYWl4V0MzRmQwTTZKRXNZeEVUX1NzTHd6NWJsZDl5NG1TaG9OVXd3ZUE?oc=5",
-      "publishedAt": "2026-10-12T21:24:06+00:00",
-      "region": "world",
-      "category": "روند جهانی",
-      "image": "world",
-      "kind": "rss",
-      "contentType": "news",
-      "body": "With Fewer Canadian Arrivals, Georgia Sees $70M Drop in Foreign Tourist Spending Global Atlanta\n\nاین نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
-      "context": "این نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
-      "archived": false
-    },
-    {
-      "id": "rss-df0f6374f233e6",
-      "title": "Design shifts and brand changes: Local hospitality market undergoes transformation - The Business Journals",
-      "summary": "Design shifts and brand changes: Local hospitality market undergoes transformation The Business Journals",
-      "source": "The Business Journals",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOVDBBcUp0QXNUYWQzb0hOajJfOFNfT3llU1k2NXdXT3k3UndISFFSMEJvNDlScU5VaS1uZENiOFdpUWg0UWhoQXBzOEx0SmUyQlBpaWRjUl82LXFVOU5GZV9KYUlyX3NWOWVQV180Yjd0TUlUVy1zSjliLWk1ZE1ZdG5SNmZBZw?oc=5",
-      "publishedAt": "2026-10-12T17:44:00+00:00",
-      "region": "world",
-      "category": "بازار جهانی",
-      "image": "world",
-      "kind": "rss",
-      "contentType": "news",
-      "body": "Design shifts and brand changes: Local hospitality market undergoes transformation The Business Journals\n\nاین نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
       "context": "این نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
       "archived": false
     },
@@ -390,6 +260,22 @@
       "contentType": "news",
       "body": "شیراز- وزیر میراث فرهنگی، گردشگری و صنایع دستی با تأکید بر ضرورت تسهیل سرمایه‌گذاری، خواستار حضور میدانی مدیران، اصلاح ضوابط و رفع موانع اجرای پروژه‌های گردشگری شد.\n\nاین خلاصه بر پایهٔ توضیحات همراه گزارش تهیه شده است؛ برای جزئیات کامل، زمینه و اصلاحیه‌های احتمالی، منبع اصلی را باز کنید.",
       "context": "این خلاصه بر پایهٔ توضیحات همراه گزارش تهیه شده است؛ برای جزئیات کامل، زمینه و اصلاحیه‌های احتمالی، منبع اصلی را باز کنید.",
+      "archived": false
+    },
+    {
+      "id": "rss-5a82c5c653ee7a",
+      "title": "صالحی‌امیری: مشکلات سرمایه‌گذاران با مکاتبات اداری حل نمی‌شود",
+      "summary": "شیراز- وزیر میراث فرهنگی، گردشگری و صنایع دستی با تأکید بر ضرورت تسهیل سرمایه‌گذاری، خواستار حضور میدانی مدیران، اصلاح ضوابط و رفع موانع اجرای پروژه‌های گردشگری شد.",
+      "source": "عصر گردشگری",
+      "sourceUrl": "https://asregardeshgari.com/cultural-heritage-news/370727/",
+      "publishedAt": "2026-10-11T20:38:12+00:00",
+      "region": "world",
+      "category": "روند جهانی",
+      "image": "world",
+      "kind": "rss",
+      "contentType": "news",
+      "body": "شیراز- وزیر میراث فرهنگی، گردشگری و صنایع دستی با تأکید بر ضرورت تسهیل سرمایه‌گذاری، خواستار حضور میدانی مدیران، اصلاح ضوابط و رفع موانع اجرای پروژه‌های گردشگری شد.\n\nاین نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
+      "context": "این نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
       "archived": false
     },
     {
@@ -614,6 +500,22 @@
       "archived": false
     },
     {
+      "id": "rss-bdfcc7c9c0ba33",
+      "title": "وقتی سفرای آمریکای لاتین میزبان خبرنگاران شدند",
+      "summary": "نشست صمیمانه با رسانه‌های ایرانی به دعوت سفیر اروگوئه در تهران و با حضور سفرای برزیل، ونزوئلا، کوبا، نیکاراگوئه و اسپانیا در محل سفارت این کشور برگزار شد.",
+      "source": "عصر گردشگری",
+      "sourceUrl": "https://asregardeshgari.com/cultural-heritage-news/370263/",
+      "publishedAt": "2026-10-06T14:38:08+00:00",
+      "region": "world",
+      "category": "روند جهانی",
+      "image": "world",
+      "kind": "rss",
+      "contentType": "news",
+      "body": "نشست صمیمانه با رسانه‌های ایرانی به دعوت سفیر اروگوئه در تهران و با حضور سفرای برزیل، ونزوئلا، کوبا، نیکاراگوئه و اسپانیا در محل سفارت این کشور برگزار شد.\n\nاین نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
+      "context": "این نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
+      "archived": false
+    },
+    {
       "id": "rss-fbf5ebd46f60f7",
       "title": "۳۰۱۷ پروژه گردشگری در ۳۱ استان کشور در حال ساخت است",
       "summary": "وزیر میراث‌فرهنگی، گردشگری و صنایع‌دستی گفت: در حال حاضر ۳۰۱۷ پروژه گردشگری در ۳۱ استان کشور با سرمایه‌گذاری حدود هزار و ۳۰۰ همت در حال ساخت است.",
@@ -790,6 +692,22 @@
       "archived": false
     },
     {
+      "id": "rss-6816eff9fc3387",
+      "title": "وزیر میراث فرهنگی بر مرمت اصولی مسجد و قلعه بردستان تأکید کرد",
+      "summary": "بوشهر – وزیر میراث‌فرهنگی، گردشگری و صنایع‌دستی در ادامه سفر به استان بوشهر از مسجد تاریخی و قلعه بردستان بازدید و وضعیت حفاظتی و ظرفیت‌های معماری این دو اثر تاریخی را بررسی کرد.",
+      "source": "عصر گردشگری",
+      "sourceUrl": "https://asregardeshgari.com/cultural-heritage-news/369889/",
+      "publishedAt": "2026-10-02T08:38:18+00:00",
+      "region": "world",
+      "category": "روند جهانی",
+      "image": "world",
+      "kind": "rss",
+      "contentType": "news",
+      "body": "بوشهر – وزیر میراث‌فرهنگی، گردشگری و صنایع‌دستی در ادامه سفر به استان بوشهر از مسجد تاریخی و قلعه بردستان بازدید و وضعیت حفاظتی و ظرفیت‌های معماری این دو اثر تاریخی را بررسی کرد.\n\nاین نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
+      "context": "این نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
+      "archived": false
+    },
+    {
       "id": "rss-8cbfe8d474de2b",
       "title": "گنبد شیخ لطف‌الله پیش از بارش‌ها به مرحله نصب کاشی رسید",
       "summary": "اصفهان- مدیرکل میراث فرهنگی استان اصفهان از آغاز نصب قطعات کاشی گنبد شیخ لطف‌الله خبر داد و گفت: این عملیات در شرایطی ادامه دارد که مدیریت خطر نفوذ رطوبت پیش از بارندگی‌ها اهمیت دارد.",
@@ -870,22 +788,6 @@
       "archived": false
     },
     {
-      "id": "rss-2187d1474cbe1e",
-      "title": "نمایشگاه عکس جاذبه‌های جهانی ایران در ایستگاه‌های مترو برپا شد",
-      "summary": "نمایشگاه عکس جاذبه‌های جهانی ایران در ایستگاه‌های مترو در چهار ایستگاه پرتردد مترو تهران برپا شد.",
-      "source": "عصر گردشگری",
-      "sourceUrl": "https://asregardeshgari.com/cultural-heritage-news/369760/",
-      "publishedAt": "2026-09-30T20:38:22+00:00",
-      "region": "iran",
-      "category": "رویدادها",
-      "image": "isfahan",
-      "kind": "rss",
-      "contentType": "news",
-      "body": "نمایشگاه عکس جاذبه‌های جهانی ایران در ایستگاه‌های مترو در چهار ایستگاه پرتردد مترو تهران برپا شد.\n\nاعلام برنامه با اثبات برگزاری همهٔ بخش‌ها یا دستاورد نهایی یکسان نیست؛ برای جزئیات اجرایی، برگزارکننده و گزارش پس از رویداد را بررسی کنید.",
-      "context": "اعلام برنامه با اثبات برگزاری همهٔ بخش‌ها یا دستاورد نهایی یکسان نیست؛ برای جزئیات اجرایی، برگزارکننده و گزارش پس از رویداد را بررسی کنید.",
-      "archived": false
-    },
-    {
       "id": "rss-3accf15e55e0d7",
       "title": "از تاب‌آوری تا بازآفرینی؛ گردشگری ایران در عصر هوش مصنوعی",
       "summary": "نائب رئیس انجمن علمی گردشگری ایران گفت:در شرایط عدم‌قطعیت و ضرورت بازسازی اعتماد، هوش مصنوعی می‌تواند به بازآفرینی تصویر مقصد، ارتقای تجربه گردشگر و افزایش رقابت‌پذیری گردشگری ایران کمک کند.",
@@ -898,22 +800,6 @@
       "kind": "rss",
       "contentType": "news",
       "body": "نائب رئیس انجمن علمی گردشگری ایران گفت:در شرایط عدم‌قطعیت و ضرورت بازسازی اعتماد، هوش مصنوعی می‌تواند به بازآفرینی تصویر مقصد، ارتقای تجربه گردشگر و افزایش رقابت‌پذیری گردشگری ایران کمک کند.\n\nاین خلاصه بر پایهٔ توضیحات همراه گزارش تهیه شده است؛ برای جزئیات کامل، زمینه و اصلاحیه‌های احتمالی، منبع اصلی را باز کنید.",
-      "context": "این خلاصه بر پایهٔ توضیحات همراه گزارش تهیه شده است؛ برای جزئیات کامل، زمینه و اصلاحیه‌های احتمالی، منبع اصلی را باز کنید.",
-      "archived": false
-    },
-    {
-      "id": "rss-dc68f65ef621cd",
-      "title": "امضای تفاهم‌نامه همکاری برای ارتقای زیرساخت‌های گردشگری دسترس‌پذیر",
-      "summary": "تفاهم‌نامه همکاری برای ارتقای زیرساخت‌های گردشگری دسترس‌پذیر امضا شد.",
-      "source": "عصر گردشگری",
-      "sourceUrl": "https://asregardeshgari.com/cultural-heritage-news/369691/",
-      "publishedAt": "2026-09-30T14:38:30+00:00",
-      "region": "iran",
-      "category": "میراث فرهنگی",
-      "image": "isfahan",
-      "kind": "rss",
-      "contentType": "news",
-      "body": "تفاهم‌نامه همکاری برای ارتقای زیرساخت‌های گردشگری دسترس‌پذیر امضا شد.\n\nاین خلاصه بر پایهٔ توضیحات همراه گزارش تهیه شده است؛ برای جزئیات کامل، زمینه و اصلاحیه‌های احتمالی، منبع اصلی را باز کنید.",
       "context": "این خلاصه بر پایهٔ توضیحات همراه گزارش تهیه شده است؛ برای جزئیات کامل، زمینه و اصلاحیه‌های احتمالی، منبع اصلی را باز کنید.",
       "archived": false
     },
@@ -1014,6 +900,22 @@
       "archived": false
     },
     {
+      "id": "rss-3ed9e5f9bd7d5d",
+      "title": "موافقت با پرداخت ۵۰۰ هزار دلار برای مطالعات و مرمت مسجد امام (ره)",
+      "summary": "اصفهان-رئیس کمیته بین‌الملل اداره کل میراث فرهنگی اصفهان از موافقت یک نهاد بین‌المللی با پرداخت ۵۰۰ هزار دلار برای مطالعات و مرمت مسجد جامع عباسی خبر داد.",
+      "source": "عصر گردشگری",
+      "sourceUrl": "https://asregardeshgari.com/cultural-heritage-news/369607/",
+      "publishedAt": "2026-09-30T08:38:31+00:00",
+      "region": "world",
+      "category": "روند جهانی",
+      "image": "world",
+      "kind": "rss",
+      "contentType": "news",
+      "body": "اصفهان-رئیس کمیته بین‌الملل اداره کل میراث فرهنگی اصفهان از موافقت یک نهاد بین‌المللی با پرداخت ۵۰۰ هزار دلار برای مطالعات و مرمت مسجد جامع عباسی خبر داد.\n\nاین نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
+      "context": "این نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
+      "archived": false
+    },
+    {
       "id": "rss-962d04ac92e82b",
       "title": "اجاره ویلا در شمال؛ ۳ اقامتگاه جدید کمیاب جاباما در شمال",
       "summary": "اگر قصد دارید اقامتی متفاوت را در دل دنج‌ترین نقاط شمال تجربه کنید، همراه ما باشید تا سه اقامتگاه کمیاب و کم‌نظیر جاباما را با هم بررسی کنیم.",
@@ -1105,6 +1007,22 @@
       "image": "shiraz",
       "manual": true,
       "context": "جزئیات بالا از اطلاعیهٔ برگزارکننده نقل شده‌اند. برای سنجش دستاورد واقعی رویداد، به گزارش پس از نمایشگاه دربارهٔ قراردادها، تماس‌های تجاری و رزروهای حاصل نیاز است.",
+      "archived": false
+    },
+    {
+      "id": "rss-6d23b2912a2dbc",
+      "title": "۱۳۲ همت سرمایه‌گذاری در زیرساخت‌های گردشگری طی دو سال",
+      "summary": "وزیر میراث‌فرهنگی، گردشگری و صنایع‌دستی گفت: طی دو سال گذشته، هزار و ۴۷۱ پروژه با سرمایه‌گذاری ۱۳۲ هزار میلیارد تومان و ایجاد اشتغال مستقیم برای ۱۹ هزار نفر در کشور اجرا شده است.",
+      "source": "عصر گردشگری",
+      "sourceUrl": "https://asregardeshgari.com/cultural-heritage-news/369284/",
+      "publishedAt": "2026-09-27T20:38:17+00:00",
+      "region": "world",
+      "category": "روند جهانی",
+      "image": "world",
+      "kind": "rss",
+      "contentType": "news",
+      "body": "وزیر میراث‌فرهنگی، گردشگری و صنایع‌دستی گفت: طی دو سال گذشته، هزار و ۴۷۱ پروژه با سرمایه‌گذاری ۱۳۲ هزار میلیارد تومان و ایجاد اشتغال مستقیم برای ۱۹ هزار نفر در کشور اجرا شده است.\n\nاین نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
+      "context": "این نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
       "archived": false
     },
     {
@@ -1297,6 +1215,22 @@
       "contentType": "news",
       "body": "مدیرکل توسعه گردشگری داخلی گفت: همزمان با هفته گردشگری و در طول مهر ماه، بیش از ۶۵۰ رویداد در قالب طرح «مهر جنوب» برگزار می‌شود\n\nاعلام برنامه با اثبات برگزاری همهٔ بخش‌ها یا دستاورد نهایی یکسان نیست؛ برای جزئیات اجرایی، برگزارکننده و گزارش پس از رویداد را بررسی کنید.",
       "context": "اعلام برنامه با اثبات برگزاری همهٔ بخش‌ها یا دستاورد نهایی یکسان نیست؛ برای جزئیات اجرایی، برگزارکننده و گزارش پس از رویداد را بررسی کنید.",
+      "archived": false
+    },
+    {
+      "id": "rss-d9abf274e3a181",
+      "title": "ترکیه؛ مقصدی که هم‌زمان بلیط سفر و برگه پذیرش دانشگاه می‌خواهد",
+      "summary": "هواپیما هنوز کامل روی باند ننشسته که چراغ‌های استانبول از پنجره دیده می‌شوند؛ شهری که کمتر از دو ساعت و نیم با تهران فاصله دارد، اما وقتی از فرودگاه بیرون می‌آیید، حس می‌کنید چند قاره را هم‌زمان پشت سر گذاشته‌اید. برای اکثر مسافران ایرانی، این همان لحظه‌ی آشنایی است: ترکیه، مقصدی که برای یک سفر […]",
+      "source": "عصر گردشگری",
+      "sourceUrl": "https://asregardeshgari.com/travel-guide/368570/",
+      "publishedAt": "2026-09-22T05:31:41+00:00",
+      "region": "world",
+      "category": "روند جهانی",
+      "image": "world",
+      "kind": "rss",
+      "contentType": "guide",
+      "body": "هواپیما هنوز کامل روی باند ننشسته که چراغ‌های استانبول از پنجره دیده می‌شوند؛ شهری که کمتر از دو ساعت و نیم با تهران فاصله دارد، اما وقتی از فرودگاه بیرون می‌آیید، حس می‌کنید چند قاره را هم‌زمان پشت سر گذاشته‌اید. برای اکثر مسافران ایرانی، این همان لحظه‌ی آشنایی است: ترکیه، مقصدی که برای یک سفر […]\n\nاین نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
+      "context": "این نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
       "archived": false
     },
     {
@@ -1600,6 +1534,70 @@
       "contentType": "news",
       "body": "قائم‌مقام وزیر میراث‌فرهنگی گفت: ایستادگی تاریخی ملت ایران بر دو ستون «باورمندی دینی» و «زبان فاخر فارسی» استوار بوده است.\n\nاین خبر می‌تواند برای شناخت مقصد مفید باشد؛ اما اطلاعات متغیر مانند مسیر دسترسی، ساعات بازدید و امکانات را نزدیک سفر جداگانه کنترل کنید.",
       "context": "این خبر می‌تواند برای شناخت مقصد مفید باشد؛ اما اطلاعات متغیر مانند مسیر دسترسی، ساعات بازدید و امکانات را نزدیک سفر جداگانه کنترل کنید.",
+      "archived": false
+    },
+    {
+      "id": "rss-8a42afc2be47fb",
+      "title": "وسایل مورد نیاز سفر به شمال با ماشین شخصی",
+      "summary": "جاده فیروزکوه در دل مه فرورفته و ناگهان باتری خودرو خاموش می‌شود؛ این صحنه برای بسیاری از مسافران شمال آشناست. رطوبت بالا، جاده‌های کوهستانی و تغییرات ناگهانی آب‌وهوا، سفر به شمال با ماشین شخصی را از یک سفر معمولی جدا می‌کند. وسایل مورد نیاز سفر به شمال با ماشین شخصی تنها به چمدان لباس محدود […]",
+      "source": "عصر گردشگری",
+      "sourceUrl": "https://asregardeshgari.com/travel-guide/367512/",
+      "publishedAt": "2026-09-14T09:25:37+00:00",
+      "region": "iran",
+      "category": "راهنمای سفر",
+      "image": "isfahan",
+      "kind": "rss",
+      "contentType": "guide",
+      "body": "جاده فیروزکوه در دل مه فرورفته و ناگهان باتری خودرو خاموش می‌شود؛ این صحنه برای بسیاری از مسافران شمال آشناست. رطوبت بالا، جاده‌های کوهستانی و تغییرات ناگهانی آب‌وهوا، سفر به شمال با ماشین شخصی را از یک سفر معمولی جدا می‌کند. وسایل مورد نیاز سفر به شمال با ماشین شخصی تنها به چمدان لباس محدود […]\n\nاین خلاصه بر پایهٔ توضیحات همراه گزارش تهیه شده است؛ برای جزئیات کامل، زمینه و اصلاحیه‌های احتمالی، منبع اصلی را باز کنید.",
+      "context": "این خلاصه بر پایهٔ توضیحات همراه گزارش تهیه شده است؛ برای جزئیات کامل، زمینه و اصلاحیه‌های احتمالی، منبع اصلی را باز کنید.",
+      "archived": false
+    },
+    {
+      "id": "rss-b474e1e10d2cba",
+      "title": "توسعه گردشگری دسترس‌پذیر در دستور کار استانداردسازی مراکز اقامتی",
+      "summary": "معاون گردشگری وزارت میراث‌فرهنگی، گردشگری و صنایع‌دستی از توجه ویژه به موضوع «گردشگری دسترس‌پذیر» در فرآیند استانداردسازی هتل‌ها و مراکز اقامتی خبر داد.",
+      "source": "عصر گردشگری",
+      "sourceUrl": "https://asregardeshgari.com/cultural-heritage-news/367509/",
+      "publishedAt": "2026-09-14T08:38:27+00:00",
+      "region": "iran",
+      "category": "میراث فرهنگی",
+      "image": "isfahan",
+      "kind": "rss",
+      "contentType": "news",
+      "body": "معاون گردشگری وزارت میراث‌فرهنگی، گردشگری و صنایع‌دستی از توجه ویژه به موضوع «گردشگری دسترس‌پذیر» در فرآیند استانداردسازی هتل‌ها و مراکز اقامتی خبر داد.\n\nاین خلاصه بر پایهٔ توضیحات همراه گزارش تهیه شده است؛ برای جزئیات کامل، زمینه و اصلاحیه‌های احتمالی، منبع اصلی را باز کنید.",
+      "context": "این خلاصه بر پایهٔ توضیحات همراه گزارش تهیه شده است؛ برای جزئیات کامل، زمینه و اصلاحیه‌های احتمالی، منبع اصلی را باز کنید.",
+      "archived": false
+    },
+    {
+      "id": "rss-583b57f2e53dd3",
+      "title": "تن‌پوش نفیس اشرافی صفوی در چهلستون به نمایش درمی‌آید",
+      "summary": "اصفهان-مدیر پایگاه جهانی کاخ موزه چهلستون از نمایش یک تن‌پوش نفیس اشرافی متعلق به دوره صفویه خبر داد؛ اثری زربفت با تزئینات ارزشمند که بخشی از ظرفیت پوشاک تاریخی اصفهان را روایت می‌کند.",
+      "source": "عصر گردشگری",
+      "sourceUrl": "https://asregardeshgari.com/cultural-heritage-news/366421/",
+      "publishedAt": "2026-09-07T08:38:12+00:00",
+      "region": "world",
+      "category": "روند جهانی",
+      "image": "world",
+      "kind": "rss",
+      "contentType": "news",
+      "body": "اصفهان-مدیر پایگاه جهانی کاخ موزه چهلستون از نمایش یک تن‌پوش نفیس اشرافی متعلق به دوره صفویه خبر داد؛ اثری زربفت با تزئینات ارزشمند که بخشی از ظرفیت پوشاک تاریخی اصفهان را روایت می‌کند.\n\nاین نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
+      "context": "این نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
+      "archived": false
+    },
+    {
+      "id": "rss-a3b919e95a3120",
+      "title": "تصویب استمهال ۶ ماهه حق بیمه کارفرمایی کسب‌وکار گردشگری و صنایع‌دستی",
+      "summary": "رئیس مرکز سرمایه‌گذاری و امور اقتصادی وزارت میراث‌فرهنگی، از تصویب استمهال ۶ ماهه حق بیمه کارفرمایی تمامی کسب‌وکارهای گردشگری و صنایع‌دستی خبر داد.",
+      "source": "عصر گردشگری",
+      "sourceUrl": "https://asregardeshgari.com/cultural-heritage-news/366187/",
+      "publishedAt": "2026-09-05T14:38:04+00:00",
+      "region": "world",
+      "category": "روند جهانی",
+      "image": "world",
+      "kind": "rss",
+      "contentType": "news",
+      "body": "رئیس مرکز سرمایه‌گذاری و امور اقتصادی وزارت میراث‌فرهنگی، از تصویب استمهال ۶ ماهه حق بیمه کارفرمایی تمامی کسب‌وکارهای گردشگری و صنایع‌دستی خبر داد.\n\nاین نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
+      "context": "این نمونه برای رصد روند جهانی است؛ شرایط بازار، مقررات، امنیت، زیرساخت و ساختار سفر کشورها متفاوت است و نتیجه را نمی‌توان مستقیم به ایران تعمیم داد.",
       "archived": false
     }
   ]
