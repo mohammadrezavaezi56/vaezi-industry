@@ -112,8 +112,8 @@ def parse_feed(payload,source,region,category,google=False):
     if child.tag.split('}')[-1].lower()=='link' and child.attrib.get('href'):
      link=child.attrib['href'];break
   link=(link or '').strip()
-  if not title or not link.startswith(('http://','https://')) or not relevant(title,region,summary):continue
   summary=clean(text_child(node,{'description','summary','content'}))
+  if not title or not link.startswith(('http://','https://')) or not relevant(title,region,summary):continue
   published=parse_date(text_child(node,{'pubdate','published','updated','date'}))
   if not published:continue
   src=''
