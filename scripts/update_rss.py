@@ -40,11 +40,18 @@ def text_child(node,names):
  for child in node.iter():
   if child.tag.split('}')[-1].lower() in names and child.text:return child.text
  return ''
-def relevant(title,region):
- t=title.casefold().replace('‌',' ')
- if any(bad in t for bad in BAD_TERMS):return False
- terms=EN_TERMS if region=='world' else IR_TERMS
- return any(term in t for term in terms)
+def relevant(title,region,summary=''):
+ t=(str(title or '')+' '+str(summary or '')).casefold().replace('‌',' ').replace('ك','ک').replace('ي','ی')
+ bad=['پاراوزنه','ملی پوش','ملی‌پوش','واحد مسکونی','هوش مصنوعی عکس','عکس دهه شصتی','فوتبال','والیبال','بسکتبال','بورس','قیمت دلار','تیم ملی','آبرسانی','سیلاب','رزمایش','عملیات میمک','سازندگان و طراحان','صنعت ساختمان','قفل هوشمند']
+ if any(x in t for x in bad):return False
+ if region=='world':
+  return any(x in t for x in ['tourism','tourist','hotel group','hotel occupancy','hotel market','hospitality industry','hospitality market','travel demand','tourism industry','tourism market','hotel investment','hotel development','travel industry','destination marketing','resort'])
+ strong=['گردشگری','گردشگر','توریسم','اقامتگاه','بوم گردی','بوم‌گردی','میراث فرهنگی','میراث‌فرهنگی','اکوتوریسم','طبیعت‌گردی','طبیعت گردی','صنایع دستی','صنایع‌دستی','هتلداری','هتل داری','هتل‌داری','هتلداران','هتل‌داران','رزرو اقامت','گردشگرپذیر','جاذبه گردشگری','گردشگری سلامت','گردشگری شهری','گردشگری دریایی','گردشگری ساحلی','توریستی','tourism']
+ if any(x in t for x in strong):return True
+ if 'هتل' in t and any(x in t for x in ['اقامت','اشغال','توسعه هتل','توسعهٔ هتل','افتتاح هتل','سرمایه گذاری هتل','سرمایه‌گذاری هتل','هتل بین المللی','هتل بین‌المللی']):return True
+ if re.search(r'(?<![\u0600-\u06FF])سفر(?![\u0600-\u06FF])',t):
+  return any(x in t for x in ['مقصد','بازدید','گردش','اقامت','پرواز','مسیر','تجربه','روستا','جزیره','ساحل','طبیعت','میراث','جاذبه'])
+ return False
 def quality(item):
  title=clean(item.get('title',''));summary=clean(item.get('summary',''))
  if len(summary)<75:return False
@@ -98,7 +105,7 @@ def parse_feed(payload,source,region,category,google=False):
     if child.tag.split('}')[-1].lower()=='link' and child.attrib.get('href'):
      link=child.attrib['href'];break
   link=(link or '').strip()
-  if not title or not link.startswith(('http://','https://')) or not relevant(title,region):continue
+  if not title or not link.startswith(('http://','https://')) or not relevant(title,region,summary):continue
   summary=clean(text_child(node,{'description','summary','content'}))
   published=parse_date(text_child(node,{'pubdate','published','updated','date'}))
   if not published:continue
@@ -133,7 +140,7 @@ def main():
  seeds=json.loads(SEEDS.read_text(encoding='utf-8')).get('items',[])
  old=json.loads(NEWS.read_text(encoding='utf-8')) if NEWS.exists() else {'items':[]}
  old_items=old if isinstance(old,list) else old.get('items',[])
- previous=[enrich(x) for x in old_items if x.get('kind')=='rss' and relevant(x.get('title',''),x.get('region','iran')) and quality(x)]
+ previous=[enrich(x) for x in old_items if x.get('kind')=='rss' and relevant(x.get('title',''),x.get('region','iran'),x.get('summary','')) and quality(x)]
  fresh_ir=[];fresh_world=[];warnings=[];success=0
  for name,url in DIRECT:
   try:
