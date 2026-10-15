@@ -215,6 +215,22 @@ def main():
             "license": SOURCES[photo]["license"], "localFile": "assets/images/platforms/" + brand + "-cover.jpg",
             "note": "Illustrative editorial image, not an official listing or endorsement from the platform."
         }
+    # Locally hosted hero collage from three credited destination photographs.
+    collage = Image.new("RGB", (1440, 620), "#e3e9e1")
+    for key, box in [("isfahan", (0, 0, 590, 620)), ("rasht", (590, 0, 1010, 620)), ("kish", (1010, 0, 1440, 620))]:
+        src = Image.open(PHOTOS / (key + ".jpg")).convert("RGB")
+        panel = ImageOps.fit(src, (box[2]-box[0], box[3]-box[1]), method=Image.Resampling.LANCZOS, centering=(.5, .48))
+        collage.paste(panel, (box[0], box[1]))
+    collage_path = PHOTOS / "iran-panorama.jpg"
+    collage.save(collage_path, "JPEG", quality=72, optimize=True, progressive=True)
+    credits["photos"]["iran-panorama"] = {
+        "title": "Editorial collage of Iranian travel destinations",
+        "author": "Composite of the contributors credited in this manifest",
+        "source": "https://commons.wikimedia.org/",
+        "license": "See individual licenses of the component photos in this manifest",
+        "localFile": "assets/images/photos/iran-panorama.jpg",
+        "components": ["isfahan", "rasht", "kish"],
+    }
     (IMG / "credits.json").write_text(json.dumps(credits, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("Photo and license manifest ready.")
 

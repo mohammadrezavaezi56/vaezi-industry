@@ -103,37 +103,24 @@ def text_child(node, names):
             return child.text
     return ""
 def relevant(title, region, summary=""):
-    t = (str(title or "") + " " + str(summary or "")).casefold().replace("‌", " ").replace("ك", "ک").replace("ي", "ی")
-    if any(bad in t for bad in BAD_TERMS):
-        return False
-    if region == "world":
-        return any(term in t for term in EN_TERMS)
-    if any(term in t for term in IR_TERMS):
-        return True
-    if "هتل" in t and any(term in t for term in ["اشغال", "اقامت", "توسعه", "افتتاح", "سرمایه", "هتلدار", "بهره برداری", "بهره‌برداری"]):
-        return True
-    if "سفر" in t and any(term in t for term in ["مقصد", "بازدید", "گردش", "اقامت", "پرواز", "مسیر", "تجربه", "روستا", "جزیره", "ساحل", "طبیعت", "میراث", "جاذبه"]):
-        return True
+    t=(str(title or "")+" "+str(summary or "")).casefold().replace("‌"," ").replace("ك","ک").replace("ي","ی")
+    bad=["پاراوزنه","ملی پوش","ملی‌پوش","واحد مسکونی","هوش مصنوعی عکس","عکس دهه شصتی","فوتبال","والیبال","بسکتبال","بورس","قیمت دلار","تیم ملی","آبرسانی","رزمایش بازسازی","عملیات میمک","سازندگان و طراحان","صنعت ساختمان","قفل هوشمند","پرستاری با تکیه بر قرآن","پرستاری","رزمایش","جنگی","عملیات نظامی","خبر ورزشی"]
+    if any(x in t for x in bad): return False
+    if region=="world":
+        return any(x in t for x in ["tourism","tourist","hotel","hospitality","travel demand","accommodation","resort","destination management","airline routes","international visitors","visitor economy"])
+    strong=["گردشگری","گردشگر","توریسم","اقامتگاه","بوم‌گردی","بوم گردی","میراث فرهنگی","میراث‌فرهنگی","اکوتوریسم","طبیعت‌گردی","طبیعت گردی","صنایع دستی","صنایع‌دستی","هتلداری","هتل‌داری","هتل داری","هتلداران","هتل‌داران","رزرو اقامت","گردشگرپذیر","جاذبه گردشگری","گردشگری سلامت","گردشگری شهری","گردشگری دریایی","گردشگری ساحلی","توریستی","موزه","قطار گردشگری","فرودگاه گردشگری","گردشگری پایدار","گردشگری تاریخی","مسافرت داخلی","سفرهای داخلی","صنعت هتلداری","هتل","روستای گردشگری","بازار اقامت","ضریب اشغال"]
+    if any(x in t for x in strong): return True
+    if "سفر" in t and any(x in t for x in ["مقصد گردشگری","اقامتگاه","جاذبه گردشگری","طبیعت‌گردی","طبیعت گردی","روستای گردشگری","ساحل","جزیره","میراث فرهنگی","بازدید از جاذبه","رزرو اقامت"]): return True
     return False
 def quality(item):
-    title = clean(item.get("title", ""))
-    summary = clean(item.get("summary", ""))
-    if len(summary) < 65:
-        return False
-    combined = (summary + " " + item.get("source", "") + " " + item.get("sourceUrl", "")).casefold()
-    if any(x in combined for x in ["safariindia.com", "sports news", "football match"]):
-        return False
-    if summary.casefold().strip(" .-") == title.casefold().strip(" .-"):
-        return False
-    if re.search(r"https?://|www\.", summary, re.I) and len(summary) < len(title) + 70:
-        return False
-    title_words = re.findall(r"[a-z0-9\u0600-\u06FF]+", title.casefold())
-    summary_words = re.findall(r"[a-z0-9\u0600-\u06FF]+", summary.casefold())
-    if len(title_words) >= 5 and len(summary_words) <= len(title_words) * 1.4:
-        joined = " ".join(summary_words)
-        overlap = sum(1 for word in title_words if word in joined.split())
-        if overlap / len(title_words) >= 0.82:
-            return False
+    title=clean(item.get("title",""))
+    summary=clean(item.get("summary",""))
+    # Don't publish bare headlines; source excerpts may be concise but must carry information.
+    if len(summary)<35: return False
+    combined=(summary+" "+item.get("source","")+" "+item.get("sourceUrl","")).casefold()
+    if any(x in combined for x in ["safariindia.com","sports news","football match"]): return False
+    if summary.casefold().strip(" .-")==title.casefold().strip(" .-"): return False
+    if re.search(r"https?://|www\\.",summary,re.I) and len(summary)<len(title)+40: return False
     return True
 def category_for(title, region, default=""):
     t = title.casefold()
@@ -247,7 +234,7 @@ def dedupe(rows):
     return result
 def make_feed(items):
     now=datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S GMT");entries=[]
-    for item in items[:100]:
+    for item in items[:200]:
         try:pub=datetime.fromisoformat(item.get("publishedAt","").replace("Z","+00:00")).strftime("%a, %d %b %Y %H:%M:%S GMT")
         except Exception:pub=now
         entries.append("<item><title>"+escape(item.get("title",""))+"</title><link>"+escape(item.get("sourceUrl",""))+"</link><guid isPermaLink=\"false\">"+escape(item.get("id",""))+"</guid><pubDate>"+escape(pub)+"</pubDate><description>"+escape(item.get("summary","")[:500])+"</description></item>")
@@ -287,7 +274,7 @@ def main():
     curated_ids={x.get("id") for x in curated_world}
     world=curated_world+[x for x in rss_world if x.get("id") not in curated_ids]
     world_limit=min(10,max(1,round(len(iran)/9))) if world else 0
-    items=iran[:90]+world[:world_limit]
+    items=iran[:180]+world[:world_limit]
     if len(items)<100:
         # Never fabricate articles merely to meet a count. Preserve all quality source-backed items and expose the shortfall in logs.
         print("WARNING: only",len(items),"quality items available; expand sources rather than duplicating headlines.")
