@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T08:11:26+00:00",
+  "updatedAt": "2026-10-15T08:13:08+00:00",
   "mix": {
     "iranTargetPercent": 90,
     "worldTargetPercent": 10
@@ -31,6 +31,19 @@
       "source": "خبرگزاری ایسنا",
       "sourceUrl": "https://www.isna.ir/news/1405072315435/%DB%B1%DB%B1%DB%B2%DB%B4%DB%B8-%D9%88%D8%A7%D8%AD%D8%AF-%D9%85%D8%B3%DA%A9%D9%88%D9%86%DB%8C-%D8%AF%D8%B1-%D8%A2%D8%B0%D8%B1%D8%A8%D8%A7%DB%8C%D8%AC%D8%A7%D9%86-%D8%B4%D8%B1%D9%82%DB%8C-%D8%A7%D9%81%D8%AA%D8%AA%D8%A7%D8%AD-%D8%B4%D8%AF",
       "publishedAt": "2026-10-15T08:00:20+00:00",
+      "region": "iran",
+      "category": "اخبار گردشگری",
+      "image": "iran-panorama",
+      "kind": "rss"
+    },
+    {
+      "id": "rss-e4975000a943fb",
+      "title": "افتتاح طرح آبرسانی به ۱۵۰ روستای آذربایجان شرقی",
+      "summary": "با حضور معاون اجرایی رئیس‌جمهور طرح آبرسانی به ۱۵۰ روستای آذربایجان شرقی افتتاح شد.",
+      "body": "این عنوان از خبرخوان RSS کشف شده است؛ خلاصه برای آشنایی اولیه است. برای جزئیات، زمینه و اصلاحیه‌ها گزارش ناشر را بررسی کنید.",
+      "source": "باشگاه خبرنگاران جوان",
+      "sourceUrl": "https://www.yjc.ir/fa/news/9138902/افتتاح-طرح-آبرسانی-به-۱۵۰-روستای-آذربایجان-شرقی",
+      "publishedAt": "2026-10-15T07:54:03+00:00",
       "region": "iran",
       "category": "اخبار گردشگری",
       "image": "iran-panorama",
@@ -109,19 +122,6 @@
       "source": "https://safariindia.com/",
       "sourceUrl": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9aM3JiNTNRZ1RtTllsNWRyWXRwYUxocENhYzhXZ1dGc2kyV2ZCSG5QOGJSX21iYW82aS1ZaHpaM3R2Z0lRc19jWmVyWGpMQmJzVGRYTHBIMEVsaTNoY2s4OV9zN29ad0MyNTVLZGpZRlg?oc=5",
       "publishedAt": "2026-10-14T11:05:11+00:00",
-      "region": "world",
-      "category": "روند جهانی",
-      "image": "world",
-      "kind": "rss"
-    },
-    {
-      "id": "rss-2c6b63d0d05ec5",
-      "title": "Accor Signs Fairmont Rishikesh, Himalayas - https://safariindia.com/",
-      "summary": "a href=\"https://news.google.com/rss/articles/CBMiZkFVX3lxTFBBSDhnc2lxRDhuQnUyTnRtU09UcEl4aWVMTlYxU3RkZnY2MUpBNGtUa3ZkWmdhWXVOVmlDX29CT1FUeDdNZm55QWdYT25kdC1LVzBSNVVuN25DYkJzakdJeTduRzI0QQ?oc=5\" target=\"_blank\" Accor Signs Fairmont Rishikesh, Himalayas /a font color=\"#6f6f6f\" https://safariindia.com/ /font",
-      "body": "این عنوان از خبرخوان RSS کشف شده است؛ خلاصه برای آشنایی اولیه است. برای جزئیات، زمینه و اصلاحیه‌ها گزارش ناشر را بررسی کنید.",
-      "source": "https://safariindia.com/",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBBSDhnc2lxRDhuQnUyTnRtU09UcEl4aWVMTlYxU3RkZnY2MUpBNGtUa3ZkWmdhWXVOVmlDX29CT1FUeDdNZm55QWdYT25kdC1LVzBSNVVuN25DYkJzakdJeTduRzI0QQ?oc=5",
-      "publishedAt": "2026-10-14T10:36:16+00:00",
       "region": "world",
       "category": "روند جهانی",
       "image": "world",
