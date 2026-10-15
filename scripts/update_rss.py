@@ -23,7 +23,7 @@ IR_QUERIES=[
 ]
 WORLD_QUERIES=[('روند جهانی','tourism hospitality hotel travel industry when:14d','روند جهانی')]
 IR_TERMS=['گردشگری','گردشگر','توریسم','هتل','اقامتگاه','بوم گردی','بوم‌گردی','سفر','مسافرت','میراث فرهنگی','میراث‌فرهنگی','موزه','جاذبه','صنایع دستی','صنایع‌دستی','هتلداری','هتل‌داری','اکوتوریسم','طبیعت گردی','طبیعت‌گردی','روستا','گردشگری دریایی','گردشگری ساحلی','گردشگری شهری','نمایشگاه گردشگری','هتلدار','گردشگرپذیر','توریستی']
-EN_TERMS=['tourism','tourist','travel','hotel','hospitality','resort','airline','cruise','destination','visitor economy','accommodation']
+EN_TERMS=['tourism','tourist','hotel','resort','airline','cruise','destination','visitor economy','accommodation','travel demand','tourism industry','travel industry','hotel occupancy','hotel market','hospitality industry','hospitality market']
 BAD_TERMS=['پاراوزنه','ملی پوش','ملی‌پوش','واحد مسکونی','هوش مصنوعی عکس','عکس دهه شصتی','فوتبال','والیبال','بسکتبال','بورس','قیمت دلار','تیم ملی','آبرسانی']
 HEAD={'User-Agent':'VAEZI-INDUSTRY-RSS/1.1'}
 def clean(value):
