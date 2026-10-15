@@ -200,8 +200,12 @@ def enrich(item):
     return item
 def parse_feed(payload,source,region,category,google=False):
     root=ET.fromstring(payload);items=[]
+    seen=0;relevance_rejects=0;quality_rejects=0
+    context_ir=["اقامت","اقامتگاه","هتل","مسافر","گردش","مقصد","روستا","استان","میراث","تاریخی","موزه","بازدید","باغ","پارک","طبیعت","جنگل","ساحل","جزیره","کویر","فرودگاه","پرواز","قطار","تور","دهکده","رستوران","خوراک","محلی","جاذبه","رزرو","مهمان","مسیر گردشگری","گردشگر"]
+    context_world=["tourism","tourist","hotel","hospitality","travel","visitor","resort","destination","airline","accommodation","cruise","tour operator","hotel group","hotel investment"]
     for node in root.iter():
         if node.tag.split("}")[-1].lower() not in ("item","entry"):continue
+        seen+=1
         title=clean(text_child(node,{"title"}));link=text_child(node,{"link"})
         if not link:
             for child in node:
@@ -209,7 +213,17 @@ def parse_feed(payload,source,region,category,google=False):
                     link=child.attrib["href"];break
         link=(link or "").strip()
         summary=clean(text_child(node,{"description","summary","content"}))
-        if not title or not link.startswith(("http://","https://")) or not relevant(title,region,summary):continue
+        if not title or not link.startswith(("http://","https://")):continue
+        text_for_check=(title+" "+summary).casefold()
+        bad=["پرستاری با تکیه بر قرآن","پرستاری","رزمایش بازسازی","عملیات میمک","سازندگان و طراحان","صنعت ساختمان","قفل هوشمند","فوتبال","والیبال","بسکتبال","پاراوزنه","تیم ملی","بورس","قیمت دلار","safariindia.com"]
+        if any(term in text_for_check for term in bad):continue
+        strict=relevant(title,region,summary)
+        if not strict:
+            # Google News RSS is a topic-specific search query. Allow a longer contextual excerpt
+            # where the headline doesn't repeat words such as "tourism" but clearly describes travel.
+            terms=context_world if region=="world" else context_ir
+            if not google or len(summary)<65 or not any(term in text_for_check for term in terms):
+                relevance_rejects+=1;continue
         published=parse_date(text_child(node,{"pubdate","published","updated","date"}))
         if not published:continue
         src=""
@@ -218,8 +232,10 @@ def parse_feed(payload,source,region,category,google=False):
         if not src or src.casefold() in ("بدون منبع","unknown"):src=source
         digest=hashlib.sha1(link.encode()).hexdigest()[:14]
         item={"id":"rss-"+digest,"title":title,"summary":summary[:420],"source":src,"sourceUrl":link,"publishedAt":published,"region":region,"category":category_for(title,region,category),"image":image_for(title,region,category),"kind":"rss","contentType":"news"}
-        if not quality(item):continue
+        if not quality(item):
+            quality_rejects+=1;continue
         items.append(enrich(item))
+    print("FEED",source,"raw",seen,"kept",len(items),"relevance_filtered",relevance_rejects,"quality_filtered",quality_rejects)
     return items
 def fetch(url):
     with urlopen(Request(url,headers=HEAD),timeout=18) as response:return response.read(2_000_000)
