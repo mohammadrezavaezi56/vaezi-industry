@@ -108,3 +108,45 @@
  .platform-card,.platform-preview img,.travel-route-plane{transition:none}
  .platform-card:hover,.news-card:hover{transform:none}
 }
+
+/* گردش‌نیوز — صفحهٔ موضوعی تازه در قالب اصلی VAEZI INDUSTRY */
+.tourism-banner{position:relative;isolation:isolate;overflow:hidden;margin-top:25px;margin-bottom:18px;min-height:330px;padding:34px 36px;border-radius:26px;background:#103f36 url('images/photos/iran-panorama.jpg') center/cover no-repeat;color:#fff;display:grid;grid-template-columns:1.12fr .88fr;align-items:center;gap:24px;box-shadow:0 16px 36px #123e3018}
+.tourism-banner:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,rgba(6,37,31,.96) 2%,rgba(7,55,45,.88) 57%,rgba(9,46,38,.32) 100%)}
+.tourism-banner-copy{position:relative;z-index:1}
+.tourism-kicker{display:inline-flex;border:1px solid #e6c4868a;background:#e6c4861f;color:#f5dca7;border-radius:30px;padding:5px 12px;font-size:11px;font-weight:800}
+.tourism-banner h1{font-size:clamp(29px,3.9vw,46px);line-height:1.55;margin:14px 0 10px;max-width:700px}
+.tourism-banner h1 em{font-style:normal;color:#e9c782}
+.tourism-banner-copy>p{font-size:13px;line-height:2.2;color:#e1eee5;max-width:650px}
+.tourism-banner-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.tourism-ghost-btn{border-color:#ffffff75;color:#fff;background:#ffffff12}
+.tourism-ghost-btn:hover{background:#ffffff22}
+.tourism-stats{display:flex;gap:25px;flex-wrap:wrap;margin-top:26px;padding-top:17px;border-top:1px solid #ffffff36}
+.tourism-stats>div{display:flex;flex-direction:column;gap:2px}
+.tourism-stats strong{font-size:15px;color:#f3d9a0}
+.tourism-stats span{font-size:10px;color:#dce9df}
+.tourism-banner-art{align-self:stretch;min-height:235px;border-radius:20px;border:1px solid #ffffff55;box-shadow:inset 0 0 0 8px #ffffff0b;overflow:hidden;background:linear-gradient(180deg,#ffffff09,#062c2480),url('images/photos/rasht.jpg') center/cover no-repeat;position:relative}
+.tourism-banner-art:after{content:"";position:absolute;inset:15px;border:1px solid #ffffff73;border-radius:13px}
+.tourism-banner-seal{position:absolute;left:50px;bottom:22px;z-index:2;color:#f5dfad;background:#082c25b8;border:1px solid #ffffff45;border-radius:10px;padding:6px 10px;font-size:9px;letter-spacing:1.2px}
+.tourism-jump{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:4px}
+.tourism-jump a{display:flex;align-items:center;gap:11px;padding:13px 16px;background:#fffefa;border:1px solid var(--line);border-radius:14px;box-shadow:0 4px 12px #133e3008;font-size:12px;font-weight:800;transition:transform .2s,border-color .2s}
+.tourism-jump a:hover{transform:translateY(-2px);border-color:#c3d6c8}
+.tourism-jump a span{font-size:10px;color:#b8883a;background:#f7edda;border-radius:8px;padding:4px 6px}
+.tourism-jump a b{margin-right:auto;color:#217260}
+.tourism-section{scroll-margin-top:100px}
+.tourism-destination-grid .cover{height:160px}
+.tourism-disclaimer{margin-top:13px;color:var(--muted);font-size:11px;line-height:2}
+.tourism-booking-cta{margin-top:22px;background:#eaf1e8;border:1px solid #d7e4d7;border-radius:18px;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.tourism-booking-cta>div{display:flex;flex-direction:column;gap:3px}
+.tourism-booking-cta b{font-size:14px;color:#17483d}
+.tourism-booking-cta span{font-size:11px;color:var(--muted)}
+.tourism-last{background:#103f36;color:#fff;margin-top:8px}
+.tourism-last-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.tourism-last h2{font-size:24px;margin:10px 0 4px}
+.tourism-last p{font-size:12px;color:#d3e4d9;max-width:660px}
+.tourism-last-actions{display:flex;gap:10px;flex-wrap:wrap}
+.tourism-last .btn-outline{color:#fff;border-color:#ffffff77}
+.tourism-status{font-size:10px;color:var(--muted);padding:0 0 22px}
+.tourism-fallback{font-size:12px;color:var(--muted);padding:18px}
+.tourism-fallback a{color:var(--brand);font-weight:800}
+@media(max-width:850px){.tourism-banner{grid-template-columns:1fr;padding:26px;gap:18px}.tourism-banner-art{min-height:170px;order:-1}.tourism-banner-seal{left:40px;bottom:205px}.tourism-jump{gap:8px}.tourism-jump a{padding:11px;font-size:11px}.tourism-last-inner{align-items:flex-start;flex-direction:column}}
+@media(max-width:620px){.tourism-banner{padding:20px;border-radius:20px}.tourism-banner h1{font-size:29px}.tourism-banner-art{min-height:135px}.tourism-banner-seal{left:32px;bottom:164px;font-size:8px}.tourism-jump{grid-template-columns:1fr;gap:7px}.tourism-jump a{padding:10px 13px}.tourism-booking-cta{align-items:flex-start;flex-direction:column}.tourism-destination-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.tourism-destination-grid .cover{height:120px}.tourism-destination-grid .destination-card b{font-size:12px}.tourism-stats{gap:14px}.tourism-last h2{font-size:21px}}
