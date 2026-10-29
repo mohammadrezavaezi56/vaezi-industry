@@ -33,4 +33,10 @@ for p in pages:
   target=href.split('?')[0].split('#')[0]
   if target and target not in known and not (root/target).exists():broken.append(p.name+': '+href)
 if broken:raise SystemExit('Broken local links: '+', '.join(broken))
+home=(root/'index.html').read_text(encoding='utf-8')
+tourism=(root/'tourism.html').read_text(encoding='utf-8')
+if 'href="tourism.html"' not in home:raise SystemExit('Homepage must link to the tourism feature page')
+if '<a href="tourism.html" class="active">گردش‌نیوز</a>' not in tourism:raise SystemExit('Tourism page navigation is not marked active')
+if '<a href="index.html" class="active">خانه</a>' in tourism:raise SystemExit('Homepage must not be marked active on tourism.html')
+if 'data-tourism-grid="industry"' not in tourism or 'data-tourism-grid="booking"' not in tourism:raise SystemExit('Tourism page must show live industry and booking news')
 print('OK:',len(pages),'HTML pages;',len(items),'news items; links, local images and assets checked.')
