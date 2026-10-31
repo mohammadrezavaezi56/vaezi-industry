@@ -33,7 +33,18 @@
 <div id="mobile"><div class="pad"><button class="mb" data-key="KeyA">◀</button><button class="mb" data-key="KeyD">▶</button></div><div class="pad"><button class="mb" data-key="KeyW">▲</button><button class="mb" data-key="KeyS">▼</button><button class="mb" id="enterBtn">E</button></div></div>
 <div id="start"><div class="card"><div class="hero">🌤️🏙️🚘</div><h1>به VAEZI CITY خوش اومدی!</h1><p>یک شهر سه‌بعدی رنگارنگ در کرج؛ آزادانه در خیابان‌ها بگرد، محله‌ها را کشف کن، سوار ماشین شو و مأموریت‌ها را انجام بده.<br>این نسخه اولیه است؛ شهر به مرور بزرگ‌تر و زنده‌تر می‌شود.</p><button class="cta" id="play">ورود به شهر 🚀</button><p style="font-size:11px">بهترین تجربه با کامپیوتر و مرورگر به‌روز</p></div></div>
 <script type="module">
-import * as THREE from 'three';
+let THREE;
+try {
+  THREE = await import('https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js');
+} catch (firstError) {
+  try {
+    THREE = await import('https://unpkg.com/three@0.160.0/build/three.module.js');
+  } catch (secondError) {
+    const start = document.querySelector('#start');
+    start.innerHTML = '<div class="card"><h1>خطا در بارگذاری بازی</h1><p>مرورگر نتوانست موتور سه‌بعدی را از اینترنت دریافت کند. اتصال اینترنت یا دسترسی به CDN را بررسی کن و صفحه را دوباره بارگذاری کن.</p><p style="direction:ltr;font-size:11px;color:#789">Three.js could not be loaded</p><button onclick="location.reload()">تلاش دوباره</button></div>';
+    throw secondError;
+  }
+}
 const root=document.querySelector('#game');
 const scene=new THREE.Scene();scene.background=new THREE.Color('#8bd8ff');scene.fog=new THREE.Fog('#a8e4ff',85,260);
 const camera=new THREE.PerspectiveCamera(62,innerWidth/innerHeight,.1,600);
