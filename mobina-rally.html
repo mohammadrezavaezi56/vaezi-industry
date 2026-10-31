@@ -1,76 +1,43 @@
 <!doctype html>
-<html lang="fa" dir="rtl">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<meta name="theme-color" content="#fff0f5">
-<title>برای منصوره، عشق زندگی‌ام 💗</title>
+<html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name="theme-color" content="#ffe8f0"><title>ماجرای قلبی در کرج | برای منصوره</title>
 <style>
-:root{--pink:#e85d88;--deep:#9f3159;--cream:#fff8f6;--ink:#593443}
-*{box-sizing:border-box}
-body{margin:0;min-height:100vh;background:radial-gradient(circle at 15% 15%,#ffe0eb 0,transparent 32%),radial-gradient(circle at 85% 80%,#ffe7d9 0,transparent 30%),linear-gradient(135deg,#fff8f6,#fff0f5);font-family:Tahoma,"Segoe UI",sans-serif;color:var(--ink);display:grid;place-items:center;padding:18px;overflow-x:hidden}
-main{width:min(100%,720px)}
-.card{background:#ffffffdf;border:1px solid #ffffff;box-shadow:0 20px 60px #9f31591a;border-radius:28px;padding:clamp(22px,5vw,42px);text-align:center}
-.kicker{color:var(--pink);font-size:13px;font-weight:bold;letter-spacing:.5px}
-h1{font-size:clamp(28px,6vw,44px);line-height:1.5;margin:10px 0;color:var(--deep)}
-.story{font-size:clamp(15px,3vw,18px);line-height:2.15;margin:16px auto;max-width:560px}
-.dedication{font-size:clamp(17px,3.8vw,22px);font-weight:bold;color:var(--deep);margin:22px 0 25px}
-button{font:inherit;font-weight:bold;border:0;border-radius:999px;padding:14px 25px;background:linear-gradient(135deg,#f4779c,#d94376);color:white;box-shadow:0 8px 20px #d9437640;cursor:pointer;transition:transform .15s}
-button:active{transform:scale(.97)}
-button:focus-visible{outline:3px solid #9f3159;outline-offset:4px}
-.small{font-size:12px;opacity:.7;margin-top:16px}
-#game{display:none}
-.topbar{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:14px;font-weight:bold;flex-wrap:wrap}
-.pill{background:#fff0f5;border-radius:999px;padding:9px 14px;color:var(--deep)}
-#field{position:relative;height:min(55vh,420px);min-height:290px;overflow:hidden;border-radius:22px;background:linear-gradient(#fbdbe7,#fff2ed 65%,#f8d6e4);border:1px solid #f7c8d8;touch-action:manipulation}
-#field:before{content:"";position:absolute;inset:auto -10% -75px;height:150px;border-radius:50%;background:#f3b8ce88}
-.hint{margin:12px 0 16px;line-height:1.8}
-.heart{position:absolute;top:-50px;border:0;background:transparent;box-shadow:none;padding:0;line-height:1;filter:drop-shadow(0 5px 4px #b83b6530);animation:fall var(--duration,4s) linear forwards;z-index:2;user-select:none;-webkit-tap-highlight-color:transparent}
-@keyframes fall{to{transform:translateY(500px) rotate(28deg);opacity:.2}}
-#end{display:none}
-.bigscore{font-size:38px;color:var(--pink);font-weight:bold;margin:12px}
-.heartline{font-size:34px;letter-spacing:5px;margin:12px}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition:none!important}}
-</style>
-</head>
-<body>
-<main>
-<section class="card" id="intro">
-<div class="kicker">یک بازی کوچولو، برای یک عشق بزرگ 💗</div>
-<h1>قصه‌ی من و منصوره</h1>
-<div class="story">می‌گویند بعضی آدم‌ها بی‌آنکه دنیا را عوض کنند، دنیای یک نفر را قشنگ‌تر می‌کنند. برای من، آن آدم منصوره است؛ همان لبخندی که خستگی روز را کم می‌کند و همان همراهی که حتی روزهای معمولی را به خاطره تبدیل می‌کند. اگر عشق یک مسیر باشد، من دلم می‌خواهد تمام پیچ‌وخم‌هایش را دست در دست منصوره طی کنم؛ آرام، با خنده، و تا همیشه. 💞</div>
+*{box-sizing:border-box}body{margin:0;padding:16px;min-height:100vh;display:grid;place-items:center;background:linear-gradient(145deg,#ffe8f0,#fff7e9 55%,#e7f4ff);font-family:Tahoma,sans-serif;color:#573044}main{width:min(100%,850px)}.panel{background:#ffffffed;border:1px solid white;border-radius:25px;padding:clamp(18px,4vw,32px);box-shadow:0 18px 55px #8e45631c;text-align:center}h1{font-size:clamp(25px,5vw,38px);color:#b6386d;line-height:1.5;margin:8px 0}.story{line-height:2;font-size:clamp(14px,2.5vw,17px);max-width:700px;margin:14px auto}.dedication{font-size:19px;font-weight:bold;color:#c13d70;margin:18px}.btn{border:0;border-radius:999px;background:linear-gradient(135deg,#f17aa1,#ca3e78);color:white;font: bold 16px Tahoma;padding:13px 25px;cursor:pointer;box-shadow:0 7px 18px #c13d7040}.btn:active,.pad button:active{transform:scale(.96)}#play{display:none}#scene{display:block;width:100%;height:auto;aspect-ratio:16/9;border-radius:18px;background:#a9dff1;border:2px solid #f4c2d4;touch-action:none}.hud{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;margin:0 0 10px;font-weight:bold}.tag{background:#fff0f5;border-radius:99px;padding:8px 12px;color:#a83265}.controls{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:12px;direction:ltr}.pad{display:flex;gap:10px}.pad button{border:0;border-radius:16px;background:#ffe2ed;color:#9d315e;font:bold 24px Tahoma;width:58px;height:52px;touch-action:none}.jump{width:100px!important;background:#d84b80!important;color:white!important;font-size:15px!important}.note{font-size:12px;opacity:.7;margin:12px 0 0}#finish{display:none}.big{font-size:42px;color:#d94d83;margin:12px}
+</style></head><body><main>
+<section class="panel" id="intro">
+<div style="color:#d14a7d;font-weight:bold">یک ماجراجویی کوچک در شهر محبوبش 🌸</div>
+<h1>منصوره و شاهزاده‌ی قلب‌ها</h1>
+<div class="story">روزی در کرج، زیر سایه‌ی کوه‌های البرز، قهرمان قصه شنید شاهزاده‌ی رویاهایش آن سوی جاده‌ی باغستان و پل‌های شهر منتظر اوست. برای رسیدن به منصوره باید از سکوهای بلند بپرد، از موانع راه بگذرد و قلب‌های گمشده را جمع کند. در آشیانه‌ی هواپیما، پدر منصوره ــ سرهنگ و تکنسین باتجربه‌ی موتور جت ــ نقشه‌ی مسیر را به او می‌دهد و می‌گوید: «راه سخت است، اما برای کسی که از ته دل دوستش داری، ارزشش را دارد.» حالا ماجراجویی شروع می‌شود! 💗</div>
 <div class="dedication">تقدیم به عشق زندگیم منصوره ❤️</div>
-<button id="start">شروع بازی عاشقانه</button>
-<div class="small">یک بازی ساده و سبک؛ فقط قلب‌ها را لمس کن.</div>
+<button class="btn" id="start">شروع ماجراجویی</button>
+<p class="note">با کیبورد: ← → برای حرکت و Space برای پرش | موبایل: دکمه‌های پایین بازی</p>
 </section>
-<section class="card" id="game">
-<div class="topbar"><span class="pill">💗 قلب‌ها: <span id="score">۰</span></span><span class="pill">⏳ زمان: <span id="time">۳۰</span></span><span class="pill">برای منصوره ❤️</span></div>
-<div id="field" aria-label="قلب‌ها را لمس کن"></div>
-<p class="hint">قلب‌های صورتی را لمس کن و امتیاز جمع کن؛ این قلب‌ها همه برای منصوره‌اند!</p>
-<button id="back">برگشت به قصه</button>
+<section class="panel" id="play">
+<div class="hud"><span class="tag">💗 قلب‌ها: <b id="score">۰</b></span><span class="tag">📍 <b id="place">باغستان کرج</b></span><span class="tag">مرحله <b id="level">۱</b> از ۳</span></div>
+<canvas id="scene" width="900" height="506" aria-label="بازی سکوبازی در کرج"></canvas>
+<div class="controls"><div class="pad"><button id="left" aria-label="چپ">◀</button><button id="right" aria-label="راست">▶</button></div><button class="pad jump" id="jump">پرش! ⤴</button></div>
+<p class="note">قلب‌ها را جمع کن، از جعبه‌ها و توربین‌های داغ بپر و خودت را به منصوره برسان!</p>
 </section>
-<section class="card" id="end">
-<div class="kicker">هر قلب، یک دوستت دارم 💗</div>
-<h1>این همه عشق، برای منصوره</h1>
-<div class="bigscore" id="finalscore">۰</div>
-<p class="story" id="message">امتیازت هرچقدر باشد، جای منصوره توی قلبت از همه‌چیز قشنگ‌تر است.</p>
-<div class="heartline">❤️ 💗 💖 💞</div>
-<div class="dedication">تقدیم به عشق زندگیم منصوره</div>
-<button id="again">دوباره بازی کنیم</button>
-</section>
+<section class="panel" id="finish"><div style="font-size:40px">👑 💗 🌷</div><h1>بالاخره به منصوره رسیدی!</h1><div class="big" id="final">۰ قلب</div><p class="story">تمام شهر را پشت سر گذاشتی، اما قشنگ‌ترین جای کرج همان جایی بود که منصوره منتظرت بود. بعضی مقصدها ارزش هر پرشی را دارند. ❤️</p><div class="dedication">تقدیم به عشق زندگیم منصوره</div><button class="btn" id="again">یک بار دیگر</button></section>
 </main>
 <script>
-(()=> {
-const $=id=>document.getElementById(id);
-const intro=$('intro'),game=$('game'),end=$('end'),field=$('field');
-let score=0,seconds=30,spawnTimer=null,clockTimer=null,active=false;
-const fa=n=>String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[Number(d)]);
-function clearGame(){clearInterval(spawnTimer);clearInterval(clockTimer);field.querySelectorAll('.heart').forEach(el=>el.remove());active=false}
-function finish(){if(!active)return;clearGame();game.style.display='none';end.style.display='block';$('finalscore').textContent=fa(score)+' قلب';$('message').textContent=score>=25?'وای! یک عالمه قلب جمع کردی؛ عشق به منصوره از صفحه هم بیرون زد! 💖':score>=12?'چه قشنگ! هر قلب یک یادآوری کوچک از عشق بزرگ توست. 💗':'مهم تعداد قلب‌ها نیست؛ مهم این است که همه‌شان را با عشق برای منصوره جمع کردی. ❤️'}
-function spawn(){if(!active)return;const el=document.createElement('button');el.className='heart';el.type='button';el.textContent=['💗','💖','❤️','💕','💞'][Math.floor(Math.random()*5)];el.setAttribute('aria-label','گرفتن قلب');const size=25+Math.random()*24;el.style.fontSize=size+'px';el.style.left=(3+Math.random()*84)+'%';el.style.setProperty('--duration',(3.2+Math.random()*2.2)+'s');el.addEventListener('pointerdown',e=>{e.preventDefault();if(!active)return;score++;$('score').textContent=fa(score);el.remove()},{once:true});el.addEventListener('animationend',()=>el.remove(),{once:true});field.appendChild(el)}
-function start(){clearGame();score=0;seconds=30;$('score').textContent=fa(score);$('time').textContent=fa(seconds);intro.style.display='none';end.style.display='none';game.style.display='block';active=true;spawn();spawnTimer=setInterval(spawn,620);clockTimer=setInterval(()=>{seconds--;$('time').textContent=fa(seconds);if(seconds<=0)finish()},1000)}
-$('start').addEventListener('click',start);$('again').addEventListener('click',start);$('back').addEventListener('click',()=>{clearGame();game.style.display='none';intro.style.display='block'}); 
+(()=>{const $=id=>document.getElementById(id),canvas=$('scene'),ctx=canvas.getContext('2d');const W=900,H=506;let running=false,keys={},score=0,level=0,camera=0,last=0,world=0,player,platforms=[],items=[],hazards=[],goal=0;
+const fa=n=>String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[+d]);
+const stages=[{name:'باغستان کرج',sky:'#a9dff1',ground:'#6eae72',length:2100},{name:'بلوار چمران و البرز',sky:'#f6d7a7',ground:'#6d9b67',length:2400},{name:'آشیانه‌ی مهرشهر',sky:'#b6d7e8',ground:'#789b83',length:2600}];
+function build(){world=0;camera=0;player={x:70,y:350,vx:0,vy:0,w:38,h:52,on:false};platforms=[{x:0,y:430,w:500,h:76},{x:550,y:390,w:260,h:116},{x:850,y:350,w:260,h:156},{x:1170,y:400,w:300,h:106},{x:1530,y:350,w:260,h:156},{x:1840,y:420,w:400,h:86}];items=[];hazards=[];for(let x=250;x<goal;x+=175){let p=platforms.find(p=>x>p.x&&x<p.x+p.w);if(p&&Math.random()>.18)items.push({x,y:p.y-40-Math.random()*24,taken:false})}for(let x=440;x<goal-180;x+=330)hazards.push({x,y:platforms.find(p=>x>p.x-40&&x<p.x+p.w)?.y-24||400,w:38,h:24});}
+function begin(){score=0;level=0;$('intro').style.display='none';$('finish').style.display='none';$('play').style.display='block';nextStage();running=true;last=performance.now();requestAnimationFrame(loop)}
+function nextStage(){goal=stages[level].length;build();$('level').textContent=fa(level+1);$('place').textContent=stages[level].name;$('score').textContent=fa(score)}
+function jump(){if(running&&player.on){player.vy=-12.8;player.on=false}}
+function draw(){let st=stages[level];let g=ctx.createLinearGradient(0,0,0,H);g.addColorStop(0,st.sky);g.addColorStop(1,'#fff0df');ctx.fillStyle=g;ctx.fillRect(0,0,W,H);ctx.fillStyle='#fff4cf';ctx.beginPath();ctx.arc(735,90,42,0,7);ctx.fill();for(let i=0;i<5;i++){let mx=(i*260-camera*.18)%(W+300)-100;ctx.fillStyle=i%2?'#8bb4aa':'#789d9b';ctx.beginPath();ctx.moveTo(mx,340);ctx.lineTo(mx+120,125+(i%2)*55);ctx.lineTo(mx+250,340);ctx.fill()}ctx.fillStyle='#7b9e7d';ctx.fillRect(0,420,W,86);
+ctx.save();ctx.translate(-camera,0);
+platforms.forEach(p=>{ctx.fillStyle=st.ground;ctx.fillRect(p.x,p.y,p.w,p.h);ctx.fillStyle='#c9e6a0';ctx.fillRect(p.x,p.y,p.w,10);ctx.fillStyle='#527d59';for(let x=p.x+15;x<p.x+p.w;x+=42)ctx.fillRect(x,p.y+23,17,5)});
+items.forEach(it=>{if(!it.taken){ctx.font='30px sans-serif';ctx.fillText('💗',it.x-14,it.y+10)}});
+hazards.forEach(h=>{ctx.fillStyle='#444b54';ctx.fillRect(h.x,h.y,h.w,h.h);ctx.fillStyle='#f3a24b';ctx.fillRect(h.x+6,h.y+5,h.w-12,6);ctx.font='18px sans-serif';ctx.fillText('⚙️',h.x+4,h.y+20)});
+if(level===2){ctx.fillStyle='#87939a';ctx.fillRect(goal-130,260,12,160);ctx.fillStyle='#d5e7ee';ctx.fillRect(goal-220,250,190,75);ctx.fillStyle='#4e7185';ctx.font='bold 22px Tahoma';ctx.fillText('آشیانه‌ی مهر',goal-205,290);ctx.font='40px sans-serif';ctx.fillText('✈️',goal-170,365);ctx.font='34px sans-serif';ctx.fillText('👩🏻‍🦰👑',goal-95,405)}else{ctx.fillStyle='#f2eee6';ctx.fillRect(goal-130,340,12,90);ctx.fillStyle='#2c876c';ctx.fillRect(goal-190,300,130,48);ctx.fillStyle='white';ctx.font='bold 17px Tahoma';ctx.fillText(level===0?'باغستان':'البرز',goal-180,330)}
+// player character
+ctx.fillStyle='#713e59';ctx.fillRect(player.x+9,player.y+14,22,35);ctx.fillStyle='#f0c39e';ctx.beginPath();ctx.arc(player.x+20,player.y+10,13,0,7);ctx.fill();ctx.fillStyle='#3c2b3d';ctx.fillRect(player.x+7,player.y-1,25,8);ctx.fillStyle='#e45e91';ctx.fillRect(player.x+5,player.y+25,28,17);ctx.fillStyle='#fff';ctx.fillRect(player.x+12,player.y+8,4,4);ctx.fillRect(player.x+23,player.y+8,4,4);ctx.restore();
+}
+function loop(now){if(!running)return;let dt=Math.min((now-last)/16.67,2);last=now;let dir=(keys.right?1:0)-(keys.left?1:0);player.vx=dir*4.3;player.x+=player.vx*dt;player.vy+=.62*dt;player.y+=player.vy*dt;player.on=false;for(let p of platforms){if(player.x+player.w>p.x&&player.x<p.x+p.w&&player.y+player.h>=p.y&&player.y+player.h<=p.y+22&&player.vy>=0){player.y=p.y-player.h;player.vy=0;player.on=true}}if(player.y>H+80){player.x=Math.max(20,player.x-100);player.y=260;player.vy=0}player.x=Math.max(0,Math.min(goal,player.x));items.forEach(it=>{if(!it.taken&&Math.abs(player.x+19-it.x)<28&&Math.abs(player.y+20-it.y)<42){it.taken=true;score++;$('score').textContent=fa(score)}});for(let h of hazards){if(player.x+player.w>h.x&&player.x<h.x+h.w&&player.y+player.h>h.y&&player.y<h.y+h.h){player.x=Math.max(20,player.x-100);player.vy=-5;score=Math.max(0,score-1);$('score').textContent=fa(score)}}camera=Math.max(0,Math.min(goal-W+150,player.x-260));if(player.x>goal-160){if(level<2){level++;nextStage()}else{running=false;$('play').style.display='none';$('finish').style.display='block';$('final').textContent=fa(score)+' قلب جمع‌شده'}}draw();requestAnimationFrame(loop)}
+function hold(id,k){let b=$(id);b.addEventListener('pointerdown',e=>{e.preventDefault();keys[k]=true});['pointerup','pointercancel','pointerleave'].forEach(ev=>b.addEventListener(ev,()=>keys[k]=false))}
+hold('left','left');hold('right','right');$('jump').addEventListener('pointerdown',e=>{e.preventDefault();jump()});window.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight',' ','ArrowUp'].includes(e.key))e.preventDefault();if(e.key==='ArrowLeft'||e.key==='a')keys.left=true;if(e.key==='ArrowRight'||e.key==='d')keys.right=true;if(e.key===' '||e.key==='ArrowUp'||e.key==='w')jump()});window.addEventListener('keyup',e=>{if(e.key==='ArrowLeft'||e.key==='a')keys.left=false;if(e.key==='ArrowRight'||e.key==='d')keys.right=false});$('start').addEventListener('click',begin);$('again').addEventListener('click',begin);
 })();
-</script>
-</body>
-</html>
+</script></body></html>
