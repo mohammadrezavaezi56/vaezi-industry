@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#74c9f5"><title>VAEZI CITY | کرج</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800;900&display=swap');
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#86d5ff;font-family:Vazirmatn,Tahoma,sans-serif;color:#153b5c}#game{position:fixed;inset:0}canvas{display:block;width:100%;height:100%}
+.panel{position:fixed;z-index:3;background:#f5fbffe8;border:1px solid #fff;border-radius:18px;box-shadow:0 12px 35px #24648a30;backdrop-filter:blur(12px)}
+#top{top:14px;left:14px;right:14px;display:flex;align-items:center;justify-content:space-between;padding:10px 16px;gap:12px}
+.logo{font-weight:900;font-size:21px;color:#1675ad;letter-spacing:.5px}.logo small{display:block;font-size:10px;color:#5790b0;font-weight:600;letter-spacing:0}
+.pills{display:flex;gap:8px;flex-wrap:wrap}.pill{background:#e2f4ff;border-radius:12px;padding:7px 11px;font-size:12px;font-weight:800}.pill b{color:#087bb8}
+#mission{top:92px;right:14px;width:min(290px,calc(100vw - 28px));padding:13px 15px}
+#mission h3{margin:0 0 5px;font-size:14px;color:#167bb5}#mission p{margin:0;font-size:12px;line-height:1.9;color:#446d89}
+#hint{bottom:16px;left:50%;transform:translateX(-50%);padding:9px 16px;font-size:12px;font-weight:700;white-space:nowrap}
+#start{position:fixed;z-index:8;inset:0;display:grid;place-items:center;background:linear-gradient(135deg,#a8e4ffdd,#effbffed);padding:20px}
+.card{width:min(540px,100%);padding:28px;border-radius:28px;background:#ffffffed;box-shadow:0 25px 80px #23638a44;text-align:center;border:1px solid white}
+.card h1{font-size:clamp(30px,7vw,48px);margin:0;color:#087cb7}.card p{line-height:2;color:#456b86;font-size:14px}.hero{font-size:60px;margin:8px}.cta{border:0;border-radius:15px;padding:14px 28px;background:linear-gradient(135deg,#22a8e5,#0877b5);color:white;font:800 16px Vazirmatn;box-shadow:0 8px 22px #168dca55;cursor:pointer}
+#map{position:fixed;z-index:3;left:14px;top:88px;width:148px;height:148px;border-radius:18px;overflow:hidden;border:3px solid #fff;background:#d7f2ff;box-shadow:0 10px 25px #24648a30}
+#map canvas{width:100%;height:100%}
+#mobile{display:none;position:fixed;z-index:5;bottom:22px;left:15px;right:15px;justify-content:space-between;pointer-events:none}
+.pad{display:flex;gap:8px;pointer-events:auto}.mb{width:55px;height:55px;border:1px solid #fff;background:#eaf8ffdd;border-radius:17px;color:#17658e;font-size:21px;font-weight:900;box-shadow:0 5px 15px #24648a33;touch-action:none}
+@media(max-width:700px){#mobile{display:flex}#map{width:112px;height:112px;top:148px}#mission{top:86px;width:calc(100vw - 150px);right:14px}#hint{bottom:92px;font-size:10px}.logo{font-size:16px}.pill{font-size:10px;padding:6px 8px}}
+</style>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+</head>
+<body>
+<div id="game"></div>
+<div id="top" class="panel"><div class="logo">VAEZI CITY <small>کرج | شهر ماجراجویی تو</small></div><div class="pills"><div class="pill">💰 پول: <b id="money">۱۲۰۰</b></div><div class="pill">🚗 <b id="vehicle">پیاده</b></div><div class="pill">📍 <b id="zone">باغستان</b></div></div></div>
+<div id="mission" class="panel"><h3>⭐ مأموریت اول: گشت در شهر</h3><p id="missionText">به نشان آبی روی نقشه برو و میدان شهر را کشف کن. کنار ماشین قرمز بایست و کلید E را بزن تا سوار شوی.</p></div>
+<div id="map"><canvas id="mapCanvas" width="220" height="220"></canvas></div>
+<div id="hint" class="panel">W A S D حرکت · ماوس چرخش دوربین · E سوار / پیاده · Shift دویدن</div>
+<div id="mobile"><div class="pad"><button class="mb" data-key="KeyA">◀</button><button class="mb" data-key="KeyD">▶</button></div><div class="pad"><button class="mb" data-key="KeyW">▲</button><button class="mb" data-key="KeyS">▼</button><button class="mb" id="enterBtn">E</button></div></div>
+<div id="start"><div class="card"><div class="hero">🌤️🏙️🚘</div><h1>به VAEZI CITY خوش اومدی!</h1><p>یک شهر سه‌بعدی رنگارنگ در کرج؛ آزادانه در خیابان‌ها بگرد، محله‌ها را کشف کن، سوار ماشین شو و مأموریت‌ها را انجام بده.<br>این نسخه اولیه است؛ شهر به مرور بزرگ‌تر و زنده‌تر می‌شود.</p><button class="cta" id="play">ورود به شهر 🚀</button><p style="font-size:11px">بهترین تجربه با کامپیوتر و مرورگر به‌روز</p></div></div>
+<script type="module">
+import * as THREE from 'three';
+const root=document.querySelector('#game');
+const scene=new THREE.Scene();scene.background=new THREE.Color('#8bd8ff');scene.fog=new THREE.Fog('#a8e4ff',85,260);
+const camera=new THREE.PerspectiveCamera(62,innerWidth/innerHeight,.1,600);
+const renderer=new THREE.WebGLRenderer({antialias:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setSize(innerWidth,innerHeight);renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.15;root.appendChild(renderer.domElement);
+scene.add(new THREE.HemisphereLight(0xe7f8ff,0x7199a5,2.1));
+const sun=new THREE.DirectionalLight(0xfff4d8,3.0);sun.position.set(-55,90,45);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);sun.shadow.camera.left=-110;sun.shadow.camera.right=110;sun.shadow.camera.top=110;sun.shadow.camera.bottom=-110;scene.add(sun);
+const mat=(c,rough=.85)=>new THREE.MeshStandardMaterial({color:c,roughness:rough});
+const mats={grass:mat('#79c98a'),road:mat('#536d80'),side:mat('#d8e7df'),white:mat('#fff7db'),blue:mat('#39a9df'),red:mat('#f06c64'),yellow:mat('#ffc95c'),pink:mat('#ed91b9'),mint:mat('#8bd7c4'),cream:mat('#f5d8a7'),dark:mat('#344d62'),glass:new THREE.MeshStandardMaterial({color:'#9be4f7',metalness:.12,roughness:.22})};
+function box(parent,x,y,z,w,h,d,m,shadow=true){const o=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),m);o.position.set(x,y,z);o.castShadow=shadow;o.receiveShadow=true;parent.add(o);return o}
+function cylinder(parent,x,y,z,r1,r2,h,m,seg=10){const o=new THREE.Mesh(new THREE.CylinderGeometry(r1,r2,h,seg),m);o.position.set(x,y,z);o.castShadow=true;parent.add(o);return o}
+const ground=box(scene,0,-.7,0,500,1,500,mats.grass,false);
+const roads=[];
+function road(x,z,w,d){box(scene,x,.015,z,w,.12,d,mats.road,false);roads.push({x,z,w,d});if(w>d){for(let xx=x-w/2+5;xx<x+w/2-3;xx+=11)box(scene,xx,.09,z,4,.025,.22,mats.white,false)}else{for(let zz=z-d/2+5;zz<z+d/2-3;zz+=11)box(scene,x,.09,zz,.22,.025,4,mats.white,false)}}
+road(0,0,18,300);road(0,0,300,18);road(-90,0,12,300);road(90,0,12,300);road(0,-90,300,12);road(0,90,300,12);road(-55,-55,12,70);road(55,55,12,70);
+// city blocks and lots of colorful low-poly buildings
+const colors=['#ffb86b','#73c7e8','#f28e9d','#9bd4a5','#c2a4e8','#f1d27c','#79c8c1','#f5a9d0'];
+function building(x,z,w,d,h,color){
+const g=new THREE.Group();g.position.set(x,0,z);scene.add(g);
+box(g,0,h/2,0,w,h,d,mat(color));box(g,0,h+.18,0,w+.5,.36,d+.5,mat('#fff0d3'));
+box(g,0,h*.78,d/2+.012,w*.8,h*.13,.04,mats.glass,false);
+for(let yy=2.5;yy<h-1;yy+=3.1){for(let xx=-w/2+1.4;xx<w/2-1;xx+=3){box(g,xx,yy,d/2+.035,1.15,1.35,.08,mat('#d9f5ff'),false)}}
+box(g,0,h+1.0,0,w*.38,1.3,d*.42,mat(color));
+return g}
+for(let gx=-125;gx<=125;gx+=35){for(let gz=-125;gz<=125;gz+=35){if(Math.abs(gx)<22||Math.abs(gz)<22||Math.abs(gx)===90||Math.abs(gz)===90)continue;let h=9+((Math.abs(gx*7+gz*11))%23);building(gx+(Math.sin(gz)*4),gz+(Math.cos(gx)*4),18,18,h,colors[Math.abs(Math.floor(gx+gz))%colors.length])}}
+// landmark: colorful clock tower / city plaza
+const plaza=new THREE.Group();plaza.position.set(0,0,0);scene.add(plaza);
+cylinder(plaza,0,.15,0,12,12,.3,mat('#f4d58b'),32);
+cylinder(plaza,0,2,0,3.2,3.8,3.7,mat('#f6c66b'),16);cylinder(plaza,0,4.2,0,3.3,3.3,.35,mat('#fff0d2'),16);
+const clock=box(plaza,0,6.2,0,4.3,4,3.2,mat('#fff0cf'));box(plaza,0,8.4,0,5.4,.5,4.2,mat('#ed846e'));
+for(let i=0;i<4;i++){let a=i*Math.PI/2;let o=new THREE.Mesh(new THREE.BoxGeometry(.2,2.7,.15),mat('#3d7b9b'));o.position.set(Math.sin(a)*2.17,6.2,Math.cos(a)*1.62);o.rotation.y=a;plaza.add(o)}
+cylinder(plaza,0,10,0,.25,.25,3,mat('#f9edcf'),12);
+// trees and lamp posts
+function tree(x,z){let g=new THREE.Group();g.position.set(x,0,z);scene.add(g);cylinder(g,0,1.1,0,.38,.5,2.2,mat('#996640'),8);let crown=new THREE.Mesh(new THREE.IcosahedronGeometry(2.1,1),mat(['#42a879','#5abf84','#82c96f'][Math.abs(x+z)%3|0]));crown.position.y=3.1;crown.castShadow=true;g.add(crown);return g}
+for(let x=-135;x<=135;x+=15){for(const z of [-13,13])tree(x,z);for(const z of [-135,135])tree(x,z)}
+for(let z=-135;z<=135;z+=18){for(const x of [-13,13])tree(x,z);for(const x of [-135,135])tree(x,z)}
+function lamp(x,z){cylinder(scene,x,2.2,z,.12,.12,4.4,mat('#607c8e'),8);box(scene,x,4.4,z,.9,.18,.35,mat('#fff3b0'),false)}
+for(let n=-130;n<=130;n+=28){lamp(n,-10);lamp(n,10);lamp(-10,n);lamp(10,n)}
+// distant Alborz-like hills
+for(let i=0;i<17;i++){let hill=new THREE.Mesh(new THREE.ConeGeometry(23+Math.random()*18,35+Math.random()*25,7),mat(['#a5d6c1','#8fc9b8','#acd7d4'][i%3]));hill.position.set(-190+i*24,10,-210-Math.random()*25);hill.rotation.y=.3;scene.add(hill)}
+// player
+const player=new THREE.Group();scene.add(player);
+const body=box(player,0,1.05,0,.85,1.25,.55,mat('#ff8c68'));const head=new THREE.Mesh(new THREE.SphereGeometry(.43,16,12),mat('#f2c7a4'));head.position.y=2;head.castShadow=true;player.add(head);
+const hair=new THREE.Mesh(new THREE.SphereGeometry(.45,12,8,0,Math.PI*2,0,Math.PI*.55),mat('#55443c'));hair.position.y=2.16;player.add(hair);
+const legL=box(player,-.23,.35,0,.25,.7,.3,mat('#315c91')),legR=box(player,.23,.35,0,.25,.7,.3,mat('#315c91'));
+const armL=box(player,-.57,1.15,0,.22,.8,.25,mat('#f2c7a4')),armR=box(player,.57,1.15,0,.22,.8,.25,mat('#f2c7a4'));
+player.position.set(-7,0,24);
+const car=new THREE.Group();scene.add(car);
+const carBody=box(car,0,.75,0,2.2,.85,4.1,mat('#ef645c'));box(car,0,1.38,-.15,1.75,.75,2.15,mats.glass);
+box(car,-.78,.32,1.25,.55,.58,.4,mat('#f9e8c5'));box(car,.78,.32,1.25,.55,.58,.4,mat('#f9e8c5'));
+for(const x of [-1.08,1.08])for(const z of [-1.35,1.35]){let wh=new THREE.Mesh(new THREE.CylinderGeometry(.42,.42,.25,16),mat('#243746'));wh.rotation.z=Math.PI/2;wh.position.set(x,.42,z);car.add(wh)}
+car.position.set(-12,0,30);car.rotation.y=Math.PI/2;
+// a few parked cars and moving colorful traffic
+const traffic=[];function makeCar(x,z,color,rot=0){let g=new THREE.Group();scene.add(g);box(g,0,.65,0,1.9,.72,3.4,mat(color));box(g,0,1.2,-.1,1.5,.6,1.65,mats.glass);for(let xx of [-.95,.95])for(let zz of [-1.1,1.1]){let w=new THREE.Mesh(new THREE.CylinderGeometry(.34,.34,.2,12),mat('#253b4c'));w.rotation.z=Math.PI/2;w.position.set(xx,.36,zz);g.add(w)}g.position.set(x,0,z);g.rotation.y=rot;traffic.push({g,z0:z,x0:x,phase:Math.random()*8});return g}
+makeCar(22,8,'#f5c14f');makeCar(-25,-8,'#55b8db');makeCar(75,22,'#8bcf91',Math.PI/2);makeCar(-75,-22,'#ad8cdb',Math.PI/2);
+const marker=new THREE.Group();scene.add(marker);cylinder(marker,0,.08,0,2.4,2.4,.16,mat('#25b9ed'),24);let ring=new THREE.Mesh(new THREE.TorusGeometry(2.8,.18,8,28),mat('#e9fbff'));ring.rotation.x=Math.PI/2;ring.position.y=.2;marker.add(ring);let beam=new THREE.Mesh(new THREE.CylinderGeometry(.12,.8,8,12,1,true),new THREE.MeshBasicMaterial({color:0x62d8ff,transparent:true,opacity:.25,side:THREE.DoubleSide}));beam.position.y=4;marker.add(beam);marker.position.set(52,0,-42);
+let inCar=false,money=1200,missionDone=false,keys={},yaw=0,vel=0,camDist=10;
+const ui={money:document.querySelector('#money'),vehicle:document.querySelector('#vehicle'),zone:document.querySelector('#zone'),mission:document.querySelector('#missionText'),hint:document.querySelector('#hint')};
+function fa(n){return Math.round(n).toLocaleString('fa-IR')}
+function enter(){if(!inCar&&player.position.distanceTo(car.position)<6){inCar=true;ui.vehicle.textContent='ماشین قرمز';ui.mission.textContent='آزادانه رانندگی کن! به نشان آبی برو و اولین مأموریت را کامل کن.'}else if(inCar){inCar=false;player.position.copy(car.position);player.position.x+=3;ui.vehicle.textContent='پیاده'}}
+window.addEventListener('keydown',e=>{keys[e.code]=true;if(e.code==='KeyE')enter()});window.addEventListener('keyup',e=>keys[e.code]=false);
+document.querySelectorAll('[data-key]').forEach(b=>{let k=b.dataset.key;b.addEventListener('pointerdown',e=>{e.preventDefault();keys[k]=true});['pointerup','pointerleave','pointercancel'].forEach(ev=>b.addEventListener(ev,()=>keys[k]=false))});document.querySelector('#enterBtn').addEventListener('click',enter);
+let dragging=false,lastX=0;renderer.domElement.addEventListener('pointerdown',e=>{dragging=true;lastX=e.clientX});window.addEventListener('pointerup',()=>dragging=false);window.addEventListener('pointermove',e=>{if(dragging&&e.pointerType==='mouse'){yaw-=(e.clientX-lastX)*.005;lastX=e.clientX}});
+const map=document.querySelector('#mapCanvas'),mctx=map.getContext('2d');
+function drawMap(){mctx.clearRect(0,0,220,220);mctx.fillStyle='#bce8cf';mctx.fillRect(0,0,220,220);mctx.fillStyle='#809baa';mctx.fillRect(99,0,22,220);mctx.fillRect(0,99,220,22);mctx.fillStyle='#f4f1d9';for(let i=0;i<220;i+=25){mctx.fillRect(i,106,12,3);mctx.fillRect(106,i,3,12)}mctx.fillStyle='#f1c27a';mctx.fillRect(96,96,28,28);mctx.fillStyle='#38aee8';mctx.beginPath();mctx.arc(155,66,7,0,7);mctx.fill();let p=inCar?car.position:player.position;mctx.fillStyle='#e95e62';mctx.beginPath();mctx.arc(110+(p.x/300)*100,110+(p.z/300)*100,5,0,7);mctx.fill();mctx.strokeStyle='#fff';mctx.lineWidth=2;mctx.stroke()}
+let clock=new THREE.Clock();
+function animate(){requestAnimationFrame(animate);let dt=Math.min(clock.getDelta(),.04);const obj=inCar?car:player;let forward=(keys.KeyW||keys.ArrowUp?1:0)-(keys.KeyS||keys.ArrowDown?1:0),turn=(keys.KeyD||keys.ArrowRight?1:0)-(keys.KeyA||keys.ArrowLeft?1:0);
+if(inCar){vel+=(forward*23*dt);vel*=Math.pow(.94,dt*60);car.rotation.y-=turn*dt*(1.3+Math.abs(vel)*.035);car.position.x+=Math.sin(car.rotation.y)*vel*dt;car.position.z+=Math.cos(car.rotation.y)*vel*dt;car.position.x=THREE.MathUtils.clamp(car.position.x,-145,145);car.position.z=THREE.MathUtils.clamp(car.position.z,-145,145)}
+else{if(turn)yaw-=turn*dt*2.3;let speed=(keys.ShiftLeft?13:7);let dx=Math.sin(yaw)*forward*speed*dt,dz=Math.cos(yaw)*forward*speed*dt;player.position.x+=dx;player.position.z+=dz;player.rotation.y=yaw;let walking=Math.abs(forward)>0;legL.rotation.x=walking?Math.sin(clock.elapsedTime*12)*.65:0;legR.rotation.x=-legL.rotation.x;armL.rotation.x=-legL.rotation.x*.5;armR.rotation.x=-legR.rotation.x*.5}
+for(let t of traffic){t.g.position.x=t.x0+Math.sin(clock.elapsedTime*.35+t.phase)*7;t.g.position.z=t.z0+Math.cos(clock.elapsedTime*.35+t.phase)*7}
+const target=obj.position.clone();target.y+=inCar?1.2:1.5;let desired=new THREE.Vector3(target.x-Math.sin(yaw)*camDist,target.y+5.2,target.z-Math.cos(yaw)*camDist);camera.position.lerp(desired,1-Math.pow(.001,dt));camera.lookAt(target);
+if(!missionDone&&obj.position.distanceTo(marker.position)<7){missionDone=true;money+=500;ui.money.textContent=fa(money);ui.mission.textContent='آفرین! میدان شهر را پیدا کردی. ۵۰۰ سکه پاداش گرفتی. حالا شهر را آزادانه بگرد!';marker.visible=false}
+let dist= obj.position.length();ui.zone.textContent=dist<45?'مرکز شهر':obj.position.z>65?'مهرشهر':obj.position.x< -65?'باغستان':'عظیمیه';
+marker.rotation.y+=dt*.6;marker.position.y=.25+Math.sin(clock.elapsedTime*2)*.18;drawMap();renderer.render(scene,camera)}
+document.querySelector('#play').addEventListener('click',()=>{document.querySelector('#start').style.display='none';animate()});
+addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)});
+</script>
+</body></html>
