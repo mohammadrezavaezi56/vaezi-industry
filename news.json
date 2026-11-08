@@ -1,13 +1,15 @@
 {
-  "updatedAt": "2026-11-08T13:17:43+00:00",
+  "updatedAt": "2026-11-08T21:59:55+00:00",
   "mix": {
     "iranTargetPercent": 90,
     "worldTargetPercent": 10
   },
   "feedStatus": {
     "configuredFeeds": 49,
-    "successfulFeeds": 49,
-    "warnings": []
+    "successfulFeeds": 48,
+    "warnings": [
+      "باشگاه خبرنگاران جوان: HTTP Error 403: Forbidden"
+    ]
   },
   "items": [
     {
